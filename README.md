@@ -18,6 +18,8 @@ Mathematica 10 or later is required for this package to work.
 
 3. Paste this folder into the folder 'Applications' located in the Mathematica user base directory. 
    To find the location of this user base directory, open a Mathematica notebook and evaluate ‘$UserBaseDirectory’
+   
+4. To get the documentation to work, reset Mathematica.
 
 ### Loading
 
