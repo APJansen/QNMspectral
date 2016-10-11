@@ -10,8 +10,8 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      7046,        218]
-NotebookOptionsPosition[      4706,        150]
+NotebookDataLength[      7045,        218]
+NotebookOptionsPosition[      4705,        150]
 NotebookOutlinePosition[      6557,        199]
 CellTagsIndexPosition[      6514,        196]
 WindowTitle->FitFunction - Wolfram Mathematica
@@ -111,7 +111,7 @@ Cell[TextData[Cell[BoxData[
   Method->"Preemptive"]]]], "NotesSection",
  WholeCellGroupOpener->True,
  CellGroupingRules->{"SectionGrouping", 50},
- CellID->1133427054],
+ CellID->944734875],
 
 Cell[CellGroupData[{
 
@@ -162,7 +162,7 @@ TaggingRules->{
          BaseStyle -> {"Link", "DockedLinkTrail"}], 
         Cell[">", "DockedLinkTrailSeparator"]}]}}, ColumnAlignments -> Left], 
   "Metadata" -> {
-   "built" -> "{2016, 10, 11, 12, 22, 7.338727}", 
+   "built" -> "{2016, 10, 11, 17, 12, 14.938452}", 
     "history" -> {"0.0", "", "", ""}, "context" -> "QNMspectral`", 
     "keywords" -> {}, "specialkeywords" -> {}, 
     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
@@ -205,21 +205,21 @@ Cell[2482, 64, 54, 1, 70, "ObjectName",
 Cell[2539, 67, 708, 24, 70, "Usage",
  CellID->982511436],
 Cell[CellGroupData[{
-Cell[3272, 95, 610, 18, 70, "NotesSection",
+Cell[3272, 95, 609, 18, 70, "NotesSection",
  CellGroupingRules->{"SectionGrouping", 50},
- CellID->1133427054],
+ CellID->944734875],
 Cell[CellGroupData[{
-Cell[3907, 117, 290, 12, 70, "Notes",
+Cell[3906, 117, 290, 12, 70, "Notes",
  CellID->1899998556],
-Cell[4200, 131, 69, 1, 70, "Notes",
+Cell[4199, 131, 69, 1, 70, "Notes",
  CellID->13178],
-Cell[4272, 134, 214, 4, 70, "3ColumnTable",
+Cell[4271, 134, 214, 4, 70, "3ColumnTable",
  CellID->11156],
-Cell[4489, 140, 163, 4, 70, "Notes",
+Cell[4488, 140, 163, 4, 70, "Notes",
  CellID->607111036]
 }, Open  ]]
 }, Closed]],
-Cell[4679, 148, 23, 0, 70, "FooterCell"]
+Cell[4678, 148, 23, 0, 70, "FooterCell"]
 }
 ]
 *)
