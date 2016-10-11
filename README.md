@@ -16,13 +16,13 @@ Mathematica 10 or later is required for this package to work.
 
 2. Now go to the ‘package’ folder and copy the ‘QNMspectral’ folder located there.
 
-3. Paste this folder into your Mathematica user base directory. 
-   To find the location of this directory, open a Mathematica notebook and evaluate ‘$UserBaseDirectory’
+3. Paste this folder into the folder 'Applications' located in the Mathematica user base directory. 
+   To find the location of this user base directory, open a Mathematica notebook and evaluate ‘$UserBaseDirectory’
 
 ### Loading
 
 The package is now installed. To use it in a notebook of your own, you first have to load it, by evaluating:
-Needs[“QNMspectral`”]
+Needs["QNMspectral`"] (you may have to retype the quotation marks)
 
 ### Using
 
