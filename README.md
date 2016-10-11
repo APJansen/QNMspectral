@@ -22,7 +22,8 @@ Mathematica 10 or later is required for this package to work.
 ### Loading
 
 The package is now installed. To use it in a notebook of your own, you first have to load it, by evaluating:
-Needs["QNMspectral'"] (you may have to retype the quotation marks)
+
+Needs\["QNMspectral\`"\] 
 
 ### Using
 
