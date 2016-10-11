@@ -1,0 +1,375 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     12219,        366]
+NotebookOptionsPosition[      8258,        258]
+NotebookOutlinePosition[     10459,        315]
+CellTagsIndexPosition[     10416,        312]
+WindowTitle->QNMspectral Overview - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["Q N MSPECTRAL PACKAGE OVERVIEW", "PacletNameCell"], Cell[TextData[
+    Cell[BoxData[
+     ActionMenuBox[
+      FrameBox["\<\"URL \[RightGuillemet]\"\>",
+       StripOnInput->
+        False], {"\<\"QNMspectral/tutorial/QNMspectralOverview\"\>":>
+      None, "\<\"Copy Mathematica url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell["QNMspectral/tutorial/QNMspectralOverview"]}, Visible -> 
+           False]]; SelectionMove[
+        DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/mathematica/QNMspectral/tutorial/\
+QNMspectralOverview.html"], StandardForm]], "Input", TextClipboardType -> 
+             "PlainText"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+           "http://reference.wolfram.com/mathematica/", 
+            "QNMspectral/tutorial/QNMspectralOverview", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell[CellGroupData[{
+
+Cell["QNMspectral Overview", "TOCDocumentTitle"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["QNMspectral",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:QNMspectral/tutorial/Introduction#509267359"]], "TOCChapter"],
+
+Cell[TextData[ButtonBox["About",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:QNMspectral/tutorial/Introduction#512620808"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["Getting Started",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:QNMspectral/tutorial/Introduction#707075887"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["Quasinormal Modes",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:QNMspectral/tutorial/Introduction#1797413958"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["Acknowledgements",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:QNMspectral/tutorial/Introduction#2056750608"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["Overview",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:QNMspectral/tutorial/Introduction#1585771417"]], "TOCSection"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ ButtonBox["A simple example: a massless scalar in ",
+  BaseStyle->"Link",
+  ButtonData->"paclet:QNMspectral/tutorial/SimpleExample#31199131"],
+ ButtonBox[Cell[BoxData[
+  FormBox[
+   SubscriptBox["AdS", "5"], TraditionalForm]], "InlineMath"],
+  BaseStyle->"Link",
+  ButtonData->"paclet:QNMspectral/tutorial/SimpleExample#31199131"]
+}], "TOCChapter"],
+
+Cell[TextData[ButtonBox["The quasinormal mode equation",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:QNMspectral/tutorial/SimpleExample#937227206"]], "TOCSubsection"],
+
+Cell[TextData[ButtonBox["Numerical solution",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:QNMspectral/tutorial/SimpleExample#581645126"]], "TOCSubsection"],
+
+Cell[TextData[ButtonBox["Displaying results",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:QNMspectral/tutorial/SimpleExample#1658998297"]], "TOCSubsection"],
+
+Cell[TextData[ButtonBox["A more accurate solution",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:QNMspectral/tutorial/SimpleExample#1118107951"]], "TOCSubsection"],
+
+Cell[TextData[ButtonBox["Recommended use: GetAccurateModes",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:QNMspectral/tutorial/SimpleExample#1211574677"]], "TOCSubsection"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["Extensions",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:QNMspectral/tutorial/Extensions#509267359"]], "TOCChapter"],
+
+Cell[TextData[ButtonBox["Computing and viewing eigenfunctions",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:QNMspectral/tutorial/Extensions#937227206"]], "TOCSubsection"],
+
+Cell[TextData[ButtonBox["Coupled equations",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:QNMspectral/tutorial/Extensions#1160455089"]], "TOCSubsection"],
+
+Cell[TextData[ButtonBox["Numerical background",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:QNMspectral/tutorial/Extensions#322198769"]], "TOCSubsection"],
+
+Cell[TextData[ButtonBox["Higher powers of the frequency",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:QNMspectral/tutorial/Extensions#1947376959"]], "TOCSubsection"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["Method",
+ BaseStyle->"Link",
+ ButtonData->"paclet:QNMspectral/tutorial/Method#509267359"]], "TOCChapter"],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["Boundary Conditions and Eddington-Finkelstein \
+coordinates",
+ BaseStyle->"Link",
+ ButtonData->"paclet:QNMspectral/tutorial/Method#278927872"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["Asymptotically flat case",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:QNMspectral/tutorial/Method#1478924877"]], "TOCSubsection"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["Discretization: Pseudospectral Methods",
+ BaseStyle->"Link",
+ ButtonData->"paclet:QNMspectral/tutorial/Method#1481255430"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["Boundary conditions",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:QNMspectral/tutorial/Method#2112455044"]], "TOCSubsection"]
+}, Open  ]],
+
+Cell[TextData[ButtonBox["Generalized Eigenvalue Equation",
+ BaseStyle->"Link",
+ ButtonData->"paclet:QNMspectral/tutorial/Method#1062523101"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["Extension: coupled equations, higher powers of \
+\[Omega]",
+ BaseStyle->"Link",
+ ButtonData->"paclet:QNMspectral/tutorial/Method#443200371"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["References",
+ BaseStyle->"Link",
+ ButtonData->"paclet:QNMspectral/tutorial/Method#1035524837"]], "TOCSection"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["ReferencePages/Symbols",
+ BaseStyle->"Link",
+ ButtonData->"paclet:QNMspectral/ref/GetModes"]], "TOCChapter"],
+
+Cell[TextData[ButtonBox["GetModes",
+ BaseStyle->"Link",
+ ButtonData->"paclet:QNMspectral/ref/GetModes"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["GetAccurateModes",
+ BaseStyle->"Link",
+ ButtonData->"paclet:QNMspectral/ref/GetAccurateModes"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["PlotFrequencies",
+ BaseStyle->"Link",
+ ButtonData->"paclet:QNMspectral/ref/PlotFrequencies"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["MakeTable",
+ BaseStyle->"Link",
+ ButtonData->"paclet:QNMspectral/ref/MakeTable"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["ShowModes",
+ BaseStyle->"Link",
+ ButtonData->"paclet:QNMspectral/ref/ShowModes"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["PlotEigenfunctions",
+ BaseStyle->"Link",
+ ButtonData->"paclet:QNMspectral/ref/PlotEigenfunctions"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["FitFunction",
+ BaseStyle->"Link",
+ ButtonData->"paclet:QNMspectral/ref/FitFunction"]], "TOCSection"],
+
+Cell[TextData[ButtonBox["PlotFit",
+ BaseStyle->"Link",
+ ButtonData->"paclet:QNMspectral/ref/PlotFit"]], "TOCSection"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"QNMspectral Overview - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "TutorialColor", 
+  "LinkTrails" -> GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Mathematica", ButtonData -> "paclet:QNMspectral/guide/QNMspectral", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"]}]}}, ColumnAlignments -> Left], 
+  "Metadata" -> {
+   "built" -> "{2016, 10, 11, 12, 22, 28.777475}", 
+    "history" -> {"XX", "", "", ""}, "context" -> "QNMspectral`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Q N Mspectral Package Overview", "language" -> "en", "paclet" -> 
+    "QNMspectral Package", "status" -> "None", "summary" -> 
+    "QNMspectral A simple example: a massless scalar in AdS_5 Extensions", 
+    "synonyms" -> {}, "title" -> "QNMspectral Overview", "titlemodifier" -> 
+    "", "windowtitle" -> "QNMspectral Overview", "type" -> "Overview", "uri" -> 
+    "QNMspectral/tutorial/QNMspectralOverview"}, "SearchTextTranslated" -> ""},
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> Notebook], 
+   Cell[
+    StyleData["Output"], CellContext -> Notebook], 
+   Cell[
+    StyleData["TutorialMoreAboutSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["RelatedTutorialsSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}], 
+   Cell[
+    StyleData["TutorialRelatedLinksSection"], 
+    CellGroupingRules -> {"SectionGrouping", 30}]}, Visible -> False, 
+  FrontEndVersion -> 
+  "9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, 2013)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[613, 21, 1964, 44, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[CellGroupData[{
+Cell[2602, 69, 48, 0, 70, "TOCDocumentTitle"],
+Cell[CellGroupData[{
+Cell[2675, 73, 144, 3, 70, "TOCChapter"],
+Cell[2822, 78, 138, 3, 70, "TOCSection"],
+Cell[2963, 83, 148, 3, 70, "TOCSection"],
+Cell[3114, 88, 151, 3, 70, "TOCSection"],
+Cell[3268, 93, 150, 3, 70, "TOCSection"],
+Cell[3421, 98, 142, 3, 70, "TOCSection"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3600, 106, 365, 9, 70, "TOCChapter"],
+Cell[3968, 117, 166, 3, 70, "TOCSubsection"],
+Cell[4137, 122, 155, 3, 70, "TOCSubsection"],
+Cell[4295, 127, 156, 3, 70, "TOCSubsection"],
+Cell[4454, 132, 162, 3, 70, "TOCSubsection"],
+Cell[4619, 137, 171, 3, 70, "TOCSubsection"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4827, 145, 141, 3, 70, "TOCChapter"],
+Cell[4971, 150, 170, 3, 70, "TOCSubsection"],
+Cell[5144, 155, 152, 3, 70, "TOCSubsection"],
+Cell[5299, 160, 154, 3, 70, "TOCSubsection"],
+Cell[5456, 165, 165, 3, 70, "TOCSubsection"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5658, 173, 130, 2, 70, "TOCChapter"],
+Cell[CellGroupData[{
+Cell[5813, 179, 183, 3, 70, "TOCSection"],
+Cell[5999, 184, 155, 3, 70, "TOCSubsection"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6191, 192, 163, 2, 70, "TOCSection"],
+Cell[6357, 196, 150, 3, 70, "TOCSubsection"]
+}, Open  ]],
+Cell[6522, 202, 156, 2, 70, "TOCSection"],
+Cell[6681, 206, 181, 3, 70, "TOCSection"],
+Cell[6865, 211, 135, 2, 70, "TOCSection"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7037, 218, 133, 2, 70, "TOCChapter"],
+Cell[7173, 222, 119, 2, 70, "TOCSection"],
+Cell[7295, 226, 135, 2, 70, "TOCSection"],
+Cell[7433, 230, 133, 2, 70, "TOCSection"],
+Cell[7569, 234, 121, 2, 70, "TOCSection"],
+Cell[7693, 238, 121, 2, 70, "TOCSection"],
+Cell[7817, 242, 139, 2, 70, "TOCSection"],
+Cell[7959, 246, 125, 2, 70, "TOCSection"],
+Cell[8087, 250, 117, 2, 70, "TOCSection"]
+}, Open  ]]
+}, Open  ]],
+Cell[8231, 256, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)

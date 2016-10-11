@@ -1,0 +1,467 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     14374,        458]
+NotebookOptionsPosition[     10752,        349]
+NotebookOutlinePosition[     12921,        407]
+CellTagsIndexPosition[     12836,        402]
+WindowTitle->GetModes - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["Q N MSPECTRAL SYMBOL", "PacletNameCell"], Cell[TextData[Cell[BoxData[
+     ActionMenuBox[
+      FrameBox["\<\"URL \[RightGuillemet]\"\>",
+       StripOnInput->False], {"\<\"QNMspectral/ref/GetModes\"\>":>
+      None, "\<\"Copy Mathematica url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell["QNMspectral/ref/GetModes"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/mathematica/QNMspectral/ref/\
+GetModes.html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, 
+           Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+           "http://reference.wolfram.com/mathematica/", 
+            "QNMspectral/ref/GetModes", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell["GetModes", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"GetModes", "[", 
+       RowBox[{
+        StyleBox["equation",
+         FontSlant->"Italic"], ",", 
+        RowBox[{"{", 
+         StyleBox[
+          RowBox[{"N", ",", "prec"}],
+          FontSlant->"Italic"], "}"}]}], "]"}]], "InlineFormula"],
+     "\[LineSeparator]computes the quasinormal mode spectrum of ",
+     Cell[BoxData[
+      StyleBox["equation", "TI"]], "InlineFormula"],
+     " using a spectral grid of  ",
+     Cell[BoxData[
+      RowBox[{"N", "+", "1"}]], "InlineFormula"],
+     " points with  ",
+     Cell[BoxData["prec"], "InlineFormula"],
+     " digits of precision."
+    }]]},
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"GetModes", "[", 
+       RowBox[{
+        StyleBox["equation",
+         FontSlant->"Italic"], ",", 
+        RowBox[{"{", 
+         StyleBox["N",
+          FontSlant->"Italic"], "}"}]}], "]"}]], "InlineFormula"],
+     "\[LineSeparator]defaults the precision to  ",
+     Cell[BoxData[
+      StyleBox[
+       RowBox[{"N", "/", "2"}], "TI"]], "InlineFormula"],
+     "."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {None, {None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->7970],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[
+  FrameBox[
+   StyleBox[
+    RowBox[{"MORE", " ", "INFORMATION"}], "NotesFrameText"],
+   StripOnInput->False],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->1513514357],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "The expression ",
+ Cell[BoxData[
+  StyleBox["equation", "TI"]], "InlineFormula"],
+ " can be an actual equation, or just an expression, in which case it is \
+assumed to be 0."
+}], "Notes",
+ CellBracketOptions->{"Color"->RGBColor[0.269993, 0.308507, 0.6]},
+ ShowAutoStyles->False,
+ ParagraphSpacing->{0.7, 0},
+ ScriptMinSize->9,
+ CellID->26053],
+
+Cell["The following options can be given: ", "Notes",
+ CellID->13178],
+
+Cell[BoxData[GridBox[{
+   {"Method", "\"\<Direct\>\"", Cell["method to use", "TableText"]},
+   {"Horizon", "1", Cell["location of the horizon", "TableText"]},
+   {"Eigenfunctions", "False", Cell[
+    "whether to compute the eigenfunctions", "TableText"]},
+   {"NumericalBackground", "False", Cell["\<\
+used to input numerical background values on the same gridpoints\
+\>", "TableText"]}
+  }]], "3ColumnTable",
+ CellID->11156],
+
+Cell[TextData[{
+ "Possible settings for ",
+ Cell[BoxData[
+  ButtonBox["Method",
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Method"]], "InlineFormula"],
+ " are:"
+}], "Notes",
+ CellID->24981],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "TableRowIcon"], "\"\<Direct\>\"", Cell["\<\
+modes are computed by directly solving the generalized eigenvalue equation\
+\>", "TableText"]},
+   {Cell["      ", "TableRowIcon"], "\"\<Sweep\>\"", Cell["\<\
+modes are computed by sweeping the complex frequency plane searching for \
+zeroes of the determinant\
+\>", "TableText"]}
+  }]], "2ColumnTableMod",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {None, {None}}, 
+   "RowsIndexed" -> {}},
+ GridBoxDividers->{"Rows" -> {{True, True, True}}}},
+ CellID->12695],
+
+Cell["\<\
+In the case the method \"Sweep\" is used there are further options\
+\>", "Notes",
+ CellID->101004581],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "TableRowIcon"], "SweepGrid", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "1"}], ",", "5", ",", 
+        SuperscriptBox["10", 
+         RowBox[{"-", "1"}]]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "5"}], ",", "1", ",", 
+        SuperscriptBox["10", 
+         RowBox[{"-", "1"}]]}], "}"}]}], "}"}], Cell[
+    "the grid on the complex plane to sweep", "TableText"]},
+   {Cell["      ", "TableRowIcon"], "Parallel", "False", Cell[
+    "whether to do the computation in parallel", "TableText"]}
+  }]], "3ColumnTableMod",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {None, {None}}, 
+   "RowsIndexed" -> {}},
+ GridBoxDividers->{"Rows" -> {{True, True, True}}}},
+ CellID->1870822672],
+
+Cell[TextData[{
+ "It is recommended to use ",
+ Cell[BoxData[
+  ButtonBox["GetAccurateModes",
+   BaseStyle->"Link",
+   ButtonData->"paclet:QNMspectral/ref/GetAccurateModes"]], "InlineFormula"],
+ ", as this can automatically filter out incorrect modes."
+}], "Notes",
+ CellID->1960893166]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["EXAMPLES",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "PrimaryExamplesSection",
+ WholeCellGroupOpener->True,
+ CellTags->"PrimaryExamplesSection",
+ CellID->691999384],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "Basic Examples",
+ "\[NonBreakingSpace]\[NonBreakingSpace]",
+ Cell["(1)", "ExampleCount"]
+}], "ExampleSection", "ExampleSection",
+ WholeCellGroupOpener->True,
+ CellID->1809698383],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<QNMspectral`\>\"", "]"}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->1970075317],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"eqAdS5", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "3"}], "-", 
+       RowBox[{"9", " ", 
+        SuperscriptBox["u", "4"]}], "+", 
+       RowBox[{"12", " ", "\[ImaginaryI]", " ", "u", " ", "\[Lambda]"}]}], 
+      ")"}], " ", 
+     RowBox[{"\[Delta]\[Phi]", "[", "u", "]"}]}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "7"}], " ", 
+        SuperscriptBox["u", "5"]}], "+", 
+       RowBox[{"u", " ", 
+        RowBox[{"(", 
+         RowBox[{"3", "+", 
+          RowBox[{"8", " ", "\[ImaginaryI]", " ", "u", " ", "\[Lambda]"}]}], 
+         ")"}]}]}], ")"}], " ", 
+     RowBox[{
+      SuperscriptBox["\[Delta]\[Phi]", "\[Prime]",
+       MultilineFunction->None], "[", "u", "]"}]}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       SuperscriptBox["u", "2"], "-", 
+       SuperscriptBox["u", "6"]}], ")"}], " ", 
+     RowBox[{
+      SuperscriptBox["\[Delta]\[Phi]", "\[Prime]\[Prime]",
+       MultilineFunction->None], "[", "u", "]"}]}]}]}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"modesAdS5", "=", 
+   RowBox[{"GetModes", "[", 
+    RowBox[{"eqAdS5", ",", 
+     RowBox[{"{", 
+      RowBox[{"50", ",", "0"}], "}"}]}], "]"}]}], ";"}], "\n", 
+ RowBox[{"ShowModes", "[", 
+  RowBox[{"modesAdS5", ",", 
+   RowBox[{"NModes", "->", "4"}]}], "]"}]}], "Input",
+ InitializationCell->False,
+ CellLabel->"In[2]:=",
+ CellID->1152983373]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[TextData[ButtonBox["TUTORIALS",
+ BaseStyle->None,
+ Appearance->{Automatic, None},
+ Evaluator->None,
+ Method->"Preemptive",
+ ButtonFunction:>(FrontEndExecute[{
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], All, ButtonCell], 
+    FrontEndToken["OpenCloseGroup"], 
+    FrontEnd`SelectionMove[
+     FrontEnd`SelectedNotebook[], After, 
+     CellContents]}]& )]], "TutorialsSection",
+ WholeCellGroupOpener->True,
+ CellID->250839057],
+
+Cell[TextData[ButtonBox["Introduction",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:QNMspectral/tutorial/Introduction"]], "RelatedDemonstrations",
+ CellID->618224417],
+
+Cell[TextData[ButtonBox["Simple Example",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:QNMspectral/tutorial/SimpleExample"]], "RelatedDemonstrations",
+ CellID->971892333],
+
+Cell[TextData[ButtonBox["Method",
+ BaseStyle->"Link",
+ ButtonData->"paclet:QNMspectral/tutorial/Method"]], "RelatedDemonstrations",
+ CellID->833821649]
+}, Open  ]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"GetModes - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Mathematica", ButtonData -> "paclet:QNMspectral/guide/QNMspectral", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"]}]}}, ColumnAlignments -> Left], 
+  "Metadata" -> {
+   "built" -> "{2016, 10, 11, 12, 22, 11.166218}", 
+    "history" -> {"1.0", "", "", ""}, "context" -> "QNMspectral`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Q N Mspectral Symbol", "language" -> "en", "paclet" -> "QNMspectral", 
+    "status" -> "None", "summary" -> 
+    "GetModes[equation, {N, prec}] computes the quasinormal mode spectrum of \
+equation using a spectral grid of N + 1 points with prec digits of \
+precision.GetModes[equation, {N}] defaults the precision to N/2.", 
+    "synonyms" -> {}, "title" -> "GetModes", "titlemodifier" -> "", 
+    "windowtitle" -> "GetModes", "type" -> "Symbol", "uri" -> 
+    "QNMspectral/ref/GetModes"}, "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> 
+  "9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, 2013)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "PrimaryExamplesSection"->{
+  Cell[7431, 231, 490, 14, 70, "PrimaryExamplesSection",
+   CellTags->"PrimaryExamplesSection",
+   CellID->691999384]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"PrimaryExamplesSection", 12693, 395}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[601, 21, 1861, 41, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[2465, 64, 51, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[2519, 67, 1282, 41, 70, "Usage",
+ CellID->7970],
+Cell[CellGroupData[{
+Cell[3826, 112, 610, 18, 70, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->1513514357],
+Cell[CellGroupData[{
+Cell[4461, 134, 360, 11, 70, "Notes",
+ CellID->26053],
+Cell[4824, 147, 69, 1, 70, "Notes",
+ CellID->13178],
+Cell[4896, 150, 425, 9, 70, "3ColumnTable",
+ CellID->11156],
+Cell[5324, 161, 195, 8, 70, "Notes",
+ CellID->24981],
+Cell[5522, 171, 603, 14, 70, "2ColumnTableMod",
+ CellID->12695],
+Cell[6128, 187, 111, 3, 70, "Notes",
+ CellID->101004581],
+Cell[6242, 192, 852, 23, 70, "3ColumnTableMod",
+ CellID->1870822672],
+Cell[7097, 217, 285, 8, 70, "Notes",
+ CellID->1960893166]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[7431, 231, 490, 14, 70, "PrimaryExamplesSection",
+ CellTags->"PrimaryExamplesSection",
+ CellID->691999384],
+Cell[CellGroupData[{
+Cell[7946, 249, 196, 6, 70, "ExampleSection",
+ CellID->1809698383],
+Cell[8145, 257, 121, 3, 70, "Input",
+ CellID->1970075317],
+Cell[8269, 262, 1449, 46, 70, "Input",
+ InitializationCell->False,
+ CellID->1152983373]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9767, 314, 448, 13, 70, "TutorialsSection",
+ CellID->250839057],
+Cell[10218, 329, 166, 4, 70, "RelatedDemonstrations",
+ CellID->618224417],
+Cell[10387, 335, 169, 4, 70, "RelatedDemonstrations",
+ CellID->971892333],
+Cell[10559, 341, 151, 3, 70, "RelatedDemonstrations",
+ CellID->833821649]
+}, Open  ]],
+Cell[10725, 347, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)

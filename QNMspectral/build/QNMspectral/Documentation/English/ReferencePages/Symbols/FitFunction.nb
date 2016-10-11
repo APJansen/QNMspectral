@@ -1,0 +1,227 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      7046,        218]
+NotebookOptionsPosition[      4706,        150]
+NotebookOutlinePosition[      6557,        199]
+CellTagsIndexPosition[      6514,        196]
+WindowTitle->FitFunction - Wolfram Mathematica
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[GridBox[{
+   {Cell["Q N MSPECTRAL SYMBOL", "PacletNameCell"], Cell[TextData[Cell[BoxData[
+     ActionMenuBox[
+      FrameBox["\<\"URL \[RightGuillemet]\"\>",
+       StripOnInput->False], {"\<\"QNMspectral/ref/FitFunction\"\>":>
+      None, "\<\"Copy Mathematica url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell["QNMspectral/ref/FitFunction"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
+      Delimiter, "\<\"Copy web url\"\>":>
+      Module[{DocumentationSearch`Private`nb$}, 
+       DocumentationSearch`Private`nb$ = NotebookPut[
+          Notebook[{
+            Cell[
+             BoxData[
+              MakeBoxes[
+               Hyperlink[
+               "http://reference.wolfram.com/mathematica/QNMspectral/ref/\
+FitFunction.html"], StandardForm]], "Input", TextClipboardType -> 
+             "PlainText"]}, Visible -> False]]; 
+       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
+       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
+       NotebookClose[DocumentationSearch`Private`nb$]; 
+       Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
+        NotebookLocate[{
+          URL[
+           StringJoin[
+           "http://reference.wolfram.com/mathematica/", 
+            "QNMspectral/ref/FitFunction", ".html"]], None}]}]},
+      Appearance->None,
+      MenuAppearance->Automatic]],
+     LineSpacing->{1.4, 0}]], "AnchorBar"]}
+  }]], "AnchorBarGrid",
+ GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
+     Scaled[0.65], {
+      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
+   "RowsIndexed" -> {}}},
+ CellID->1],
+
+Cell["FitFunction", "ObjectName",
+ CellID->1224892054],
+
+Cell[BoxData[GridBox[{
+   {"", Cell[TextData[{
+     Cell[BoxData[
+      RowBox[{"FitFunction", "[", 
+       RowBox[{
+        StyleBox["modes",
+         FontSlant->"Italic"], ",", 
+        StyleBox["f",
+         FontSlant->"Italic"]}], "]"}]], "InlineFormula"],
+     " \[LineSeparator]fits the eigenfunctions in ",
+     Cell[BoxData[
+      StyleBox["modes",
+       FontSlant->"Italic"]], "InlineFormula"],
+     " to the function ",
+     Cell[BoxData[
+      StyleBox["f",
+       FontSlant->"Italic"]], "InlineFormula"],
+     "."
+    }]]}
+  }]], "Usage",
+ GridBoxOptions->{
+ GridBoxBackground->{
+  "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
+   "RowsIndexed" -> {}}},
+ CellID->982511436],
+
+Cell[CellGroupData[{
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox[
+  FrameBox[
+   StyleBox[
+    RowBox[{"MORE", " ", "INFORMATION"}], "NotesFrameText"],
+   StripOnInput->False],
+  Appearance->{Automatic, None},
+  BaseStyle->None,
+  ButtonFunction:>(FrontEndExecute[{
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], All, ButtonCell], 
+     FrontEndToken["OpenCloseGroup"], 
+     FrontEnd`SelectionMove[
+      FrontEnd`SelectedNotebook[], After, CellContents]}]& ),
+  Evaluator->None,
+  Method->"Preemptive"]]]], "NotesSection",
+ WholeCellGroupOpener->True,
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->1133427054],
+
+Cell[CellGroupData[{
+
+Cell[TextData[{
+ "The function ",
+ Cell[BoxData[
+  StyleBox["f",
+   FontSlant->"Italic"]], "InlineFormula"],
+ " has to be a pure function, say ",
+ Cell[BoxData[
+  RowBox[{"(", 
+   RowBox[{
+    SuperscriptBox["#", "2"], "&"}], ")"}]], "InlineFormula"],
+ "."
+}], "Notes",
+ CellID->1899998556],
+
+Cell["The following options can be given: ", "Notes",
+ CellID->13178],
+
+Cell[BoxData[GridBox[{
+   {"NModes", "All", Cell["how many eigenfunctions are plotted", "TableText"]},
+   {"FunctionNumber", "1", Cell["which functions to plot", "TableText"]}
+  }]], "3ColumnTable",
+ CellID->11156],
+
+Cell["\<\
+The option FunctionNumber is used in the case of a coupled system of \
+equations, to select which of these is plotted.\
+\>", "Notes",
+ CellID->607111036]
+}, Open  ]]
+}, Closed]],
+
+Cell[" ", "FooterCell"]
+},
+Saveable->False,
+ScreenStyleEnvironment->"Working",
+WindowSize->{725, 750},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowTitle->"FitFunction - Wolfram Mathematica",
+TaggingRules->{
+ "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
+  GridBox[{{
+      RowBox[{
+        ButtonBox[
+        "Mathematica", ButtonData -> "paclet:QNMspectral/guide/QNMspectral", 
+         BaseStyle -> {"Link", "DockedLinkTrail"}], 
+        Cell[">", "DockedLinkTrailSeparator"]}]}}, ColumnAlignments -> Left], 
+  "Metadata" -> {
+   "built" -> "{2016, 10, 11, 12, 22, 7.338727}", 
+    "history" -> {"0.0", "", "", ""}, "context" -> "QNMspectral`", 
+    "keywords" -> {}, "specialkeywords" -> {}, 
+    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
+    "Q N Mspectral Symbol", "language" -> "en", "paclet" -> "QNMspectral", 
+    "status" -> "None", "summary" -> 
+    "FitFunction[modes, f] fits the eigenfunctions in modes to the function \
+f.", "synonyms" -> {}, "title" -> "FitFunction", "titlemodifier" -> "", 
+    "windowtitle" -> "FitFunction", "type" -> "Symbol", "uri" -> 
+    "QNMspectral/ref/FitFunction"}, "SearchTextTranslated" -> ""},
+CellContext->"Global`",
+FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
+2013)",
+StyleDefinitions->Notebook[{
+   Cell[
+    StyleData[
+    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
+   Cell[
+    StyleData["Input"], CellContext -> "Global`"], 
+   Cell[
+    StyleData["Output"], CellContext -> "Global`"]}, Visible -> False, 
+  FrontEndVersion -> 
+  "9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, 2013)", 
+  StyleDefinitions -> "Default.nb"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[604, 21, 1875, 41, 70, "AnchorBarGrid",
+ CellID->1],
+Cell[2482, 64, 54, 1, 70, "ObjectName",
+ CellID->1224892054],
+Cell[2539, 67, 708, 24, 70, "Usage",
+ CellID->982511436],
+Cell[CellGroupData[{
+Cell[3272, 95, 610, 18, 70, "NotesSection",
+ CellGroupingRules->{"SectionGrouping", 50},
+ CellID->1133427054],
+Cell[CellGroupData[{
+Cell[3907, 117, 290, 12, 70, "Notes",
+ CellID->1899998556],
+Cell[4200, 131, 69, 1, 70, "Notes",
+ CellID->13178],
+Cell[4272, 134, 214, 4, 70, "3ColumnTable",
+ CellID->11156],
+Cell[4489, 140, 163, 4, 70, "Notes",
+ CellID->607111036]
+}, Open  ]]
+}, Closed]],
+Cell[4679, 148, 23, 0, 70, "FooterCell"]
+}
+]
+*)
+
+(* End of internal cache information *)
