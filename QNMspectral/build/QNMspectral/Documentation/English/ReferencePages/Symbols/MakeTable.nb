@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      8925,        275]
-NotebookOptionsPosition[      6290,        197]
-NotebookOutlinePosition[      8129,        246]
-CellTagsIndexPosition[      8086,        243]
+NotebookDataLength[      8669,        267]
+NotebookOptionsPosition[      6034,        189]
+NotebookOutlinePosition[      7873,        238]
+CellTagsIndexPosition[      7830,        235]
 WindowTitle->MakeTable - Wolfram Mathematica
 WindowFrame->Normal*)
 
@@ -100,7 +100,7 @@ Cell[TextData[Cell[BoxData[
   Method->"Preemptive"]]]], "NotesSection",
  WholeCellGroupOpener->True,
  CellGroupingRules->{"SectionGrouping", 50},
- CellID->946355267],
+ CellID->822718758],
 
 Cell[CellGroupData[{
 
@@ -130,16 +130,7 @@ Cell[BoxData[GridBox[{
    {"Precision", "6", Cell["how many digits to show", "TableText"]},
    {"Name", "\"\<\!\(\*SubscriptBox[\(\[Omega]\), \(n\)]\)\>\"", Cell[
     "what to name the modes in the table", "TableText"]},
-   {"Conjugates", 
-    RowBox[{"(", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"Abs", "[", 
-        RowBox[{
-         RowBox[{"Im", "[", "#1", "]"}], "-", 
-         RowBox[{"Im", "[", "#2", "]"}]}], "]"}], "<", 
-       SuperscriptBox["10", 
-        RowBox[{"-", "3"}]]}], "&"}], ")"}], Cell[
+   {"ConjugateCutoff", "3", Cell[
     "criterion for determining which modes are conjugates", "TableText"]}
   }]], "3ColumnTable",
  CellID->11156],
@@ -152,12 +143,13 @@ adds any digits.\
 
 Cell[TextData[{
  "The quasinormal modes of a real field come in conjugate pairs, with \
-opposite sign in the real part. By default these are accounted for only once \
-in the table. To turn this off one can set the option ",
- Cell[BoxData["Conjugates"], "InlineFormula"],
- " to ",
- Cell[BoxData["False"], "InlineFormula"],
- ", or one can change the criterion using the same option."
+opposite sign in the real part. The option ConjugateCutoff determines how \
+close two imaginary parts have to be to be considered conjugate pairs, \
+defaulting to 3 meaning the difference has to be less than ",
+ Cell[BoxData[
+  SuperscriptBox["10", 
+   RowBox[{"-", "3"}]]], "InlineFormula"],
+ "."
 }], "Notes",
  CellID->53933009]
 }, Open  ]]
@@ -209,7 +201,7 @@ TaggingRules->{
          BaseStyle -> {"Link", "DockedLinkTrail"}], 
         Cell[">", "DockedLinkTrailSeparator"]}]}}, ColumnAlignments -> Left], 
   "Metadata" -> {
-   "built" -> "{2016, 10, 11, 17, 12, 21.942975}", 
+   "built" -> "{2016, 10, 11, 21, 29, 29.091728}", 
     "history" -> {"0.0", "", "", ""}, "context" -> "QNMspectral`", 
     "keywords" -> {}, "specialkeywords" -> {}, 
     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
@@ -254,29 +246,29 @@ Cell[2525, 67, 434, 13, 70, "Usage",
 Cell[CellGroupData[{
 Cell[2984, 84, 609, 18, 70, "NotesSection",
  CellGroupingRules->{"SectionGrouping", 50},
- CellID->946355267],
+ CellID->822718758],
 Cell[CellGroupData[{
 Cell[3618, 106, 465, 16, 70, "Notes",
  CellID->1067943069],
 Cell[4086, 124, 69, 1, 70, "Notes",
  CellID->13178],
-Cell[4158, 127, 694, 17, 70, "3ColumnTable",
+Cell[4158, 127, 434, 8, 70, "3ColumnTable",
  CellID->11156],
-Cell[4855, 146, 139, 4, 70, "Notes",
+Cell[4595, 137, 139, 4, 70, "Notes",
  CellID->44614052],
-Cell[4997, 152, 413, 9, 70, "Notes",
+Cell[4737, 143, 417, 10, 70, "Notes",
  CellID->53933009]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[5459, 167, 448, 13, 70, "TutorialsSection",
+Cell[5203, 159, 448, 13, 70, "TutorialsSection",
  CellID->250839057],
-Cell[5910, 182, 166, 4, 70, "RelatedDemonstrations",
+Cell[5654, 174, 166, 4, 70, "RelatedDemonstrations",
  CellID->618224417],
-Cell[6079, 188, 169, 4, 70, "RelatedDemonstrations",
+Cell[5823, 180, 169, 4, 70, "RelatedDemonstrations",
  CellID->971892333]
 }, Open  ]],
-Cell[6263, 195, 23, 0, 70, "FooterCell"]
+Cell[6007, 187, 23, 0, 70, "FooterCell"]
 }
 ]
 *)

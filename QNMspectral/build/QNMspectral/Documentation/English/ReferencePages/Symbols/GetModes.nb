@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     14375,        458]
+NotebookDataLength[     14374,        458]
 NotebookOptionsPosition[     10752,        349]
-NotebookOutlinePosition[     12922,        407]
-CellTagsIndexPosition[     12837,        402]
+NotebookOutlinePosition[     12921,        407]
+CellTagsIndexPosition[     12836,        402]
 WindowTitle->GetModes - Wolfram Mathematica
 WindowFrame->Normal*)
 
@@ -128,7 +128,7 @@ Cell[TextData[Cell[BoxData[
   Method->"Preemptive"]]]], "NotesSection",
  WholeCellGroupOpener->True,
  CellGroupingRules->{"SectionGrouping", 50},
- CellID->1802191130],
+ CellID->1688152849],
 
 Cell[CellGroupData[{
 
@@ -243,7 +243,7 @@ Cell[TextData[ButtonBox["EXAMPLES",
      CellContents]}]& )]], "PrimaryExamplesSection",
  WholeCellGroupOpener->True,
  CellTags->"PrimaryExamplesSection",
- CellID->1316964622],
+ CellID->230988979],
 
 Cell[CellGroupData[{
 
@@ -253,7 +253,7 @@ Cell[TextData[{
  Cell["(1)", "ExampleCount"]
 }], "ExampleSection", "ExampleSection",
  WholeCellGroupOpener->True,
- CellID->110452325],
+ CellID->1728819924],
 
 Cell[BoxData[
  RowBox[{"Needs", "[", "\"\<QNMspectral`\>\"", "]"}]], "Input",
@@ -361,7 +361,7 @@ TaggingRules->{
          BaseStyle -> {"Link", "DockedLinkTrail"}], 
         Cell[">", "DockedLinkTrailSeparator"]}]}}, ColumnAlignments -> Left], 
   "Metadata" -> {
-   "built" -> "{2016, 10, 11, 17, 12, 18.963916}", 
+   "built" -> "{2016, 10, 11, 21, 29, 25.072569}", 
     "history" -> {"1.0", "", "", ""}, "context" -> "QNMspectral`", 
     "keywords" -> {}, "specialkeywords" -> {}, 
     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
@@ -394,9 +394,9 @@ StyleDefinitions->Notebook[{
 (*CellTagsOutline
 CellTagsIndex->{
  "PrimaryExamplesSection"->{
-  Cell[7431, 231, 491, 14, 70, "PrimaryExamplesSection",
+  Cell[7431, 231, 490, 14, 70, "PrimaryExamplesSection",
    CellTags->"PrimaryExamplesSection",
-   CellID->1316964622]}
+   CellID->230988979]}
  }
 *)
 (*CellTagsIndex
@@ -415,7 +415,7 @@ Cell[2519, 67, 1282, 41, 70, "Usage",
 Cell[CellGroupData[{
 Cell[3826, 112, 610, 18, 70, "NotesSection",
  CellGroupingRules->{"SectionGrouping", 50},
- CellID->1802191130],
+ CellID->1688152849],
 Cell[CellGroupData[{
 Cell[4461, 134, 360, 11, 70, "Notes",
  CellID->26053],
@@ -436,12 +436,12 @@ Cell[7097, 217, 285, 8, 70, "Notes",
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[7431, 231, 491, 14, 70, "PrimaryExamplesSection",
+Cell[7431, 231, 490, 14, 70, "PrimaryExamplesSection",
  CellTags->"PrimaryExamplesSection",
- CellID->1316964622],
+ CellID->230988979],
 Cell[CellGroupData[{
-Cell[7947, 249, 195, 6, 70, "ExampleSection",
- CellID->110452325],
+Cell[7946, 249, 196, 6, 70, "ExampleSection",
+ CellID->1728819924],
 Cell[8145, 257, 121, 3, 70, "Input",
  CellID->1970075317],
 Cell[8269, 262, 1449, 46, 70, "Input",

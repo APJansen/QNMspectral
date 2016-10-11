@@ -81,7 +81,7 @@ NumericalBackground::usage="Option for GetModes that allows to specify numerical
 
 
 (* ::Input::Initialization:: *)
-Protect@@{Horizon,Eigenfunctions,Method,NumericalBackground,SweepGrid,Parallel,Plot,Quiet,Cutoff,NModes,Precision,FunctionNumber,Rescale,RealCutoff,FrequencySign,tMax,GridPoint,Rescale,RescaleFrequency,Name,Conjugates};
+Protect@@{Horizon,Eigenfunctions,Method,NumericalBackground,SweepGrid,Parallel,Plot,Quiet,Cutoff,NModes,Precision,FunctionNumber,Rescale,RealCutoff,FrequencySign,tMax,GridPoint,Rescale,RescaleFrequency,Name,ConjugateCutoff};
 
 
 (* ::Input::Initialization:: *)
@@ -425,14 +425,14 @@ nrtostring[nr_]:=ToString[nr,TraditionalForm];
 
 
 (* ::Input::Initialization:: *)
-Options[MakeTable]={NModes->All,Precision->10,Name->"\!\(\*SubscriptBox[\(\[Omega]\), \(n\)]\)",Conjugates->(Abs[Im[#1]-Im[#2]]<10^-3&)};
+Options[MakeTable]={NModes->All,Precision->10,Name->"\!\(\*SubscriptBox[\(\[Omega]\), \(n\)]\)",ConjugateCutoff->3};
 
-MakeTable[modes_,OptionsPattern[]]:=Block[{n=OptionValue[NModes]/.All->-1,prec=OptionValue[Precision],\[Omega]=OptionValue[Name],
-conjQ=OptionValue[Conjugates]/.False->(False&),freqs},
+MakeTable[modes_,OptionsPattern[]]:=Block[{n=OptionValue[NModes]/.All->-1,prec=OptionValue[Precision],\[Omega]=OptionValue[Name],conjCutoff=OptionValue[ConjugateCutoff],
+conjQ,freqs},
 
 If[n>Length[modes],Message[MakeTable::nmodes,n,n=Length[modes]]];
 catchError[If[Not@StringQ@\[Omega],throwError[MakeTable::name]],Block];
-catchError[If[Not[Head[conjQ]==Function&&Not[FreeQ[conjQ,Slot[2]]]||conjQ==(False&)],throwError[MakeTable::conjugates]],Block];
+catchError[conjQ=If[NumericQ@conjCutoff,(Abs[Im[#1]-Im[#2]]<10^-conjCutoff||N[Abs[Im[#1]-Im[#2]]]==0.&),throwError[MakeTable::conjugates]],Block];
 
 freqs=modes[[1;;n]]//If[Length[modes[[1]]]==0,#,#[[All,1]]]&;
 
@@ -449,7 +449,7 @@ setPrec=If[prec==\[Infinity]//TrueQ,#&,N[#,   Min[Precision[#],prec]      ]&]},
 (* ::Input::Initialization:: *)
 MakeTable::nmodes="There are not as many modes as `1`, showing all `2` instead.";
 MakeTable::name="The name should be a string.";
-MakeTable::conjugates="Conjugates should be a (pure) function of two variables.";
+MakeTable::conjugateCutoff="Option ConjugateCutoff should be a number.";
 
 
 (* ::Input::Initialization:: *)
