@@ -12,7 +12,7 @@ Mathematica 10 or later is required for this package to work.
 
 ### Installing
 
-1. If you haven’t already dowloaded it, click ‘Clone or download’ on the top right.
+1. If you haven’t already dowloaded it, click ‘Clone or download’ on the top right, and choose `download ZIP`.
 
 2. Now go to the ‘package’ folder and copy the ‘QNMspectral’ folder located there.
 
