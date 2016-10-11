@@ -58,5 +58,6 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 #### Backwards compatibility
 
 For anyone who has used the pre-github version, there are two changes you have to make to any old code to make it compatible with the current version:
+
 1. Remove all quotation marks from option names (not from their values)
 2. Add a $-sign to any use of QNMMemory and QNMQuiet.
