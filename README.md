@@ -64,3 +64,6 @@ For anyone who has used the pre-github version, there are two changes you have t
 
 1. Remove all quotation marks from option names (not from their values)
 2. Add a $-sign to any use of QNMMemory and QNMQuiet.
+
+
+[![Analytics](https://ga-beacon.appspot.com/UA-46899860-1/chromeskel_a/readme?pixel)](https://github.com/igrigorik/ga-beacon)
