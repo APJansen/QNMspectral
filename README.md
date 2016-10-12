@@ -14,7 +14,7 @@ Mathematica 10 or later is required for this package to work.
 
 1. If you haven’t already dowloaded it, click ‘Clone or download’ on the top right, and choose `download ZIP`.
 
-2. Now go to the ‘package’ folder and copy the ‘QNMspectral’ folder located there.
+2. Now copy the ‘QNMspectral’ folder.
 
 3. Paste this folder into the folder 'Applications' located in the Mathematica user base directory. 
    To find the location of this user base directory, open a Mathematica notebook and evaluate ‘$UserBaseDirectory’
@@ -36,7 +36,7 @@ Alternatively, there is a notebook with examples in the same folder, titled ‘Q
 
 If you wish to contribute to the package, for example by fixing a bug or even adding a feature, you are welcome to do so.
 
-The source code is located in the QNMspectral folder (not in package/QNMspectral). 
+The source code is located in the code/QNMspectral folder. 
 This can be used with Wolfram Workbench to create the package with documentation included.
 The actual code is QNMspectral.m, which is created from QNMspectral.nb.
 
