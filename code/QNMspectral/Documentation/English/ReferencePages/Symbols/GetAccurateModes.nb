@@ -10,11 +10,11 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      8944,        268]
-NotebookOptionsPosition[      6192,        188]
-NotebookOutlinePosition[      8072,        237]
-CellTagsIndexPosition[      8029,        234]
-WindowTitle->PlotEigenfunctions - Wolfram Mathematica
+NotebookDataLength[     10232,        319]
+NotebookOptionsPosition[      7360,        238]
+NotebookOutlinePosition[      9417,        290]
+CellTagsIndexPosition[      9374,        287]
+WindowTitle->GetAccurateModes - Wolfram Mathematica
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -23,12 +23,12 @@ Cell[BoxData[GridBox[{
    {Cell["Q N MSPECTRAL SYMBOL", "PacletNameCell"], Cell[TextData[Cell[BoxData[
      ActionMenuBox[
       FrameBox["\<\"URL \[RightGuillemet]\"\>",
-       StripOnInput->False], {"\<\"QNMspectral/ref/PlotEigenfunctions\"\>":>
+       StripOnInput->False], {"\<\"QNMspectral/ref/GetAccurateModes\"\>":>
       None, "\<\"Copy Mathematica url\"\>":>
       Module[{DocumentationSearch`Private`nb$}, 
        DocumentationSearch`Private`nb$ = NotebookPut[
           Notebook[{
-            Cell["QNMspectral/ref/PlotEigenfunctions"]}, Visible -> False]]; 
+            Cell["QNMspectral/ref/GetAccurateModes"]}, Visible -> False]]; 
        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
@@ -41,7 +41,7 @@ Cell[BoxData[GridBox[{
               MakeBoxes[
                Hyperlink[
                "http://reference.wolfram.com/mathematica/QNMspectral/ref/\
-PlotEigenfunctions.html"], StandardForm]], "Input", TextClipboardType -> 
+GetAccurateModes.html"], StandardForm]], "Input", TextClipboardType -> 
              "PlainText"]}, Visible -> False]]; 
        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
@@ -51,7 +51,7 @@ PlotEigenfunctions.html"], StandardForm]], "Input", TextClipboardType ->
           URL[
            StringJoin[
            "http://reference.wolfram.com/mathematica/", 
-            "QNMspectral/ref/PlotEigenfunctions", ".html"]], None}]}]},
+            "QNMspectral/ref/GetAccurateModes", ".html"]], None}]}]},
       Appearance->None,
       MenuAppearance->Automatic]],
      LineSpacing->{1.4, 0}]], "AnchorBar"]}
@@ -62,22 +62,53 @@ PlotEigenfunctions.html"], StandardForm]], "Input", TextClipboardType ->
    "RowsIndexed" -> {}}},
  CellID->1],
 
-Cell["PlotEigenfunctions", "ObjectName",
+Cell["GetAccurateModes", "ObjectName",
  CellID->1224892054],
 
 Cell[BoxData[GridBox[{
    {"", Cell[TextData[{
      Cell[BoxData[
-      RowBox[{"PlotEigenfunctions", "[", 
-       StyleBox["modes",
-        FontSlant->"Italic"], "]"}]], "InlineFormula"],
-     " \[LineSeparator]plots the eigenfunctions contained in ",
+      RowBox[{"GetAccurateModes", "[", 
+       RowBox[{
+        StyleBox["equation",
+         FontSlant->"Italic"], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          StyleBox["N1",
+           FontSlant->"Italic"], ",", 
+          StyleBox["prec1",
+           FontSlant->"Italic"]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{
+          StyleBox["N2",
+           FontSlant->"Italic"], ",", 
+          StyleBox["prec2",
+           FontSlant->"Italic"]}], "}"}]}], "]"}]], "InlineFormula"],
+     " \[LineSeparator]computes the quasinormal mode spectrum using ",
      Cell[BoxData[
-      StyleBox["modes",
-       FontSlant->"Italic"]], "InlineFormula"],
-     "."
+      ButtonBox["GetModes",
+       BaseStyle->"Link",
+       ButtonData->"paclet:QNMspectral/ref/GetModes"]], "InlineFormula"],
+     " with two different grid sizes and precisions specified by ",
+     Cell[BoxData[
+      RowBox[{"{", 
+       RowBox[{
+        StyleBox["N1",
+         FontSlant->"Italic"], ",", 
+        StyleBox["prec1",
+         FontSlant->"Italic"]}], "}"}]], "InlineFormula"],
+     " and ",
+     Cell[BoxData[
+      RowBox[{"{", 
+       RowBox[{
+        StyleBox["N2",
+         FontSlant->"Italic"], ",", 
+        StyleBox["prec2",
+         FontSlant->"Italic"]}], "}"}]], "InlineFormula"],
+     " returning only those digits which are the same for both."
     }]]}
   }]], "Usage",
+ Deletable->True,
  GridBoxOptions->{
  GridBoxBackground->{
   "Columns" -> {{None}}, "ColumnsIndexed" -> {}, "Rows" -> {{None}}, 
@@ -104,48 +135,67 @@ Cell[TextData[Cell[BoxData[
   Method->"Preemptive"]]]], "NotesSection",
  WholeCellGroupOpener->True,
  CellGroupingRules->{"SectionGrouping", 50},
- CellID->211788287],
+ CellID->522331031],
 
 Cell[CellGroupData[{
 
-Cell["The following options can be given: ", "Notes",
+Cell["The following option can be given: ", "Notes",
  CellID->13178],
 
 Cell[BoxData[GridBox[{
-   {"NModes", "All", Cell["how many eigenfunctions are plotted", "TableText"]},
-   {"FunctionNumber", "1", Cell["which functions to plot", "TableText"]},
-   {"Rescale", "0", Cell[
-    "multiplies function by a set power of the radial variable", "TableText"]},
-   {"Conjugates", 
-    RowBox[{"(", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"#", "\[LeftDoubleBracket]", 
-        RowBox[{"-", "3"}], "\[RightDoubleBracket]"}], ">", "0"}], "&"}], 
-     ")"}], Cell["selects which imaginary parts to plot", "TableText"]}
+   {"Cutoff", "1", Cell[TextData[{
+     "keeps only modes whose difference is smaller than ",
+     Cell[BoxData[
+      SuperscriptBox["10", 
+       RowBox[{"-", "Cutoff"}]]], "InlineFormula"]
+    }], "TableText"]}
   }]], "3ColumnTable",
  CellID->11156],
 
-Cell["\<\
-The option FunctionNumber is used in the case of a coupled system of \
-equations, to select which of these is plotted.\
-\>", "Notes",
- CellID->607111036],
+Cell[TextData[{
+ "Options to use in ",
+ Cell[BoxData[
+  ButtonBox["GetModes",
+   BaseStyle->"Link",
+   ButtonData->"paclet:QNMspectral/ref/GetModes"]], "InlineFormula"],
+ " are given as ",
+ Cell[BoxData[
+  RowBox[{"GetAccurateModes", "[", 
+   RowBox[{
+    StyleBox["equation",
+     FontSlant->"Italic"], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      StyleBox["N1",
+       FontSlant->"Italic"], ",", 
+      StyleBox["prec1",
+       FontSlant->"Italic"], ",", 
+      StyleBox["opts1",
+       FontSlant->"Italic"]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{
+      StyleBox["N2",
+       FontSlant->"Italic"], ",", 
+      StyleBox["prec2",
+       FontSlant->"Italic"], ",", 
+      StyleBox["opts2",
+       FontSlant->"Italic"]}], "}"}], ",", 
+    StyleBox["opts",
+     FontSlant->"Italic"]}], "]"}]], "InlineFormula"],
+ " where ",
+ Cell[BoxData["opts1"], "InlineFormula"],
+ " and ",
+ Cell[BoxData["opts2"], "InlineFormula"],
+ " will override the global ",
+ Cell[BoxData[
+  RowBox[{"opts", Cell["", "InlineFormula"]}]], "InlineFormula"],
+ ", which is particularly useful when using the method \"Sweep\", allowing to \
+sweep two different grids."
+}], "Notes",
+ CellID->1808402586],
 
-Cell["\<\
-Usually the perturbation is real, and so the eigenfunctions come in conjugate \
-pairs. To avoid plotting both, by default we select only those imaginary \
-parts which are positive near the boundary. This can be changed by the option \
-Conjugates, in particular setting it to False will plot everything.\
-\>", "Notes",
- CellID->1604986219],
-
-Cell["\<\
-Note that we do not explicitly add the conjugates, so in order not to miss \
-the positive imaginary parts of the eigenfunctions we recommend taking an \
-even number of modes.\
-\>", "Notes",
- CellID->902627705]
+Cell["", "Notes",
+ CellID->486206911]
 }, Open  ]]
 }, Closed]],
 
@@ -172,11 +222,11 @@ Cell[TextData[ButtonBox["Introduction",
   "paclet:QNMspectral/tutorial/Introduction"]], "RelatedDemonstrations",
  CellID->618224417],
 
-Cell[TextData[ButtonBox["Extensions",
+Cell[TextData[ButtonBox["Simple Example",
  BaseStyle->"Link",
  ButtonData->
-  "paclet:QNMspectral/tutorial/Extensions"]], "RelatedDemonstrations",
- CellID->1734708405],
+  "paclet:QNMspectral/tutorial/SimpleExample"]], "RelatedDemonstrations",
+ CellID->971892333],
 
 Cell[TextData[ButtonBox["Method",
  BaseStyle->"Link",
@@ -190,7 +240,7 @@ Saveable->False,
 ScreenStyleEnvironment->"Working",
 WindowSize->{725, 750},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
-WindowTitle->"PlotEigenfunctions - Wolfram Mathematica",
+WindowTitle->"GetAccurateModes - Wolfram Mathematica",
 TaggingRules->{
  "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
   GridBox[{{
@@ -200,16 +250,19 @@ TaggingRules->{
          BaseStyle -> {"Link", "DockedLinkTrail"}], 
         Cell[">", "DockedLinkTrailSeparator"]}]}}, ColumnAlignments -> Left], 
   "Metadata" -> {
-   "built" -> "{2016, 10, 11, 21, 42, 48.120674}", 
+   "built" -> "{2016, 10, 11, 12, 16, 13.306546}", 
     "history" -> {"0.0", "", "", ""}, "context" -> "QNMspectral`", 
     "keywords" -> {}, "specialkeywords" -> {}, 
     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
     "Q N Mspectral Symbol", "language" -> "en", "paclet" -> "QNMspectral", 
     "status" -> "None", "summary" -> 
-    "PlotEigenfunctions[modes] plots the eigenfunctions contained in modes.", 
-    "synonyms" -> {}, "title" -> "PlotEigenfunctions", "titlemodifier" -> "", 
-    "windowtitle" -> "PlotEigenfunctions", "type" -> "Symbol", "uri" -> 
-    "QNMspectral/ref/PlotEigenfunctions"}, "SearchTextTranslated" -> ""},
+    "GetAccurateModes[equation, {N1, prec1}, {N2, prec2}] computes the \
+quasinormal mode spectrum using GetModes with two different grid sizes and \
+precisions specified by {N1, prec1} and {N2, prec2} returning only those \
+digits which are the same for both.", "synonyms" -> {}, "title" -> 
+    "GetAccurateModes", "titlemodifier" -> "", "windowtitle" -> 
+    "GetAccurateModes", "type" -> "Symbol", "uri" -> 
+    "QNMspectral/ref/GetAccurateModes"}, "SearchTextTranslated" -> ""},
 CellContext->"Global`",
 FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
 2013)",
@@ -236,40 +289,38 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[611, 21, 1903, 41, 70, "AnchorBarGrid",
+Cell[609, 21, 1895, 41, 70, "AnchorBarGrid",
  CellID->1],
-Cell[2517, 64, 61, 1, 70, "ObjectName",
+Cell[2507, 64, 59, 1, 70, "ObjectName",
  CellID->1224892054],
-Cell[2581, 67, 534, 17, 70, "Usage",
+Cell[2569, 67, 1534, 48, 70, "Usage",
  CellID->982511436],
 Cell[CellGroupData[{
-Cell[3140, 88, 609, 18, 70, "NotesSection",
+Cell[4128, 119, 609, 18, 70, "NotesSection",
  CellGroupingRules->{"SectionGrouping", 50},
- CellID->211788287],
+ CellID->522331031],
 Cell[CellGroupData[{
-Cell[3774, 110, 69, 1, 70, "Notes",
+Cell[4762, 141, 68, 1, 70, "Notes",
  CellID->13178],
-Cell[3846, 113, 579, 13, 70, "3ColumnTable",
+Cell[4833, 144, 275, 8, 70, "3ColumnTable",
  CellID->11156],
-Cell[4428, 128, 163, 4, 70, "Notes",
- CellID->607111036],
-Cell[4594, 134, 348, 6, 70, "Notes",
- CellID->1604986219],
-Cell[4945, 142, 219, 5, 70, "Notes",
- CellID->902627705]
+Cell[5111, 154, 1175, 40, 70, "Notes",
+ CellID->1808402586],
+Cell[6289, 196, 37, 1, 70, "Notes",
+ CellID->486206911]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[5213, 153, 448, 13, 70, "TutorialsSection",
+Cell[6375, 203, 448, 13, 70, "TutorialsSection",
  CellID->250839057],
-Cell[5664, 168, 166, 4, 70, "RelatedDemonstrations",
+Cell[6826, 218, 166, 4, 70, "RelatedDemonstrations",
  CellID->618224417],
-Cell[5833, 174, 163, 4, 70, "RelatedDemonstrations",
- CellID->1734708405],
-Cell[5999, 180, 151, 3, 70, "RelatedDemonstrations",
+Cell[6995, 224, 169, 4, 70, "RelatedDemonstrations",
+ CellID->971892333],
+Cell[7167, 230, 151, 3, 70, "RelatedDemonstrations",
  CellID->833821649]
 }, Open  ]],
-Cell[6165, 186, 23, 0, 70, "FooterCell"]
+Cell[7333, 236, 23, 0, 70, "FooterCell"]
 }
 ]
 *)

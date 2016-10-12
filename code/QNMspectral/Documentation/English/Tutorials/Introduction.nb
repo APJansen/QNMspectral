@@ -148,10 +148,10 @@ Cell[TextData[{
  Cell[BoxData[
   FormBox[
    RowBox[{
-    RowBox[{"\[Delta]\[Phi]", "(", " ", "t", ")"}], "=", 
+    RowBox[{"\[Delta]\[Phi]", " ", "t"}], "=", 
     SuperscriptBox["e", 
      RowBox[{
-      RowBox[{"-", "i"}], " ", "\[Omega]", " ", "t"}]]}], TraditionalForm]], 
+      RowBox[{"-", "i"}], " ", "t", " ", "\[Omega]"}]]}], TraditionalForm]], 
   "InlineMath"],
  ". These are further required to be ingoing at the horizon and normalizable \
 at the boundary. These two boundary conditions admit solutions only for a \
@@ -231,10 +231,10 @@ versions of this package and helping me fix the occasional bugs and other \
 improvements, and U. Gursoy, J. M. Magan and S. Vandoren for collaborations \
 on different projects during which this package was used and developed. I \
 further want to thank N. Kaplis for tips on efficiently sweeping the complex \
-plane, M. Ammon for a suggestion on how to treat higher powers of the \
-frequency, O. Dias for interesting discussions on using the Newton-Raphson \
-method, and J. Harris for comments on the code, and the suggestion to write \
-this documentation."
+plane, Martin Ammon for a suggestion on how to treat higher powers of the \
+frequency, Oscar Dias for interesting discussions on using the Newton-Raphson \
+method, and Jason Harris for comments on the code, and the suggestion to \
+write this documentation."
 }], "Text",
  CellID->677148683]
 }, Open  ]],
@@ -477,7 +477,7 @@ TaggingRules->{
          BaseStyle -> {"Link", "DockedLinkTrail"}], 
         Cell[">", "DockedLinkTrailSeparator"]}]}}, ColumnAlignments -> Left], 
   "Metadata" -> {
-   "built" -> "{2016, 10, 11, 21, 42, 59.632779}", 
+   "built" -> "{2016, 10, 11, 12, 16, 28.726459}", 
     "history" -> {"0.0", "", "", ""}, "context" -> "QNMspectral`", 
     "keywords" -> {}, "specialkeywords" -> {}, 
     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
@@ -555,21 +555,21 @@ Cell[4069, 129, 235, 5, 70, "Text",
 Cell[CellGroupData[{
 Cell[4341, 139, 57, 1, 70, "Section",
  CellID->1797413958],
-Cell[4401, 142, 971, 27, 70, "Text",
+Cell[4401, 142, 961, 27, 70, "Text",
  CellID->1282883017],
-Cell[5375, 171, 148, 4, 70, "Text",
+Cell[5365, 171, 148, 4, 70, "Text",
  CellID->1449877470],
-Cell[5526, 177, 290, 6, 70, "Text",
+Cell[5516, 177, 290, 6, 70, "Text",
  CellID->1852568906],
-Cell[5819, 185, 382, 10, 70, "Text",
+Cell[5809, 185, 382, 10, 70, "Text",
  CellID->1877588382],
-Cell[6204, 197, 345, 13, 70, "Text",
+Cell[6194, 197, 345, 13, 70, "Text",
  CellID->331515170]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6586, 215, 56, 1, 70, "Section",
+Cell[6576, 215, 56, 1, 70, "Section",
  CellID->2056750608],
-Cell[6645, 218, 1059, 20, 70, "Text",
+Cell[6635, 218, 1069, 20, 70, "Text",
  CellID->677148683]
 }, Open  ]],
 Cell[7719, 241, 48, 1, 70, "Section",

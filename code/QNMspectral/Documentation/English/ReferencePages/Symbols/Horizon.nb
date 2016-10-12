@@ -10,11 +10,11 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      4926,        138]
-NotebookOptionsPosition[      3009,         85]
-NotebookOutlinePosition[      4847,        134]
-CellTagsIndexPosition[      4804,        131]
-WindowTitle->$QNMMemory - Wolfram Mathematica
+NotebookDataLength[      4733,        134]
+NotebookOptionsPosition[      2878,         82]
+NotebookOutlinePosition[      4654,        130]
+CellTagsIndexPosition[      4611,        127]
+WindowTitle->Horizon - Wolfram Mathematica
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -23,12 +23,12 @@ Cell[BoxData[GridBox[{
    {Cell["Q N MSPECTRAL SYMBOL", "PacletNameCell"], Cell[TextData[Cell[BoxData[
      ActionMenuBox[
       FrameBox["\<\"URL \[RightGuillemet]\"\>",
-       StripOnInput->False], {"\<\"QNMspectral/ref/$QNMMemory\"\>":>
+       StripOnInput->False], {"\<\"QNMspectral/ref/Horizon\"\>":>
       None, "\<\"Copy Mathematica url\"\>":>
       Module[{DocumentationSearch`Private`nb$}, 
        DocumentationSearch`Private`nb$ = NotebookPut[
           Notebook[{
-            Cell["QNMspectral/ref/$QNMMemory"]}, Visible -> False]]; 
+            Cell["QNMspectral/ref/Horizon"]}, Visible -> False]]; 
        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
        NotebookClose[DocumentationSearch`Private`nb$]; Null], 
@@ -40,9 +40,9 @@ Cell[BoxData[GridBox[{
              BoxData[
               MakeBoxes[
                Hyperlink[
-               "http://reference.wolfram.com/mathematica/QNMspectral/ref/$\
-QNMMemory.html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]},
-            Visible -> False]]; 
+               "http://reference.wolfram.com/mathematica/QNMspectral/ref/\
+Horizon.html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]}, 
+           Visible -> False]]; 
        SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
        FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
        NotebookClose[DocumentationSearch`Private`nb$]; 
@@ -51,7 +51,7 @@ QNMMemory.html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]},
           URL[
            StringJoin[
            "http://reference.wolfram.com/mathematica/", 
-            "QNMspectral/ref/$QNMMemory", ".html"]], None}]}]},
+            "QNMspectral/ref/Horizon", ".html"]], None}]}]},
       Appearance->None,
       MenuAppearance->Automatic]],
      LineSpacing->{1.4, 0}]], "AnchorBar"]}
@@ -62,17 +62,14 @@ QNMMemory.html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]},
    "RowsIndexed" -> {}}},
  CellID->1],
 
-Cell["$QNMMemory", "ObjectName",
+Cell["Horizon", "ObjectName",
  CellID->1224892054],
 
 Cell[BoxData[GridBox[{
    {"", Cell[TextData[{
-     Cell[BoxData["$QNMMemory"], "InlineFormula"],
-     " \[LineSeparator]controls whether ",
      Cell[BoxData[
-      StyleBox["GetModes",
-       FontSlant->"Italic"]], "InlineFormula"],
-     " stores computed values."
+      RowBox[{"Horizon", "[", "]"}]], "InlineFormula"],
+     " \[LineSeparator]Horizon"
     }]]}
   }]], "Usage",
  GridBoxOptions->{
@@ -87,7 +84,7 @@ Saveable->False,
 ScreenStyleEnvironment->"Working",
 WindowSize->{725, 750},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
-WindowTitle->"$QNMMemory - Wolfram Mathematica",
+WindowTitle->"Horizon - Wolfram Mathematica",
 TaggingRules->{
  "ModificationHighlight" -> False, "ColorType" -> "SymbolColor", "LinkTrails" -> 
   GridBox[{{
@@ -97,16 +94,15 @@ TaggingRules->{
          BaseStyle -> {"Link", "DockedLinkTrail"}], 
         Cell[">", "DockedLinkTrailSeparator"]}]}}, ColumnAlignments -> Left], 
   "Metadata" -> {
-   "built" -> "{2016, 10, 11, 21, 42, 54.896690}", 
-    "history" -> {"0.0", "", "", ""}, "context" -> "QNMspectral`", 
+   "built" -> "{2016, 10, 11, 12, 16, 16.352158}", 
+    "history" -> {"1.1", "", "", ""}, "context" -> "QNMspectral`", 
     "keywords" -> {}, "specialkeywords" -> {}, 
     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
     "Q N Mspectral Symbol", "language" -> "en", "paclet" -> "QNMspectral", 
-    "status" -> "None", "summary" -> 
-    "$QNMMemory controls whether GetModes stores computed values.", 
-    "synonyms" -> {}, "title" -> "$QNMMemory", "titlemodifier" -> "", 
-    "windowtitle" -> "$QNMMemory", "type" -> "Symbol", "uri" -> 
-    "QNMspectral/ref/$QNMMemory"}, "SearchTextTranslated" -> ""},
+    "status" -> "None", "summary" -> "Horizon[] Horizon", "synonyms" -> {}, 
+    "title" -> "Horizon", "titlemodifier" -> "", "windowtitle" -> "Horizon", 
+    "type" -> "Symbol", "uri" -> "QNMspectral/ref/Horizon"}, 
+  "SearchTextTranslated" -> ""},
 CellContext->"Global`",
 FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
 2013)",
@@ -133,13 +129,13 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[603, 21, 1869, 41, 70, "AnchorBarGrid",
+Cell[600, 21, 1857, 41, 70, "AnchorBarGrid",
  CellID->1],
-Cell[2475, 64, 53, 1, 70, "ObjectName",
+Cell[2460, 64, 50, 1, 70, "ObjectName",
  CellID->1224892054],
-Cell[2531, 67, 448, 14, 70, "Usage",
+Cell[2513, 67, 335, 11, 70, "Usage",
  CellID->982511436],
-Cell[2982, 83, 23, 0, 70, "FooterCell"]
+Cell[2851, 80, 23, 0, 70, "FooterCell"]
 }
 ]
 *)
