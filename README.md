@@ -49,9 +49,9 @@ Aron Jansen
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Changes with respect to pre-github version
+### Changes with respect to pre-github version
 
-### Summary of changes with respect to the pre-github version
+#### Summary of changes with respect to the pre-github version
 
 1. Added Mathematica-style documentation, with an information page for each function, and some tutorials.
 2. Some significant speed improvements (most notable with machine precision and small grids, with around a factor 6 speedup)
@@ -59,7 +59,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 4. To more closely match Mathematica’s conventions, removed quotation marks from all option names, and added $ sign to global option variables ($QNMMemory and $QNMQuiet)
 5. Restructured most of the code, to make it more readable and more modular
 
-#### Backwards compatibility
+##### Backwards compatibility
 
 For anyone who has used the pre-github version, there are two changes you have to make to any old code to make it compatible with the current version:
 
