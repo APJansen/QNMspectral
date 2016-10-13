@@ -81,7 +81,7 @@ NumericalBackground::usage="Option for GetModes that allows to specify numerical
 
 
 (* ::Input::Initialization:: *)
-Protect@@{Horizon,Eigenfunctions,Method,NumericalBackground,SweepGrid,Parallel,Plot,Quiet,Cutoff,NModes,Precision,FunctionNumber,Rescale,RealCutoff,FrequencySign,tMax,GridPoint,Rescale,RescaleFrequency,Name,ConjugateCutoff};
+Protect@@{Horizon,Eigenfunctions,Method,NumericalBackground,SweepGrid,Parallel,Plot,Quiet,Cutoff,NModes,Precision,FunctionNumber,Rescale,RealCutoff,FrequencySign,tMax,GridPoint,Rescale,RescaleFrequency,Name,Conjugates,ConjugateCutoff};
 
 
 (* ::Input::Initialization:: *)
@@ -469,9 +469,9 @@ eigenfunctionsQ[modes_]:=Length[Dimensions@modes]==2
 
 
 (* ::Input::Initialization:: *)
-Options[PlotEigenfunctions]={NModes->All,FunctionNumber->1,Rescale->0,Conjugates ->(#[[-3]]>0&)};
+Options[PlotEigenfunctions]={NModes->All,FunctionNumber->1,Rescale->0,Conjugates ->(#[[-3]]<0&)};
 
-PlotEigenfunctions[modes_,opts : OptionsPattern[{PlotEigenfunctions,Plot}]]:=Block[{n=OptionValue[NModes]/.All->Length[modes],fn=OptionValue[FunctionNumber],resc=OptionValue[Rescale],conjQ=OptionValue[Conjugates]/.False->(True&),eigenfcts,grid,fRe,fIm,hor,fname},
+PlotEigenfunctions[modes_,opts : OptionsPattern[{PlotEigenfunctions,Plot}]]:=Block[{n=OptionValue[NModes]/.All->Length[modes],fn=OptionValue[FunctionNumber],resc=OptionValue[Rescale],conjQ=OptionValue[Conjugates]/.False->(False&),eigenfcts,grid,fRe,fIm,hor,fname},
 
 If[n>Length[modes],Message[PlotEigenfunctions::nmodes,n,n=Length[modes]]];
 catchError[If[Not@eigenfunctionsQ[modes],throwError[PlotEigenfunctions::efcomputed]],Block];
@@ -482,7 +482,7 @@ eigenfcts=If[resc==0,1,(grid/hor)^resc] #&/@ modes[[1;;n,2,fn,All,2]];
 fRe=eigenfcts//Re;
 fIm=eigenfcts//Im;
 
-fIm=Select[fIm,conjQ];
+fIm=DeleteCases[fIm,x_/;conjQ[x]];
 
 fRe=Transpose[{grid,#}]&/@fRe;
 fIm=Transpose[{grid,#}]&/@fIm;

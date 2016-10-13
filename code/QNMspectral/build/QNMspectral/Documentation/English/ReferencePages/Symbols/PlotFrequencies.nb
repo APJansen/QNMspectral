@@ -10,8 +10,8 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      8575,        265]
-NotebookOptionsPosition[      5922,        188]
+NotebookDataLength[      8576,        265]
+NotebookOptionsPosition[      5923,        188]
 NotebookOutlinePosition[      7824,        238]
 CellTagsIndexPosition[      7781,        235]
 WindowTitle->PlotFrequencies - Wolfram Mathematica
@@ -104,7 +104,7 @@ Cell[TextData[Cell[BoxData[
   Method->"Preemptive"]]]], "NotesSection",
  WholeCellGroupOpener->True,
  CellGroupingRules->{"SectionGrouping", 50},
- CellID->460608550],
+ CellID->1541449245],
 
 Cell[CellGroupData[{
 
@@ -200,7 +200,7 @@ TaggingRules->{
          BaseStyle -> {"Link", "DockedLinkTrail"}], 
         Cell[">", "DockedLinkTrailSeparator"]}]}}, ColumnAlignments -> Left], 
   "Metadata" -> {
-   "built" -> "{2016, 10, 11, 21, 29, 33.616466}", 
+   "built" -> "{2016, 10, 13, 16, 1, 52.496944}", 
     "history" -> {"0.0", "", "", ""}, "context" -> "QNMspectral`", 
     "keywords" -> {}, "specialkeywords" -> {}, 
     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
@@ -244,29 +244,29 @@ Cell[2502, 64, 58, 1, 70, "ObjectName",
 Cell[2563, 67, 566, 17, 70, "Usage",
  CellID->982511436],
 Cell[CellGroupData[{
-Cell[3154, 88, 609, 18, 70, "NotesSection",
+Cell[3154, 88, 610, 18, 70, "NotesSection",
  CellGroupingRules->{"SectionGrouping", 50},
- CellID->460608550],
+ CellID->1541449245],
 Cell[CellGroupData[{
-Cell[3788, 110, 465, 16, 70, "Notes",
+Cell[3789, 110, 465, 16, 70, "Notes",
  CellID->1067943069],
-Cell[4256, 128, 70, 1, 70, "Notes",
+Cell[4257, 128, 70, 1, 70, "Notes",
  CellID->733155441],
-Cell[4329, 131, 497, 11, 70, "3ColumnTableMod",
+Cell[4330, 131, 497, 11, 70, "3ColumnTableMod",
  CellID->463527202],
-Cell[4829, 144, 213, 8, 70, "Notes",
+Cell[4830, 144, 213, 8, 70, "Notes",
  CellID->693775915]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[5091, 158, 448, 13, 70, "TutorialsSection",
+Cell[5092, 158, 448, 13, 70, "TutorialsSection",
  CellID->250839057],
-Cell[5542, 173, 166, 4, 70, "RelatedDemonstrations",
+Cell[5543, 173, 166, 4, 70, "RelatedDemonstrations",
  CellID->618224417],
-Cell[5711, 179, 169, 4, 70, "RelatedDemonstrations",
+Cell[5712, 179, 169, 4, 70, "RelatedDemonstrations",
  CellID->971892333]
 }, Open  ]],
-Cell[5895, 186, 23, 0, 70, "FooterCell"]
+Cell[5896, 186, 23, 0, 70, "FooterCell"]
 }
 ]
 *)

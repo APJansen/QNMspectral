@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[    112239,       2659]
+NotebookDataLength[    112238,       2659]
 NotebookOptionsPosition[    103985,       2392]
-NotebookOutlinePosition[    106622,       2456]
-CellTagsIndexPosition[    106579,       2453]
+NotebookOutlinePosition[    106621,       2456]
+CellTagsIndexPosition[    106578,       2453]
 WindowTitle->Method - Wolfram Mathematica
 WindowFrame->Normal*)
 
@@ -1815,7 +1815,7 @@ fhS0HfW3+wFf+9tRdghmf/vXBOpvt6P+dhQUP3KEfDIoKCgoKBBBtR0FBQXl
  ImageMargins->{{0, 0}, {0, 0}},
  ImageRegion->{{0, 1}, {0, 1}},
  CellLabel->"Out[221]=",
- CellID->2137476534]
+ CellID->1229544557]
 }, Open  ]]
 }, Open  ]],
 
@@ -2405,7 +2405,7 @@ TaggingRules->{
           BaseStyle -> {"Link", "DockedLinkTrail"}], FontSlant -> "Italic"], 
         Cell[">", "DockedLinkTrailSeparator"]}]}}, ColumnAlignments -> Left], 
   "Metadata" -> {
-   "built" -> "{2016, 10, 11, 21, 43, 1.153325}", 
+   "built" -> "{2016, 10, 13, 16, 2, 1.217475}", 
     "history" -> {"0.0", "", "", ""}, "context" -> "QNMspectral`", 
     "keywords" -> {}, "specialkeywords" -> {}, 
     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
@@ -2553,7 +2553,7 @@ Cell[CellGroupData[{
 Cell[18433, 628, 2132, 70, 70, "Input",
  CellID->1104739231],
 Cell[20568, 700, 67648, 1117, 70, "Output",
- CellID->2137476534]
+ CellID->1229544557]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{

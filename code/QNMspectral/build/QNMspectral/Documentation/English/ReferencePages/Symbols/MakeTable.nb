@@ -10,8 +10,8 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      8669,        267]
-NotebookOptionsPosition[      6034,        189]
+NotebookDataLength[      8670,        267]
+NotebookOptionsPosition[      6035,        189]
 NotebookOutlinePosition[      7873,        238]
 CellTagsIndexPosition[      7830,        235]
 WindowTitle->MakeTable - Wolfram Mathematica
@@ -100,7 +100,7 @@ Cell[TextData[Cell[BoxData[
   Method->"Preemptive"]]]], "NotesSection",
  WholeCellGroupOpener->True,
  CellGroupingRules->{"SectionGrouping", 50},
- CellID->822718758],
+ CellID->1291465899],
 
 Cell[CellGroupData[{
 
@@ -201,7 +201,7 @@ TaggingRules->{
          BaseStyle -> {"Link", "DockedLinkTrail"}], 
         Cell[">", "DockedLinkTrailSeparator"]}]}}, ColumnAlignments -> Left], 
   "Metadata" -> {
-   "built" -> "{2016, 10, 11, 21, 29, 29.091728}", 
+   "built" -> "{2016, 10, 13, 16, 1, 48.276556}", 
     "history" -> {"0.0", "", "", ""}, "context" -> "QNMspectral`", 
     "keywords" -> {}, "specialkeywords" -> {}, 
     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
@@ -244,31 +244,31 @@ Cell[2470, 64, 52, 1, 70, "ObjectName",
 Cell[2525, 67, 434, 13, 70, "Usage",
  CellID->982511436],
 Cell[CellGroupData[{
-Cell[2984, 84, 609, 18, 70, "NotesSection",
+Cell[2984, 84, 610, 18, 70, "NotesSection",
  CellGroupingRules->{"SectionGrouping", 50},
- CellID->822718758],
+ CellID->1291465899],
 Cell[CellGroupData[{
-Cell[3618, 106, 465, 16, 70, "Notes",
+Cell[3619, 106, 465, 16, 70, "Notes",
  CellID->1067943069],
-Cell[4086, 124, 69, 1, 70, "Notes",
+Cell[4087, 124, 69, 1, 70, "Notes",
  CellID->13178],
-Cell[4158, 127, 434, 8, 70, "3ColumnTable",
+Cell[4159, 127, 434, 8, 70, "3ColumnTable",
  CellID->11156],
-Cell[4595, 137, 139, 4, 70, "Notes",
+Cell[4596, 137, 139, 4, 70, "Notes",
  CellID->44614052],
-Cell[4737, 143, 417, 10, 70, "Notes",
+Cell[4738, 143, 417, 10, 70, "Notes",
  CellID->53933009]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[5203, 159, 448, 13, 70, "TutorialsSection",
+Cell[5204, 159, 448, 13, 70, "TutorialsSection",
  CellID->250839057],
-Cell[5654, 174, 166, 4, 70, "RelatedDemonstrations",
+Cell[5655, 174, 166, 4, 70, "RelatedDemonstrations",
  CellID->618224417],
-Cell[5823, 180, 169, 4, 70, "RelatedDemonstrations",
+Cell[5824, 180, 169, 4, 70, "RelatedDemonstrations",
  CellID->971892333]
 }, Open  ]],
-Cell[6007, 187, 23, 0, 70, "FooterCell"]
+Cell[6008, 187, 23, 0, 70, "FooterCell"]
 }
 ]
 *)
