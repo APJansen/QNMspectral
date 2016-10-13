@@ -30,7 +30,8 @@ Needs\["QNMspectral\`"\]
 ### Using
 
 Once it is loaded, one can go to Help->Wolfram Documentation and type in ‘QNMspectral’ to get a usage guide.
-Alternatively, there is a notebook with examples in the same folder, titled ‘QNMspectralExamples.nb’.
+
+Alternatively, there is a notebook with examples in the main folder, titled ‘QNMspectralExamples.nb’.
 
 ## Contributing
 
