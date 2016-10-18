@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     13075,        497]
-NotebookOptionsPosition[      8753,        345]
-NotebookOutlinePosition[      9383,        370]
-CellTagsIndexPosition[      9305,        365]
+NotebookDataLength[     13496,        507]
+NotebookOptionsPosition[      9114,        353]
+NotebookOutlinePosition[      9746,        378]
+CellTagsIndexPosition[      9668,        373]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -204,14 +204,22 @@ close two imaginary parts have to be to be considered conjugate pairs, \
 defaulting to 3 meaning the difference has to be less than ",
  Cell[BoxData[
   SuperscriptBox["10", 
-   RowBox[{"-", "3"}]]], "InlineFormula",
-  FormatType->"StandardForm"],
- "."
+   RowBox[{"-", "3"}]]], "InlineFormula"],
+ ". If it is set to False all modes are shown."
 }], "Notes",
  CellChangeTimes->{{3.681123307196253*^9, 3.681123324317608*^9}, {
   3.682261480260396*^9, 3.682261559191593*^9}, {3.6852028953023157`*^9, 
-  3.685202944610424*^9}},
- CellID->53933009]
+  3.685202944610424*^9}, {3.685685329441905*^9, 3.6856853376639853`*^9}},
+ CellID->53933009],
+
+Cell["\<\
+Setting NModes->n will attempt to show n conjugate pairs, unless it is set to \
+False.\
+\>", "Notes",
+ CellChangeTimes->{{3.685685168101667*^9, 3.6856851695014267`*^9}, {
+  3.685685232550633*^9, 3.685685244012454*^9}, {3.685685312517029*^9, 
+  3.685685320280292*^9}},
+ CellID->850691632]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -344,7 +352,7 @@ Cell[BoxData[
 }, Open  ]]
 },
 WindowSize->{886, 977},
-WindowMargins->{{201, Automatic}, {Automatic, 0}},
+WindowMargins->{{Automatic, 185}, {Automatic, 155}},
 CellContext->"Global`",
 FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
 2013)",
@@ -357,14 +365,14 @@ StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStyles.nb",
 (*CellTagsOutline
 CellTagsIndex->{
  "ExtendedExamples"->{
-  Cell[7233, 287, 100, 2, 55, "ExtendedExamplesSection",
+  Cell[7594, 295, 100, 2, 55, "ExtendedExamplesSection",
    CellTags->"ExtendedExamples",
    CellID->1854448968]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"ExtendedExamples", 9167, 358}
+ {"ExtendedExamples", 9530, 366}
  }
 *)
 (*NotebookFileOutline
@@ -435,68 +443,70 @@ Cell[3732, 170, 1145, 20, 95, "3ColumnTable",
  CellID->11156],
 Cell[4880, 192, 205, 5, 25, "Notes",
  CellID->44614052],
-Cell[5088, 199, 613, 14, 57, "Notes",
- CellID->53933009]
+Cell[5088, 199, 674, 13, 73, "Notes",
+ CellID->53933009],
+Cell[5765, 214, 297, 7, 25, "Notes",
+ CellID->850691632]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5738, 218, 57, 1, 43, "TutorialsSection",
+Cell[6099, 226, 57, 1, 43, "TutorialsSection",
  CellID->250839057],
-Cell[5798, 221, 210, 5, 16, "RelatedDemonstrations",
+Cell[6159, 229, 210, 5, 16, "RelatedDemonstrations",
  CellID->618224417],
-Cell[6011, 228, 210, 5, 16, "RelatedDemonstrations",
+Cell[6372, 236, 210, 5, 16, "RelatedDemonstrations",
  CellID->971892333]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6258, 238, 83, 1, 30, "RelatedDemonstrationsSection",
+Cell[6619, 246, 83, 1, 30, "RelatedDemonstrationsSection",
  CellID->1268215905],
-Cell[6344, 241, 58, 1, 16, "RelatedDemonstrations",
+Cell[6705, 249, 58, 1, 16, "RelatedDemonstrations",
  CellID->1129518860]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6439, 247, 65, 1, 30, "RelatedLinksSection",
+Cell[6800, 255, 65, 1, 30, "RelatedLinksSection",
  CellID->1584193535],
-Cell[6507, 250, 49, 1, 16, "RelatedLinks",
+Cell[6868, 258, 49, 1, 16, "RelatedLinks",
  CellID->1038487239]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6593, 256, 55, 1, 30, "SeeAlsoSection",
+Cell[6954, 264, 55, 1, 30, "SeeAlsoSection",
  CellID->1255426704],
-Cell[6651, 259, 43, 1, 16, "SeeAlso",
+Cell[7012, 267, 43, 1, 16, "SeeAlso",
  CellID->929782353]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6731, 265, 57, 1, 30, "MoreAboutSection",
+Cell[7092, 273, 57, 1, 30, "MoreAboutSection",
  CellID->38303248],
-Cell[6791, 268, 46, 1, 16, "MoreAbout",
+Cell[7152, 276, 46, 1, 16, "MoreAbout",
  CellID->1665078683]
 }, Open  ]],
-Cell[6852, 272, 356, 11, 69, "PrimaryExamplesSection",
+Cell[7213, 280, 356, 11, 69, "PrimaryExamplesSection",
  CellID->880084151],
 Cell[CellGroupData[{
-Cell[7233, 287, 100, 2, 55, "ExtendedExamplesSection",
+Cell[7594, 295, 100, 2, 55, "ExtendedExamplesSection",
  CellTags->"ExtendedExamples",
  CellID->1854448968],
-Cell[7336, 291, 125, 3, 33, "ExampleSection",
+Cell[7697, 299, 125, 3, 33, "ExampleSection",
  CellID->1293636265],
-Cell[7464, 296, 148, 3, 21, "ExampleSection",
+Cell[7825, 304, 148, 3, 21, "ExampleSection",
  CellID->1020263627],
 Cell[CellGroupData[{
-Cell[7637, 303, 127, 3, 21, "ExampleSection",
+Cell[7998, 311, 127, 3, 21, "ExampleSection",
  CellID->2061341341],
-Cell[7767, 308, 130, 3, 70, "ExampleSubsection",
+Cell[8128, 316, 130, 3, 70, "ExampleSubsection",
  CellID->1757724783],
-Cell[7900, 313, 130, 3, 70, "ExampleSubsection",
+Cell[8261, 321, 130, 3, 70, "ExampleSubsection",
  CellID->1295379749]
 }, Closed]],
-Cell[8045, 319, 131, 3, 21, "ExampleSection",
+Cell[8406, 327, 131, 3, 21, "ExampleSection",
  CellID->258228157],
-Cell[8179, 324, 142, 3, 21, "ExampleSection",
+Cell[8540, 332, 142, 3, 21, "ExampleSection",
  CellID->2123667759],
-Cell[8324, 329, 135, 3, 21, "ExampleSection",
+Cell[8685, 337, 135, 3, 21, "ExampleSection",
  CellID->1305812373],
-Cell[8462, 334, 140, 3, 21, "ExampleSection",
+Cell[8823, 342, 140, 3, 21, "ExampleSection",
  CellID->1653164318],
-Cell[8605, 339, 132, 3, 21, "ExampleSection",
+Cell[8966, 347, 132, 3, 21, "ExampleSection",
  CellID->589267740]
 }, Open  ]]
 }

@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     20315,        656]
+NotebookDataLength[     20316,        656]
 NotebookOptionsPosition[     14076,        465]
-NotebookOutlinePosition[     16690,        528]
-CellTagsIndexPosition[     16647,        525]
+NotebookOutlinePosition[     16691,        528]
+CellTagsIndexPosition[     16648,        525]
 WindowTitle->QNMspectral - Wolfram Mathematica
 WindowFrame->Normal*)
 
@@ -217,7 +217,7 @@ Cell["Acknowledgements", "Section",
  CellID->2056750608],
 
 Cell[TextData[{
- "I want to thank especially L. Yaffe and the organizors of the 2014 ",
+ "I want to thank especially L. Yaffe and the organisers of the 2014 ",
  StyleBox["Mathematica",
   FontSlant->"Italic"],
  " summer school on theoretical physics in Porto, as this package was \
@@ -477,7 +477,7 @@ TaggingRules->{
          BaseStyle -> {"Link", "DockedLinkTrail"}], 
         Cell[">", "DockedLinkTrailSeparator"]}]}}, ColumnAlignments -> Left], 
   "Metadata" -> {
-   "built" -> "{2016, 10, 13, 16, 1, 59.722701}", 
+   "built" -> "{2016, 10, 18, 14, 19, 44.036600}", 
     "history" -> {"0.0", "", "", ""}, "context" -> "QNMspectral`", 
     "keywords" -> {}, "specialkeywords" -> {}, 
     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 

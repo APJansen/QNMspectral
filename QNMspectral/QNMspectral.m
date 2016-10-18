@@ -66,6 +66,9 @@ StyleBox[\"fit\",\nFontSlant->\"Italic\"]\) as given by the corresponding quasin
 (* ::Input::Initialization:: *)
 analyzeEquation::usage = "Internal function used to process the equation.";
 computeMatrix::usage = "Internal function used to compute the numerical matrices representing the equation.";
+sameModes::usage="Internal function used by GetAccurateModes. SameModes[\!\(\*
+StyleBox[\"modes1\",\nFontSlant->\"Italic\"]\),\!\(\*
+StyleBox[\"modes2\",\nFontSlant->\"Italic\"]\)] compares two lists of modes and returns those that occur in both lists.";
 detFunction::usage = "Internal function used for sweeping.";
 
 
@@ -289,7 +292,9 @@ ArrayFlatten/@Map[coeffToMatFunc[# , ders]&,Mpart,{3}]
 
 
 (* ::Input::Initialization:: *)
-direct[Mcoeffs_,precision_,order_,maxpower_,eigenfuncts_]:=Block[{$MinPrecision=Max[precision,$MachinePrecision],\[Alpha],\[Beta],mat0=0 IdentityMatrix[Length@First[Mcoeffs]],mat1=IdentityMatrix[Length@First[Mcoeffs]]},
+direct[Mcoeffs_,precision_,order_,maxpower_,eigenfuncts_]:=Block[{
+$MinPrecision=Max[precision,$MachinePrecision],
+\[Alpha],\[Beta],mat0=0 IdentityMatrix[Length@First[Mcoeffs]],mat1=IdentityMatrix[Length@First[Mcoeffs]]},
 
 If[maxpower==1,\[Alpha]=Mcoeffs[[0+1]];\[Beta]=-Mcoeffs[[1+1]];,
 \[Alpha]=Table[If[i==0,Mcoeffs[[j+1]],If[i==j,mat1,mat0]],{i,0,maxpower-1},{j,0,maxpower-1}]//ArrayFlatten;
@@ -303,7 +308,7 @@ If[TrueQ@eigenfuncts,Eigensystem[{\[Alpha],\[Beta]}],Eigenvalues[{\[Alpha],\[Bet
 
 
 (* ::Input::Initialization:: *)
-sweep[Mcoeffs_,precision_,order_,maxpower_,eigenfuncts_,sweepGrid_,parallel_,plot_]:=Block[{$MinPrecision=Quiet[precision,Precision::mnprec],
+sweep[Mcoeffs_,precision_,order_,maxpower_,eigenfuncts_,sweepGrid_,parallel_,plot_]:=Block[{$MinPrecision=Max[precision,$MachinePrecision],
 eigensyst0,detf,
 \[Omega]ReMin,\[Omega]ReMax,\[Delta]\[Omega]Re,\[Omega]ImMin,\[Omega]ImMax,\[Delta]\[Omega]Im,
 \[Omega]grid,\[Omega]detgrid,\[Omega]ReVals,\[Omega]ImVals,\[Omega]DetVals,neighbors,tests,count,map,
@@ -365,24 +370,54 @@ eigenvectorsNormalized=Map[Transpose[{grid,If[Max[Abs@#]>10^-10,Conjugate[First@
 
 
 (* ::Input::Initialization:: *)
-Options[GetAccurateModes]={Cutoff->1};
+(*Options[GetAccurateModes]={Cutoff\[Rule]1};
 GetAccurateModes[equation_,{N1_,M1_  : "default",opts1___},{N2_,M2_  : "default",opts2___},opts:OptionsPattern[{GetAccurateModes,GetModes}]]:=Block[
-{modes1,modes2,modesMax,modesMin,cutoff=OptionValue[Cutoff],agreedModes,prec1=M1/."default"->N1/2,prec2=M2/."default"->N2/2},
+{modes1,modes2,modesMax,modesMin,cutoff=OptionValue[Cutoff],agreedModes,prec1=M1/."default"\[Rule]N1/2,prec2=M2/."default"\[Rule]N2/2},
 
-modes1=GetModes[equation,{N1,prec1},FilterRules[{opts1,opts},Options[GetModes]]/.{}->Sequence[]];
-modes2=GetModes[equation,{N2,prec2},FilterRules[{opts2,opts},Options[GetModes]]/.{}->Sequence[]];
-{modesMax,modesMin}=If[N1>=N2,{modes1,modes2},{modes2,modes1}];
+modes1=GetModes[equation,{N1,prec1},FilterRules[{opts1,opts},Options[GetModes]]/.{}\[Rule]Sequence[]];
+modes2=GetModes[equation,{N2,prec2},FilterRules[{opts2,opts},Options[GetModes]]/.{}\[Rule]Sequence[]];
+{modesMax,modesMin}=If[N1\[GreaterEqual]N2,{modes1,modes2},{modes2,modes1}];
 
 agreedModes=Cases[modesMax,(mode_/;minDiff[modesMin][mode]<10^-cutoff)];
 catchError[If[agreedModes==={},throwError[GetAccurateModes::noconvergedmodes,cutoff]],Block];
-agreedModes=SetPrecision[#,(-Floor@Log[10,Abs@minDiff[modesMin][#]])/.Indeterminate->Max[Min[prec1,prec2],$MachinePrecision]]&/@agreedModes;
+agreedModes=SetPrecision[#,(-Floor@Log[10,Abs@minDiff[modesMin][#]])/.Indeterminate\[Rule]Max[Min[prec1,prec2],$MachinePrecision]]&/@agreedModes;
 
-agreedModes//If[Length[#[[1]]]==0,SortBy[#,(-Im[#1]&)],SortBy[#,(-Im[First[#1]]&)]]&
+agreedModes//If[Length[#\[LeftDoubleBracket]1\[RightDoubleBracket]]\[Equal]0,SortBy[#,(-Im[#1]&)],SortBy[#,(-Im[First[#1]]&)]]&
+]*)
+
+
+(* ::Input::Initialization:: *)
+(*GetAccurateModes::noconvergedmodes="No modes found that agree up to order 10^-`1`"(*;*)*)
+
+
+(* ::Input::Initialization:: *)
+Options[GetAccurateModes]={Cutoff->1};
+GetAccurateModes[equation_,{N1_,M1_  : "default",opts1___},{N2_,M2_  : "default",opts2___},opts:OptionsPattern[{GetAccurateModes,GetModes}]]:=Block[
+{prec1=M1/."default"->N1/2,prec2=M2/."default"->N2/2,modes1,modes2},
+
+modes1=GetModes[equation,{N1,prec1},FilterRules[{opts1,opts},Options[GetModes]]/.{}->Sequence[]];
+modes2=GetModes[equation,{N2,prec2},FilterRules[{opts2,opts},Options[GetModes]]/.{}->Sequence[]];
+
+sameModes[modes1,modes2,OptionValue[Cutoff]]
 ]
 
 
 (* ::Input::Initialization:: *)
-GetAccurateModes::noconvergedmodes="No modes found that agree up to order \!\(\*SuperscriptBox[\(10\), \(-`1`\)]\)";
+sameModes[modes1_,modes2_,cutoff_ : 1]:=Block[{modesMax,modesMin,prec1=Precision[modes1],prec2=Precision[modes2],agreedModes1,agreedModes2},
+{modesMax,modesMin}=Sort[{modes1,modes2},Length[#1]>Length[#2]&];
+
+agreedModes1=Cases[modesMax,(mode_/;minDiff[modesMin][mode]<10^-cutoff)];
+
+catchError[If[agreedModes1==={},throwError[GetAccurateModes::noconvergedmodes,cutoff]],Block];
+
+agreedModes2=SetPrecision[#,(-Floor@Log[10,Abs@minDiff[modesMin][#]])/.Indeterminate->Max[Min[prec1,prec2],$MachinePrecision]]&/@agreedModes1;
+
+agreedModes2//If[Length[#[[1]]]==0,SortBy[#,(-Im[#1]&)],SortBy[#,(-Im[First[#1]]&)]]&
+]
+
+
+(* ::Input::Initialization:: *)
+sameModes::noconvergedmodes="No modes found that agree up to order \!\(\*SuperscriptBox[\(10\), \(-`1`\)]\)";
 
 
 (* ::Input::Initialization:: *)
@@ -428,21 +463,26 @@ nrtostring[nr_]:=ToString[nr,TraditionalForm];
 Options[MakeTable]={NModes->All,Precision->10,Name->"\!\(\*SubscriptBox[\(\[Omega]\), \(n\)]\)",ConjugateCutoff->3};
 
 MakeTable[modes_,OptionsPattern[]]:=Block[{n=OptionValue[NModes]/.All->-1,prec=OptionValue[Precision],\[Omega]=OptionValue[Name],conjCutoff=OptionValue[ConjugateCutoff],
-conjQ,freqs},
-
-If[n>Length[modes],Message[MakeTable::nmodes,n,n=Length[modes]]];
+conjQ,uniquefreqs},
 catchError[If[Not@StringQ@\[Omega],throwError[MakeTable::name]],Block];
-catchError[conjQ=If[NumericQ@conjCutoff,(Abs[Im[#1]-Im[#2]]<10^-conjCutoff||N[Abs[Im[#1]-Im[#2]]]==0.&),throwError[MakeTable::conjugates]],Block];
 
-freqs=modes[[1;;n]]//If[Length[modes[[1]]]==0,#,#[[All,1]]]&;
+catchError[conjQ=If[conjCutoff===False,(False&),
+If[NumericQ@conjCutoff,
+(Abs[Im[#1]-Im[#2]]<10^-conjCutoff||N[Abs[Im[#1]-Im[#2]]]==0.&),
+throwError[MakeTable::conjugates]]],
+Block];
 
-With[{uniquefreqs=DeleteDuplicates[freqs,conjQ]},
+uniquefreqs=DeleteDuplicates[modes,conjQ];
+If[n>Length[uniquefreqs],Message[MakeTable::nmodes,n,n=Length[uniquefreqs]]];
+uniquefreqs=uniquefreqs[[1;;n]]//If[Length[modes[[1]]]==0,#,#[[All,1]]]&;
+(*If[n>Length[modes],Message[MakeTable::nmodes,n,n=Length[modes]]];*)
+
 Block[{
 setPrec=If[prec==\[Infinity]//TrueQ,#&,N[#,   Min[Precision[#],prec]      ]&]},
 {{"n","Re "<>\[Omega],"Im "<>\[Omega]}}~Join~Table[
 {i,If[Abs[Re[uniquefreqs[[i]]]]>10^-10,"\[PlusMinus] ",""]<>nrtostring[Abs@Re@uniquefreqs[[i]]//setPrec],Im@uniquefreqs[[i]]//setPrec},
 {i,1,Length@uniquefreqs}]//Grid[#,Frame->All]&
-]]
+]
 ]
 
 

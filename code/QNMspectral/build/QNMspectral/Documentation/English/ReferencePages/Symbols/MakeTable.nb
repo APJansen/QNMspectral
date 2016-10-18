@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      8670,        267]
-NotebookOptionsPosition[      6035,        189]
-NotebookOutlinePosition[      7873,        238]
-CellTagsIndexPosition[      7830,        235]
+NotebookDataLength[      8904,        275]
+NotebookOptionsPosition[      6211,        195]
+NotebookOutlinePosition[      8050,        244]
+CellTagsIndexPosition[      8007,        241]
 WindowTitle->MakeTable - Wolfram Mathematica
 WindowFrame->Normal*)
 
@@ -100,7 +100,7 @@ Cell[TextData[Cell[BoxData[
   Method->"Preemptive"]]]], "NotesSection",
  WholeCellGroupOpener->True,
  CellGroupingRules->{"SectionGrouping", 50},
- CellID->1291465899],
+ CellID->508941844],
 
 Cell[CellGroupData[{
 
@@ -149,9 +149,15 @@ defaulting to 3 meaning the difference has to be less than ",
  Cell[BoxData[
   SuperscriptBox["10", 
    RowBox[{"-", "3"}]]], "InlineFormula"],
- "."
+ ". If it is set to False all modes are shown."
 }], "Notes",
- CellID->53933009]
+ CellID->53933009],
+
+Cell["\<\
+Setting NModes->n will attempt to show n conjugate pairs, unless it is set to \
+False.\
+\>", "Notes",
+ CellID->850691632]
 }, Open  ]]
 }, Closed]],
 
@@ -201,7 +207,7 @@ TaggingRules->{
          BaseStyle -> {"Link", "DockedLinkTrail"}], 
         Cell[">", "DockedLinkTrailSeparator"]}]}}, ColumnAlignments -> Left], 
   "Metadata" -> {
-   "built" -> "{2016, 10, 13, 16, 1, 48.276556}", 
+   "built" -> "{2016, 10, 18, 14, 19, 31.651510}", 
     "history" -> {"0.0", "", "", ""}, "context" -> "QNMspectral`", 
     "keywords" -> {}, "specialkeywords" -> {}, 
     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
@@ -244,31 +250,33 @@ Cell[2470, 64, 52, 1, 70, "ObjectName",
 Cell[2525, 67, 434, 13, 70, "Usage",
  CellID->982511436],
 Cell[CellGroupData[{
-Cell[2984, 84, 610, 18, 70, "NotesSection",
+Cell[2984, 84, 609, 18, 70, "NotesSection",
  CellGroupingRules->{"SectionGrouping", 50},
- CellID->1291465899],
+ CellID->508941844],
 Cell[CellGroupData[{
-Cell[3619, 106, 465, 16, 70, "Notes",
+Cell[3618, 106, 465, 16, 70, "Notes",
  CellID->1067943069],
-Cell[4087, 124, 69, 1, 70, "Notes",
+Cell[4086, 124, 69, 1, 70, "Notes",
  CellID->13178],
-Cell[4159, 127, 434, 8, 70, "3ColumnTable",
+Cell[4158, 127, 434, 8, 70, "3ColumnTable",
  CellID->11156],
-Cell[4596, 137, 139, 4, 70, "Notes",
+Cell[4595, 137, 139, 4, 70, "Notes",
  CellID->44614052],
-Cell[4738, 143, 417, 10, 70, "Notes",
- CellID->53933009]
+Cell[4737, 143, 460, 10, 70, "Notes",
+ CellID->53933009],
+Cell[5200, 155, 131, 4, 70, "Notes",
+ CellID->850691632]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[5204, 159, 448, 13, 70, "TutorialsSection",
+Cell[5380, 165, 448, 13, 70, "TutorialsSection",
  CellID->250839057],
-Cell[5655, 174, 166, 4, 70, "RelatedDemonstrations",
+Cell[5831, 180, 166, 4, 70, "RelatedDemonstrations",
  CellID->618224417],
-Cell[5824, 180, 169, 4, 70, "RelatedDemonstrations",
+Cell[6000, 186, 169, 4, 70, "RelatedDemonstrations",
  CellID->971892333]
 }, Open  ]],
-Cell[6008, 187, 23, 0, 70, "FooterCell"]
+Cell[6184, 193, 23, 0, 70, "FooterCell"]
 }
 ]
 *)
