@@ -370,27 +370,6 @@ eigenvectorsNormalized=Map[Transpose[{grid,If[Max[Abs@#]>10^-10,Conjugate[First@
 
 
 (* ::Input::Initialization:: *)
-(*Options[GetAccurateModes]={Cutoff\[Rule]1};
-GetAccurateModes[equation_,{N1_,M1_  : "default",opts1___},{N2_,M2_  : "default",opts2___},opts:OptionsPattern[{GetAccurateModes,GetModes}]]:=Block[
-{modes1,modes2,modesMax,modesMin,cutoff=OptionValue[Cutoff],agreedModes,prec1=M1/."default"\[Rule]N1/2,prec2=M2/."default"\[Rule]N2/2},
-
-modes1=GetModes[equation,{N1,prec1},FilterRules[{opts1,opts},Options[GetModes]]/.{}\[Rule]Sequence[]];
-modes2=GetModes[equation,{N2,prec2},FilterRules[{opts2,opts},Options[GetModes]]/.{}\[Rule]Sequence[]];
-{modesMax,modesMin}=If[N1\[GreaterEqual]N2,{modes1,modes2},{modes2,modes1}];
-
-agreedModes=Cases[modesMax,(mode_/;minDiff[modesMin][mode]<10^-cutoff)];
-catchError[If[agreedModes==={},throwError[GetAccurateModes::noconvergedmodes,cutoff]],Block];
-agreedModes=SetPrecision[#,(-Floor@Log[10,Abs@minDiff[modesMin][#]])/.Indeterminate\[Rule]Max[Min[prec1,prec2],$MachinePrecision]]&/@agreedModes;
-
-agreedModes//If[Length[#\[LeftDoubleBracket]1\[RightDoubleBracket]]\[Equal]0,SortBy[#,(-Im[#1]&)],SortBy[#,(-Im[First[#1]]&)]]&
-]*)
-
-
-(* ::Input::Initialization:: *)
-(*GetAccurateModes::noconvergedmodes="No modes found that agree up to order 10^-`1`"(*;*)*)
-
-
-(* ::Input::Initialization:: *)
 Options[GetAccurateModes]={Cutoff->1};
 GetAccurateModes[equation_,{N1_,M1_  : "default",opts1___},{N2_,M2_  : "default",opts2___},opts:OptionsPattern[{GetAccurateModes,GetModes}]]:=Block[
 {prec1=M1/."default"->N1/2,prec2=M2/."default"->N2/2,modes1,modes2},
@@ -408,7 +387,7 @@ sameModes[modes1_,modes2_,cutoff_ : 1]:=Block[{modesMax,modesMin,prec1=Precision
 
 agreedModes1=Cases[modesMax,(mode_/;minDiff[modesMin][mode]<10^-cutoff)];
 
-catchError[If[agreedModes1==={},throwError[GetAccurateModes::noconvergedmodes,cutoff]],Block];
+catchError[If[agreedModes1==={},throwError[sameModes::noconvergedmodes,cutoff]],Block];
 
 agreedModes2=SetPrecision[#,(-Floor@Log[10,Abs@minDiff[modesMin][#]])/.Indeterminate->Max[Min[prec1,prec2],$MachinePrecision]]&/@agreedModes1;
 
@@ -446,7 +425,7 @@ If[n>Length[modes],Message[PlotFrequencies::nmodes,n,n=Length[modes]]];
 
 freqs=modes[[1;;n]]//If[Length[modes[[1]]]==0,#,#[[All,1]]]&;
 
-ListPlot[freqs/.Complex[a_,b_]:>{a,b},FilterRules[{opts},Options[ListPlot]],FrameLabel->{"Re "<>\[Omega],"Im "<>\[Omega]},PlotStyle->{Blue,PointSize[Large]},plotopts]
+ListPlot[freqs/.{Complex[a_,b_]:>{a,b},0->{0,0}},FilterRules[{opts},Options[ListPlot]],FrameLabel->{"Re "<>\[Omega],"Im "<>\[Omega]},PlotStyle->{Blue,PointSize[Large]},plotopts]
 ]
 
 
