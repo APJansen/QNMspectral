@@ -363,7 +363,7 @@ eigensyst//Select[#,NumericQ]&//SortBy[#,Im]&//Reverse,
 
 {eigenvalues,eigenvectors}=eigensyst;
 eigenvectorsSorted=Partition[#,order+1]&/@(Take[#,Neqs(order+1)]&/@eigenvectors);
-eigenvectorsNormalized=Map[Transpose[{grid,If[Max[Abs@#]>10^-10,Conjugate[First@#]/Norm[First@#]^2,1]#}]&,eigenvectorsSorted,{2}];
+eigenvectorsNormalized=Map[Transpose[{grid,If[Max[Abs@#]>10^-10&&Norm[First@#]>0,Conjugate[First@#]/Norm[First@#]^2,1]#}]&,eigenvectorsSorted,{2}];
 {eigenvalues,eigenvectorsNormalized}//Transpose//Cases[#,x_/;NumericQ@First[x]]&//SortBy[#,(-Im[First[#1]]&)]&
 ]
 ]
