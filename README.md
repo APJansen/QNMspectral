@@ -67,4 +67,4 @@ For anyone who has used the pre-github version, there are two changes you have t
 2. Add a $-sign to any use of QNMMemory and QNMQuiet.
 
 
-[![Analytics](https://ga-beacon.appspot.com/UA-81215073-4/chromeskel_a/readme)](https://github.com/QNMspectral/ga-beacon)
+[![Analytics](https://nojsstats.appspot.com/UA-81215073-4/chromeskel_a/readme)](https://github.com/QNMspectral/ga-beacon)
