@@ -100,7 +100,7 @@ Cell[TextData[Cell[BoxData[
   Method->"Preemptive"]]]], "NotesSection",
  WholeCellGroupOpener->True,
  CellGroupingRules->{"SectionGrouping", 50},
- CellID->508941844],
+ CellID->891061097],
 
 Cell[CellGroupData[{
 
@@ -207,7 +207,7 @@ TaggingRules->{
          BaseStyle -> {"Link", "DockedLinkTrail"}], 
         Cell[">", "DockedLinkTrailSeparator"]}]}}, ColumnAlignments -> Left], 
   "Metadata" -> {
-   "built" -> "{2016, 10, 18, 14, 19, 31.651510}", 
+   "built" -> "{2016, 10, 29, 11, 48, 56.254917}", 
     "history" -> {"0.0", "", "", ""}, "context" -> "QNMspectral`", 
     "keywords" -> {}, "specialkeywords" -> {}, 
     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
@@ -252,7 +252,7 @@ Cell[2525, 67, 434, 13, 70, "Usage",
 Cell[CellGroupData[{
 Cell[2984, 84, 609, 18, 70, "NotesSection",
  CellGroupingRules->{"SectionGrouping", 50},
- CellID->508941844],
+ CellID->891061097],
 Cell[CellGroupData[{
 Cell[3618, 106, 465, 16, 70, "Notes",
  CellID->1067943069],

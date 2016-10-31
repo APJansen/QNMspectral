@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      4926,        138]
+NotebookDataLength[      4925,        138]
 NotebookOptionsPosition[      3009,         85]
-NotebookOutlinePosition[      4847,        134]
-CellTagsIndexPosition[      4804,        131]
+NotebookOutlinePosition[      4846,        134]
+CellTagsIndexPosition[      4803,        131]
 WindowTitle->$QNMMemory - Wolfram Mathematica
 WindowFrame->Normal*)
 
@@ -97,7 +97,7 @@ TaggingRules->{
          BaseStyle -> {"Link", "DockedLinkTrail"}], 
         Cell[">", "DockedLinkTrailSeparator"]}]}}, ColumnAlignments -> Left], 
   "Metadata" -> {
-   "built" -> "{2016, 10, 18, 14, 19, 39.448794}", 
+   "built" -> "{2016, 10, 29, 11, 49, 3.328830}", 
     "history" -> {"0.0", "", "", ""}, "context" -> "QNMspectral`", 
     "keywords" -> {}, "specialkeywords" -> {}, 
     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 

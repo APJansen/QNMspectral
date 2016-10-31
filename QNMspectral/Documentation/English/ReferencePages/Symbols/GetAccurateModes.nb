@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     10232,        319]
-NotebookOptionsPosition[      7360,        238]
-NotebookOutlinePosition[      9417,        290]
-CellTagsIndexPosition[      9374,        287]
+NotebookDataLength[     11615,        356]
+NotebookOptionsPosition[      8563,        269]
+NotebookOutlinePosition[     10620,        321]
+CellTagsIndexPosition[     10577,        318]
 WindowTitle->GetAccurateModes - Wolfram Mathematica
 WindowFrame->Normal*)
 
@@ -135,7 +135,7 @@ Cell[TextData[Cell[BoxData[
   Method->"Preemptive"]]]], "NotesSection",
  WholeCellGroupOpener->True,
  CellGroupingRules->{"SectionGrouping", 50},
- CellID->552451781],
+ CellID->1177149199],
 
 Cell[CellGroupData[{
 
@@ -148,7 +148,9 @@ Cell[BoxData[GridBox[{
      Cell[BoxData[
       SuperscriptBox["10", 
        RowBox[{"-", "Cutoff"}]]], "InlineFormula"]
-    }], "TableText"]}
+    }], "TableText"]},
+   {"FilterModes", "False", Cell["", "TableText"]},
+   {"FilterEigenfunctions", "False", "\[Placeholder]"}
   }]], "3ColumnTable",
  CellID->11156],
 
@@ -193,6 +195,35 @@ Cell[TextData[{
 sweep two different grids."
 }], "Notes",
  CellID->1808402586],
+
+Cell["\<\
+The option FilterModes will remove any modes with imaginary part exactly \
+equal to zero, which sometimes show up as unphysical modes. This is not \
+always safe to do so it is set to False by default.\
+\>", "Notes",
+ CellID->1187631099],
+
+Cell["\<\
+The option FilterEigenfunctions checks if the eigenfunctions are smooth, \
+finite (this assumes they are scaled to go to zero at the boundary) and \
+nonzero. Setting this to true automatically sets Eigenfunctions to True as \
+well.\
+\>", "Notes",
+ CellID->1712957043],
+
+Cell[TextData[{
+ "The option Eigenfunctions of ",
+ Cell[BoxData[
+  ButtonBox["GetModes",
+   BaseStyle->"Link",
+   ButtonData->"paclet:QNMspectral/ref/GetModes"]], "InlineFormula"],
+ " has an extra posibility when used with GetAccurateModes, which is \
+\"Later\". This first computes just the frequencies, then it computes the \
+eigenfunctions only for those modes which have converged. This is not always \
+faster, but particularly with higher precision and a higher power of the \
+frequency it can give a significant speed up."
+}], "Notes",
+ CellID->1933538609],
 
 Cell["", "Notes",
  CellID->486206911]
@@ -250,7 +281,7 @@ TaggingRules->{
          BaseStyle -> {"Link", "DockedLinkTrail"}], 
         Cell[">", "DockedLinkTrailSeparator"]}]}}, ColumnAlignments -> Left], 
   "Metadata" -> {
-   "built" -> "{2016, 10, 18, 14, 19, 26.351464}", 
+   "built" -> "{2016, 10, 29, 11, 48, 51.609818}", 
     "history" -> {"0.0", "", "", ""}, "context" -> "QNMspectral`", 
     "keywords" -> {}, "specialkeywords" -> {}, 
     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
@@ -296,31 +327,37 @@ Cell[2507, 64, 59, 1, 70, "ObjectName",
 Cell[2569, 67, 1534, 48, 70, "Usage",
  CellID->982511436],
 Cell[CellGroupData[{
-Cell[4128, 119, 609, 18, 70, "NotesSection",
+Cell[4128, 119, 610, 18, 70, "NotesSection",
  CellGroupingRules->{"SectionGrouping", 50},
- CellID->552451781],
+ CellID->1177149199],
 Cell[CellGroupData[{
-Cell[4762, 141, 68, 1, 70, "Notes",
+Cell[4763, 141, 68, 1, 70, "Notes",
  CellID->13178],
-Cell[4833, 144, 275, 8, 70, "3ColumnTable",
+Cell[4834, 144, 383, 10, 70, "3ColumnTable",
  CellID->11156],
-Cell[5111, 154, 1175, 40, 70, "Notes",
+Cell[5220, 156, 1175, 40, 70, "Notes",
  CellID->1808402586],
-Cell[6289, 196, 37, 1, 70, "Notes",
+Cell[6398, 198, 246, 5, 70, "Notes",
+ CellID->1187631099],
+Cell[6647, 205, 277, 6, 70, "Notes",
+ CellID->1712957043],
+Cell[6927, 213, 562, 12, 70, "Notes",
+ CellID->1933538609],
+Cell[7492, 227, 37, 1, 70, "Notes",
  CellID->486206911]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[6375, 203, 448, 13, 70, "TutorialsSection",
+Cell[7578, 234, 448, 13, 70, "TutorialsSection",
  CellID->250839057],
-Cell[6826, 218, 166, 4, 70, "RelatedDemonstrations",
+Cell[8029, 249, 166, 4, 70, "RelatedDemonstrations",
  CellID->618224417],
-Cell[6995, 224, 169, 4, 70, "RelatedDemonstrations",
+Cell[8198, 255, 169, 4, 70, "RelatedDemonstrations",
  CellID->971892333],
-Cell[7167, 230, 151, 3, 70, "RelatedDemonstrations",
+Cell[8370, 261, 151, 3, 70, "RelatedDemonstrations",
  CellID->833821649]
 }, Open  ]],
-Cell[7333, 236, 23, 0, 70, "FooterCell"]
+Cell[8536, 267, 23, 0, 70, "FooterCell"]
 }
 ]
 *)

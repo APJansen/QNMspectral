@@ -62,10 +62,34 @@ PlotFit::usage = "PlotFit[\!\(\*
 StyleBox[\"fit\",\nFontSlant->\"Italic\"]\)] plots the time evolution of the \!\(\*
 StyleBox[\"fit\",\nFontSlant->\"Italic\"]\) as given by the corresponding quasinormal modes.";
 
+FilterEigenfunctions::usage = "Deletes modes whose eigenfunction is not smooth, finite and nonzero.";
+FilterModes::usage="Deletes any modes with imaginary part exactly equal to zero."
+
 
 (* ::Input::Initialization:: *)
-analyzeEquation::usage = "Internal function used to process the equation.";
-computeMatrix::usage = "Internal function used to compute the numerical matrices representing the equation.";
+analyzeEquation::usage = "analyzeEquation[\!\(\*
+StyleBox[\"equation\",\nFontSlant->\"Italic\"]\)] extracts all the information needed for the computation.";
+computeMatrix::usage = "computeMatrix[\!\(\*
+StyleBox[\"analyzedEquation\",\nFontSlant->\"Italic\"]\),{\!\(\*
+StyleBox[\"N\",\nFontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\",\",\nFontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\"p\",\nFontSlant->\"Italic\"]\)}], where \!\(\*
+StyleBox[\"analyzedEquation\",\nFontSlant->\"Italic\"]\) is the output of analyzeEquation, computes the matrix discretizing the equation, with a grid of \!\(\*
+StyleBox[\"N\",\nFontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\"+\",\nFontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\"1\",\nFontSlant->\"Italic\"]\) points using \!\(\*
+StyleBox[\"p\",\nFontSlant->\"Italic\"]\) digits of precision. Output is as a first argument the spectral grid, and as second argument a list of the matrix coefficients of the powers of the frequency.";
+computeLinearMatrix::usage="computeLinearMatrix[\!\(\*
+StyleBox[\"matrixList\",\nFontSlant->\"Italic\"]\)], where \!\(\*
+StyleBox[\"matrixList\",\nFontSlant->\"Italic\"]\) is the second part of the output of computeMatrix, rearranges the matrices into two possibly bigger matrices linearizing the equation in the frequency.";
+reorganize::usage="reorganize[\!\(\*
+StyleBox[\"eigensyst\",\nFontSlant->\"Italic\"]\),\!\(\*
+StyleBox[\"grid\",\nFontSlant->\"Italic\"]\),\!\(\*
+StyleBox[\"Neqs\",\nFontSlant->\"Italic\"]\)], where \!\(\*
+StyleBox[\"eigensyst\",\nFontSlant->\"Italic\"]\) is the output of applying either Eigenvalues or Eigensystem to the output of computeLinearMatrix, \!\(\*
+StyleBox[\"grid\",\nFontSlant->\"Italic\"]\) is the spectral grid and \!\(\*
+StyleBox[\"Neqs\",\nFontSlant->\"Italic\"]\) is the number of equations that were solved, rearranges the results, matching the eigenfunctions to the eigenvalues, normalizing them, and sorting by imaginary part of the eigenvalues.";
+
 sameModes::usage="Internal function used by GetAccurateModes. SameModes[\!\(\*
 StyleBox[\"modes1\",\nFontSlant->\"Italic\"]\),\!\(\*
 StyleBox[\"modes2\",\nFontSlant->\"Italic\"]\)] compares two lists of modes and returns those that occur in both lists.";
@@ -94,7 +118,7 @@ Begin["`Private`"];
 (* ::Input::Initialization:: *)
 paQ=Developer`PackedArrayQ;
 topa=Developer`ToPackedArray;
-format[expr_]:=If[$MinPrecision<=$MachinePrecision//TrueQ,expr//N//topa,expr//(SetPrecision[#,$MinPrecision]&)]
+format[expr_]:=If[$MinPrecision<=$MachinePrecision//TrueQ,expr//N//topa,(expr//(SetPrecision[#,$MinPrecision]&))/. 0 ->SetAccuracy[0,$MinPrecision]]
 
 
 (* ::Input::Initialization:: *)
@@ -109,13 +133,8 @@ printTemporaryIf[expr_]:=If[Not@$QNMQuiet,PrintTemporary[expr]]
 
 
 (* ::Input::Initialization:: *)
-eqs={(3 (3+4 z^2+9 z^4)-18 I z \[Lambda]) Z3[z]+(3 z (-3+7 z^4)-12 I z^2 \[Lambda]) Derivative[1][Z3][z]+3 z^2 (-1+z^4) (Z3^\[Prime]\[Prime])[z],1000000 ((3 (3+400 z^2+9 z^4)-18 I z \[Lambda]) bla[z]+(3 z (-3+7 z^4)-12 I z^2 \[Lambda]) Derivative[1][bla][z]+3 z^2 (-1+z^4) (bla^\[Prime]\[Prime])[z])};
-old[n_,prec_]:=computeMatrix[Sequence@@Most[analyzeEquation[eqs]],1,{n,prec}]
-new[n_,prec_]:=computeMatrix2[Sequence@@Most[analyzeEquation[eqs]],1,{n,prec}]
-
-
-(* ::Input::Initialization:: *)
 coefficientToMatrixC=Compile[{{vecList,_Complex,2},{matList,_Real,3}},Total[vecList*matList],CompilationTarget->"C"];
+freqToMatrixC=Compile[{{freqList,_Complex,1},{matList,_Complex,3}},Total[freqList*matList],CompilationTarget->"C"];
 
 
 (* ::Input::Initialization:: *)
@@ -137,18 +156,24 @@ catchError[{eqn,Neqs,functs,var,\[Omega],bgfuncts,maxder,maxpower}=analyzeEquati
 
 If[method=!="Sweep"&&quiet==False,\[Omega]powerMessage[maxpower,Neqs,order]];
 
-{grid,Mcoeffs}=computeMatrix[eqn,Neqs,functs,var,\[Omega],bgfuncts,maxder,hor,{order,precision}];
+{grid,Mcoeffs}=computeMatrix[eqn,Neqs,functs,var,\[Omega],bgfuncts,maxder,{order,precision},hor];
+Sow[{grid,Mcoeffs,Neqs},"Mcoeffs"];
 
 computeEigensyst=catchError[Switch[method,
 "Direct",direct,
-"Sweep",sweep[##,OptionValue[SweepGrid],OptionValue[Parallel],OptionValue[Plot]]&,
+"Sweep",sweep[##,order,OptionValue[SweepGrid],OptionValue[Parallel],OptionValue[Plot]]&,
 _,throwError[GetModes::method,ToString@method]],Block];
 
-eigensyst=catchError[computeEigensyst[Mcoeffs,precision,order,maxpower,eigenfuncts],Block];
+eigensyst=catchError[computeEigensyst[Mcoeffs,precision,maxpower,eigenfuncts],Block];
 
-result=reorganize[eigensyst,grid,order,Neqs,maxpower];
+result=reorganize[eigensyst,grid,Neqs];
 
-If[TrueQ@$QNMMemory,GetModes[equation,{order,precision},opts]=result,result]
+If[TrueQ@$QNMMemory,
+GetModes[equation,{order,precision},opts]=result;
+eigenfunctionData[equation,{order,precision},opts]={grid,Mcoeffs,Neqs};
+];
+
+result
 ]
 
 
@@ -221,7 +246,7 @@ printTemporaryIf["System of "<>ToString[Neqs]<>" coupled equations depending on 
 
 
 (* ::Input::Initialization:: *)
-computeMatrix[equation_,Neqs_,functs_,var_,\[Omega]_,numBG_,maxder_,hor_,{order_,precision_}]:=Block[{grid,der,coeffs,coeffsEval,M\[Omega]List},
+computeMatrix[equation_,Neqs_,functs_,var_,\[Omega]_,numBG_,maxder_,{order_,precision_},hor_ ]:=Block[{grid,der,coeffs,coeffsEval,M\[Omega]List},
 
 coeffs=coefficients[equation,functs,var,\[Omega],maxder];
 
@@ -233,6 +258,9 @@ M\[Omega]List=coeffsToMatrix[coeffsEval,der,maxder,Neqs,precision];
 
 {grid,M\[Omega]List}
 ]
+
+computeMatrix[{equation_,Neqs_,functs_,var_,\[Omega]_,bgfuncts_,maxder_,maxpower_},{order_,precision_}, hor_ : 1]:=
+computeMatrix[equation,Neqs,functs,var,\[Omega],{},maxder,{order,precision},hor ] (* for easy manual use, e.g. debugging, first list is the output of analyzeEquation *)
 
 
 (* ::Input::Initialization:: *)
@@ -252,7 +280,7 @@ Map[Coefficient[#,functsAndDers]&,\[Omega]coeffs,{2}]//Transpose
 
 (* ::Input::Initialization:: *)
 Attributes[makeSpectralGrid]={HoldFirst};
-makeSpectralGrid[{grid_Symbol,der_Symbol},{order_Integer,prec_?NumericQ,hor_?NumericQ}]:=Block[{$MinPrecision=prec},
+makeSpectralGrid[{grid_Symbol,der_Symbol},{order_Integer,prec_?NumericQ,hor_ : 1 }]/;NumericQ[hor]:=Block[{$MinPrecision=prec},
 grid=Rescale[Cos[\[Pi]/order format@Range[0,order]],{-1,1},{0,hor}] //format;
 der[0]=IdentityMatrix[order+1]//format;(* Note there is a bug with the function below, using ["DifferentiationMatrix"] gives a wrong last column *)
 der[n_]:=der[n]=(-1)^n NDSolve`FiniteDifferenceDerivative[n,grid//Reverse,DifferenceOrder->"Pseudospectral"]/@IdentityMatrix[order+1]//Transpose;
@@ -287,13 +315,22 @@ Mpart=Map[First[Partition[Partition[#,maxder+1],Nfuncts]]&,coeffs,{2}];
 ders=der/@Range[0,maxder];
 
 coeffToMatFunc=If[$MinPrecision<=$MachinePrecision,coefficientToMatrixC,{vs,ms}\[Function]Total[vs*ms]];
-ArrayFlatten/@Map[coeffToMatFunc[# , ders]&,Mpart,{3}]
+ArrayFlatten/@Map[coeffToMatFunc[# , ders]&,Mpart,{3}]//If[$MinPrecision<=$MachinePrecision,#+0.0I,#]&//format
 ]
 
 
 (* ::Input::Initialization:: *)
-direct[Mcoeffs_,precision_,order_,maxpower_,eigenfuncts_]:=Block[{
-$MinPrecision=Max[precision,$MachinePrecision],
+direct[Mcoeffs_,precision_,maxpower_,eigenfuncts_]:=Block[{\[Alpha],\[Beta]},
+{\[Alpha],\[Beta]}=computeLinearMatrix[Mcoeffs,precision,maxpower];
+
+If[TrueQ@eigenfuncts,Eigensystem[{\[Alpha],\[Beta]}],Eigenvalues[{\[Alpha],\[Beta]}]]
+]
+
+
+(* ::Input::Initialization:: *)
+computeLinearMatrix[Mcoeffs_]:=computeLinearMatrix[Mcoeffs,Precision@Mcoeffs[[1]],Length[Mcoeffs]-1] (* to use manually, for debugging *)
+computeLinearMatrix[Mcoeffs_,precision_,maxpower_]:=
+Block[{$MinPrecision=Max[precision,$MachinePrecision],
 \[Alpha],\[Beta],mat0=0 IdentityMatrix[Length@First[Mcoeffs]],mat1=IdentityMatrix[Length@First[Mcoeffs]]},
 
 If[maxpower==1,\[Alpha]=Mcoeffs[[0+1]];\[Beta]=-Mcoeffs[[1+1]];,
@@ -303,32 +340,34 @@ If[maxpower==1,\[Alpha]=Mcoeffs[[0+1]];\[Beta]=-Mcoeffs[[1+1]];,
 \[Alpha]=\[Alpha]+If[$MinPrecision<$MachinePrecision,0. I,0]//format; 
 \[Beta]=\[Beta]+If[$MinPrecision<$MachinePrecision,0. I,0]//format;
 
-If[TrueQ@eigenfuncts,Eigensystem[{\[Alpha],\[Beta]}],Eigenvalues[{\[Alpha],\[Beta]}]]
+{\[Alpha],\[Beta]}
 ]
 
 
 (* ::Input::Initialization:: *)
-sweep[Mcoeffs_,precision_,order_,maxpower_,eigenfuncts_,sweepGrid_,parallel_,plot_]:=Block[{$MinPrecision=Max[precision,$MachinePrecision],
+sweep[Mcoeffs_,precision_,maxpower_,eigenfuncts_,order_,sweepGrid_,parallel_,plot_]:=Block[{$MinPrecision=Max[precision,$MachinePrecision],
 eigensyst0,detf,
 \[Omega]ReMin,\[Omega]ReMax,\[Delta]\[Omega]Re,\[Omega]ImMin,\[Omega]ImMax,\[Delta]\[Omega]Im,
-\[Omega]grid,\[Omega]detgrid,\[Omega]ReVals,\[Omega]ImVals,\[Omega]DetVals,neighbors,tests,count,map,
+\[Omega]grid,detgrid,\[Omega]detgrid,\[Omega]ReVals,\[Omega]ImVals,\[Omega]DetVals,neighbors,tests,count,map,
 eigenvalues,eigenvectors,
 M,\[Omega]},
-M=Inner[Times,Mcoeffs,\[Omega]^Range[0,maxpower],Plus,1];
-
 If[MatchQ[sweepGrid,{{_?NumericQ,_?NumericQ,_?NumericQ},{_?NumericQ,_?NumericQ,_?NumericQ}}]//TrueQ,
 {{\[Omega]ReMin,\[Omega]ReMax,\[Delta]\[Omega]Re},{\[Omega]ImMin,\[Omega]ImMax,\[Delta]\[Omega]Im}}=sweepGrid//format,
 throwError[sweep::grid]];
 \[Omega]grid=Table[a+b I,{a,\[Omega]ReMin,\[Omega]ReMax,\[Delta]\[Omega]Re},{b,\[Omega]ImMin,\[Omega]ImMax,\[Delta]\[Omega]Im}]//Flatten[#,1]&//format;
 
-detf=detFunction[M,\[Omega]];
+detf=detFunction[Mcoeffs];
 
 count=0;
-If[TrueQ@parallel,SetSharedVariable[count];DistributeDefinitions[detf];map=ParallelMap;,map=Map;];
-\[Omega]detgrid=Monitor[Quiet[If[TrueQ@parallel,ParallelMap,Map][{Re[#],Im[#],count++;detf[#]}&,\[Omega]grid],LinearSolve::luc],
+If[TrueQ@parallel,SetSharedVariable[count];DistributeDefinitions[detf];map=ParallelMap;ParallelEvaluate[detf=detf;];,map=Map;
+];(* Note: this isn't working properly, actually slows things down alot*)
+\[Omega]detgrid=Monitor[(*If[TrueQ@parallel,ParallelMap,Map]*)map[{Re[#],Im[#],count++;Quiet[detf[#],LinearSolve::luc]}&,\[Omega]grid],
 {ProgressIndicator[count,{0,Length@\[Omega]grid}],ToString[count]<>"/"<>ToString[Length@\[Omega]grid]}];
+(* slightly faster, but without progress indicator *)
+(*detgrid=Quiet[detf[\[Omega]grid],LinearSolve::luc];
+\[Omega]detgrid=MapThread[Append,{\[Omega]grid/.Complex[a_,b_]\[RuleDelayed]{a,b},detgrid}];*)
 
-If[TrueQ@plot,printIf[Show[ListContourPlot[\[Omega]detgrid,(*Mesh\[Rule]All,*)FrameLabel->{"Re \[Omega]","Im \[Omega]"}],ListPlot[\[Omega]detgrid[[All,1;;2]],PlotStyle->Red]]]];
+If[TrueQ@plot,printIf[Show[ListContourPlot[\[Omega]detgrid,FrameLabel->{"Re \[Omega]","Im \[Omega]"}],ListPlot[\[Omega]detgrid[[All,1;;2]],PlotStyle->Red]]]];
 
 neighbors=List@@@DelaunayMesh[\[Omega]detgrid[[All,1;;2]]]["VertexVertexConnectivityRules"];
 {\[Omega]ReVals,\[Omega]ImVals,\[Omega]DetVals}=Transpose[\[Omega]detgrid];
@@ -347,38 +386,71 @@ sweep::grid="Grid should be of the form {{\[Omega]ReMin,\[Omega]ReMax,\[Delta]\[
 
 
 (* ::Input::Initialization:: *)
-detFunction[M_List,\[Omega]_Symbol]:=Block[{$MinPrecision=Max[Precision@M,$MachinePrecision],dM},
-dM=\!\(
-\*SubscriptBox[\(\[PartialD]\), \(\[Omega]\)]M\);
-If[$MinPrecision<=$MachinePrecision,M=M+0.0 I//format;dM=dM+0.0 I//format;];
+detFunction[M0_List]:=Block[{$MinPrecision=Quiet[Max[Precision@M0,$MachinePrecision],Precision::mnprec],\[Omega]},
+With[{Mpref=\[Omega]^Range[0,Length[M0]-1]//format,dMpref=Range[1,Length[M0]-1]\[Omega]^Range[0,Length[M0]-2]//format},
 
-Hold[Function][\[Omega],1/Hold[Abs][Hold[Tr][Hold[LinearSolve][M,dM]]]]/.Hold[x_]:>x
+Hold[{{\[Omega],_Complex,0}},
+Module[{M=Total[Mpref*M0],dM=Total[dMpref*Rest[M0]]},
+1/Abs[Tr@LinearSolve[M,dM]]
+]
+,CompilationOptions->{"InlineExternalDefinitions"->True},RuntimeAttributes->{Listable}]/.Hold[args_,code_,opts__]:>If[$MinPrecision<=$MachinePrecision,Compile[args,code,opts],Function[Evaluate@(First/@args),code]]
+
+]]
+
+
+(* ::Input::Initialization:: *)
+reorganize[eigensyst0_,grid_,Neqs_]:=Block[{order=Length[grid]-1,eigensyst,eigensystFormatted},
+
+If[Length[Dimensions@eigensyst0]==1,
+Return[eigensyst0//Select[#,NumericQ]&//SortBy[#,-Im[#]-10^-10 Re[#]&]&]
+];
+
+eigensyst=Transpose[eigensyst0]//Select[#,NumericQ[#[[1]]]&]&//SortBy[#,-Im[#[[1]]]&]&;
+
+eigensystFormatted=formatEigenfunctions[eigensyst,grid,Neqs]
 ]
 
 
 (* ::Input::Initialization:: *)
-reorganize[eigensyst_,grid_,order_,Neqs_,maxpower_]:=Block[{eigenvalues,eigenvectors,eigenvectorsSorted,eigenvectorsNormalized},
-If[Length[Dimensions@eigensyst]==1,
-eigensyst//Select[#,NumericQ]&//SortBy[#,Im]&//Reverse,
+formatEigenfunctions[eigensyst_,grid_,Neqs_]:=Block[{order=Length[grid]-1,freqs,evecs,evecsUnique,evecsSorted,evecsNormalized,evecsGrid},
+{freqs,evecs}=Transpose[eigensyst];
 
-{eigenvalues,eigenvectors}=eigensyst;
-eigenvectorsSorted=Partition[#,order+1]&/@(Take[#,Neqs(order+1)]&/@eigenvectors);
-eigenvectorsNormalized=Map[Transpose[{grid,If[Max[Abs@#]>10^-10&&Norm[First@#]>0,Conjugate[First@#]/Norm[First@#]^2,1]#}]&,eigenvectorsSorted,{2}];
-{eigenvalues,eigenvectorsNormalized}//Transpose//Cases[#,x_/;NumericQ@First[x]]&//SortBy[#,(-Im[First[#1]]&)]&
-]
+evecsUnique=Take[Transpose[evecs],Neqs (order+1)]; 
+evecsSorted=Transpose[Partition[evecsUnique,(order+1)],{2,3,1}]; 
+evecsNormalized=Map[If[Max[Abs@#]>10^-10&&Norm[First@#]>0,Conjugate[First@#]/Norm[First@#]^2,1]#&,evecsSorted,{2}];
+evecsGrid=Map[Transpose[{grid,#}]&,evecsNormalized,{2}];
+
+Transpose[{freqs,evecsGrid}]
 ]
 
 
 (* ::Input::Initialization:: *)
-Options[GetAccurateModes]={Cutoff->1};
+Options[GetAccurateModes]={Cutoff->1,FilterEigenfunctions->False,FilterModes->False};
 GetAccurateModes[equation_,{N1_,M1_  : "default",opts1___},{N2_,M2_  : "default",opts2___},opts:OptionsPattern[{GetAccurateModes,GetModes}]]:=Block[
-{prec1=M1/."default"->N1/2,prec2=M2/."default"->N2/2,modes1,modes2},
+{prec1=M1/."default"->N1/2,prec2=M2/."default"->N2/2,filtermds=OptionValue[FilterModes],filterEfs=OptionValue[FilterEigenfunctions],efs=OptionValue[Eigenfunctions],
+Npmax,Npmin,optsmin,optsmax,modesMax,modesMin,samemodes,
+reap,grid,matrices,Neqs},
 
-modes1=GetModes[equation,{N1,prec1},FilterRules[{opts1,opts},Options[GetModes]]/.{}->Sequence[]];
-modes2=GetModes[equation,{N2,prec2},FilterRules[{opts2,opts},Options[GetModes]]/.{}->Sequence[]];
+If[TrueQ@(filterEfs&&Not[efs]),efs=True];
 
-sameModes[modes1,modes2,OptionValue[Cutoff]]
+{Npmin,Npmax}=SortBy[{{N1,prec1},{N2,prec2}},First];
+If[Npmax=={N1,M1},optsmax=opts1;optsmin=opts2;,optsmax=opts2;optsmin=opts1;];
+
+reap=Reap[modesMax=GetModes[equation,Npmax,filterOpts[{optsmax},{opts}]],"Mcoeffs"];
+modesMin=GetModes[equation,Npmin,filterOpts[{optsmin},{opts}]];
+
+{grid,matrices,Neqs}=If[Length[Dimensions@reap[[2]]]>=2,reap[[2,1,1]],eigenfunctionData[equation,Npmax,filterOpts[{optsmax},{opts}]]];
+
+samemodes=sameModes[modesMax,modesMin,OptionValue[Cutoff]]//If[filtermds,FilterModes[#],#]&;
+
+If[efs==="Later",samemodes=ComputeEigenfunctions[{grid,matrices,Neqs},samemodes]];
+
+samemodes//If[filterEfs,FilterEigenfunctions[#],#]&
 ]
+
+
+(* ::Input::Initialization:: *)
+filterOpts[{opts1___},{opts___}]:=FilterRules[{opts1,opts},Options[GetModes]]/.HoldPattern[Eigenfunctions->"Later"]->Sequence[]/.{}->Sequence[]
 
 
 (* ::Input::Initialization:: *)
@@ -389,9 +461,9 @@ agreedModes1=Cases[modesMax,(mode_/;minDiff[modesMin][mode]<10^-cutoff)];
 
 catchError[If[agreedModes1==={},throwError[sameModes::noconvergedmodes,cutoff]],Block];
 
-agreedModes2=SetPrecision[#,(-Floor@Log[10,Abs@minDiff[modesMin][#]])/.Indeterminate->Max[Min[prec1,prec2],$MachinePrecision]]&/@agreedModes1;
+agreedModes2=(-Floor@Log[10,Abs@minDiff[modesMin][#]])/.{Indeterminate->#,prec_:>SetPrecision[#,prec]}&/@agreedModes1;
 
-agreedModes2//If[Length[#[[1]]]==0,SortBy[#,(-Im[#1]&)],SortBy[#,(-Im[First[#1]]&)]]&
+agreedModes2//If[Length[#[[1]]]==0,SortBy[#,(-Im[#1]&)],SortBy[#,(-Im[First@#1]&)]]&
 ]
 
 
@@ -403,6 +475,57 @@ sameModes::noconvergedmodes="No modes found that agree up to order \!\(\*Supersc
 minDiff[refmodes_][singleMode_]:=If[Length[singleMode]==0,
 Abs[MinimalBy[Abs][(#-refmodes)]&[singleMode]]//Last,
 Abs[MinimalBy[Abs][(#-refmodes[[All,1]])]&[singleMode[[1]]]]//Last]
+
+
+(* ::Input::Initialization:: *)
+FilterModes[modes_]:=Block[{crit=If[eigenfunctionsQ@modes,(Im[#[[1]]]=!=0&),(Im[#]=!=0&)]},Select[modes,crit]]
+
+
+(* ::Input::Initialization:: *)
+convQ[ef_]:=Abs[ef[[-2,2]]]<1
+smoothQ[ef_]:=Count[ef[[All,2]]//Re//Sign//Split,x_/;Length[x]==1]<5&&Count[ef[[All,2]]//Im//Chop//Sign//Split,x_/;Length[x]==1]<5
+nonzeroQ[ef_]:=Length[ef]-Count[ef[[All,2]],0]>5
+
+FilterEigenfunctions[modes_?eigenfunctionsQ,test_Function : (convQ[#]&&smoothQ[#]&&nonzeroQ[#]&)]:=Select[modes,And@@(test/@#[[2]])&]
+FilterEigenfunctions[modes_,test_Function : None]:=Message[FilterEigenfunctions::efcomputed]
+FilterEigenfunctions[modes_?eigenfunctionsQ,test_]:=Message[FilterEigenfunctions::test]
+
+
+(* ::Input::Initialization:: *)
+FilterEigenfunctions::efcomputed="Eigenfunctions not computed, use option Eigenfunctions -> True in GetModes.";
+FilterEigenfunctions::test="Second argument should be a pure function.";
+
+
+(* ::Input::Initialization:: *)
+Options[ComputeEigenfunctions]={Horizon->1,NumericalBackground->False,Quiet->False};
+
+ComputeEigenfunctions[equation_,\[Omega]list_,{N_,p_},opts : OptionsPattern[]]:=Block[{grid,matrices,Neqs,$MinPrecision=Max[$MachinePrecision,p],result},
+{grid,matrices,Neqs}=GetModes[equation,{N,p},ReturnMatrices->True,opts];
+
+If[TrueQ@$QNMMemory,
+ComputeEigenfunctions[equation,\[Omega]list,{N,p},opts ]=Block[{$QNMMemory=False},ComputeEigenfunctions[{grid,matrices,Neqs},\[Omega]list//format]],
+ComputeEigenfunctions[{grid,matrices,Neqs},\[Omega]list//format]]
+]
+
+ComputeEigenfunctions[{grid_,matrices_,Neqs_},\[Omega]_?NumericQ]:=ComputeEigenfunctions[{grid,matrices,Neqs},{\[Omega]}]
+
+
+(* ::Input::Initialization:: *)
+ComputeEigenfunctions[{grid_,matrices_,Neqs_},\[Omega]list0_List]:=With[{p=Precision[grid]},Block[{\[Omega]list,\[Omega]powers,Mlist,$MinPrecision=Max[p,$MachinePrecision],freqtomat,evecs,result},
+\[Omega]list=\[Omega]list0//format;
+\[Omega]powers=Evaluate[#^Range[0,Length[matrices]-1]]&/@\[Omega]list//format;
+
+freqtomat=If[p<=$MachinePrecision,Function[{freqpowers},freqToMatrixC[freqpowers,matrices]],Function[{freqpowers},Total[freqpowers*matrices]]];
+Mlist=freqtomat/@\[Omega]powers;
+
+evecs=Eigensystem[#,-1][[2,1]]&/@Mlist;
+
+result=formatEigenfunctions[Transpose[{\[Omega]list0,evecs}],grid,Neqs];
+
+If[TrueQ@$QNMMemory,ComputeEigenfunctions[{matrices,grid,Neqs},\[Omega]list0]=result;];
+
+result
+]]
 
 
 (* ::Input::Initialization:: *)
@@ -423,7 +546,7 @@ catchError[If[Not@StringQ@\[Omega],throwError[PlotFrequencies::name]],Block];
 
 If[n>Length[modes],Message[PlotFrequencies::nmodes,n,n=Length[modes]]];
 
-freqs=modes[[1;;n]]//If[Length[modes[[1]]]==0,#,#[[All,1]]]&;
+freqs=modes[[1;;n]]//If[eigenfunctionsQ[#],#[[All,1]],#]&;
 
 ListPlot[freqs/.{Complex[a_,b_]:>{a,b},0->{0,0}},FilterRules[{opts},Options[ListPlot]],FrameLabel->{"Re "<>\[Omega],"Im "<>\[Omega]},PlotStyle->{Blue,PointSize[Large]},plotopts]
 ]
@@ -432,6 +555,10 @@ ListPlot[freqs/.{Complex[a_,b_]:>{a,b},0->{0,0}},FilterRules[{opts},Options[List
 (* ::Input::Initialization:: *)
 PlotFrequencies::nmodes="There are not as many modes as `1`, plotting all `2` instead.";
 PlotFrequencies::name="The name should be a string.";
+
+
+(* ::Input::Initialization:: *)
+eigenfunctionsQ[modes_]:=Length[Dimensions@modes]==2
 
 
 (* ::Input::Initialization:: *)
@@ -451,10 +578,9 @@ If[NumericQ@conjCutoff,
 throwError[MakeTable::conjugates]]],
 Block];
 
-uniquefreqs=DeleteDuplicates[modes,conjQ];
+uniquefreqs=modes//If[eigenfunctionsQ[#],#[[All,1]],#]&//DeleteDuplicates[#,conjQ]&;
 If[n>Length[uniquefreqs],Message[MakeTable::nmodes,n,n=Length[uniquefreqs]]];
-uniquefreqs=uniquefreqs[[1;;n]]//If[Length[modes[[1]]]==0,#,#[[All,1]]]&;
-(*If[n>Length[modes],Message[MakeTable::nmodes,n,n=Length[modes]]];*)
+uniquefreqs=uniquefreqs[[1;;n]];
 
 Block[{
 setPrec=If[prec==\[Infinity]//TrueQ,#&,N[#,   Min[Precision[#],prec]      ]&]},
@@ -481,10 +607,6 @@ If[n>Length[modes],Message[ShowModes::nmodes,n,n=Length[modes]]];
 
 (* ::Input::Initialization:: *)
 ShowModes::nmodes="There are not as many modes as `1`, showing all `2` instead.";
-
-
-(* ::Input::Initialization:: *)
-eigenfunctionsQ[modes_]:=Length[Dimensions@modes]==2
 
 
 (* ::Input::Initialization:: *)
