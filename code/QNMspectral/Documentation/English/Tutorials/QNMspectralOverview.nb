@@ -3,103 +3,296 @@
 (*** Wolfram Notebook File ***)
 (* http://www.wolfram.com/nb *)
 
-(* CreatedBy='Mathematica 9.0' *)
+(* CreatedBy='Mathematica 11.0' *)
 
 (*CacheID: 234*)
 (* Internal cache information:
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
-NotebookDataPosition[       157,          7]
-NotebookDataLength[     12219,        366]
-NotebookOptionsPosition[      8258,        258]
-NotebookOutlinePosition[     10459,        315]
-CellTagsIndexPosition[     10416,        312]
-WindowTitle->QNMspectral Overview - Wolfram Mathematica
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17452,        626]
+NotebookOptionsPosition[     12899,        466]
+NotebookOutlinePosition[     13327,        483]
+CellTagsIndexPosition[     13284,        480]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-Cell[BoxData[GridBox[{
-   {Cell["Q N MSPECTRAL PACKAGE OVERVIEW", "PacletNameCell"], Cell[TextData[
-    Cell[BoxData[
-     ActionMenuBox[
-      FrameBox["\<\"URL \[RightGuillemet]\"\>",
-       StripOnInput->
-        False], {"\<\"QNMspectral/tutorial/QNMspectralOverview\"\>":>
-      None, "\<\"Copy Mathematica url\"\>":>
-      Module[{DocumentationSearch`Private`nb$}, 
-       DocumentationSearch`Private`nb$ = NotebookPut[
-          Notebook[{
-            Cell["QNMspectral/tutorial/QNMspectralOverview"]}, Visible -> 
-           False]]; SelectionMove[
-        DocumentationSearch`Private`nb$, All, Notebook]; 
-       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
-       NotebookClose[DocumentationSearch`Private`nb$]; Null], 
-      Delimiter, "\<\"Copy web url\"\>":>
-      Module[{DocumentationSearch`Private`nb$}, 
-       DocumentationSearch`Private`nb$ = NotebookPut[
-          Notebook[{
-            Cell[
-             BoxData[
-              MakeBoxes[
-               Hyperlink[
-               "http://reference.wolfram.com/mathematica/QNMspectral/tutorial/\
-QNMspectralOverview.html"], StandardForm]], "Input", TextClipboardType -> 
-             "PlainText"]}, Visible -> False]]; 
-       SelectionMove[DocumentationSearch`Private`nb$, All, Notebook]; 
-       FrontEndTokenExecute[DocumentationSearch`Private`nb$, "Copy"]; 
-       NotebookClose[DocumentationSearch`Private`nb$]; 
-       Null], "\<\"Go to web url\"\>":>FrontEndExecute[{
-        NotebookLocate[{
-          URL[
-           StringJoin[
-           "http://reference.wolfram.com/mathematica/", 
-            "QNMspectral/tutorial/QNMspectralOverview", ".html"]], None}]}]},
-      Appearance->None,
-      MenuAppearance->Automatic]],
-     LineSpacing->{1.4, 0}]], "AnchorBar"]}
-  }]], "AnchorBarGrid",
- GridBoxOptions->{GridBoxItemSize->{"Columns" -> {
-     Scaled[0.65], {
-      Scaled[0.34]}}, "ColumnsIndexed" -> {}, "Rows" -> {{1.}}, 
-   "RowsIndexed" -> {}}},
- CellID->1],
+Cell[TextData[{
+ "New in: ",
+ Cell["XX", "HistoryData",
+  CellTags->"New"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised"]
+}], "History",
+ CellID->1247902091],
 
 Cell[CellGroupData[{
 
-Cell["QNMspectral Overview", "TOCDocumentTitle"],
+Cell["Categorization", "CategorizationSection",
+ CellID->1122911449],
+
+Cell["Overview", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->686433507],
+
+Cell["QNMspectral Package", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->605800465],
+
+Cell["QNMspectral`", "Categorization",
+ CellLabel->"Context",
+ CellID->468444828],
+
+Cell["QNMspectral/tutorial/QNMspectralOverview", "Categorization",
+ CellLabel->"URI"]
+}, Open  ]],
 
 Cell[CellGroupData[{
 
-Cell[TextData[ButtonBox["QNMspectral",
- BaseStyle->"Link",
- ButtonData->
-  "paclet:QNMspectral/tutorial/Introduction#509267359"]], "TOCChapter"],
+Cell["Synonyms", "SynonymsSection",
+ CellID->1427418553],
 
-Cell[TextData[ButtonBox["About",
- BaseStyle->"Link",
- ButtonData->
-  "paclet:QNMspectral/tutorial/Introduction#512620808"]], "TOCSection"],
+Cell["XXXX", "Synonyms",
+ CellID->1251652828]
+}, Closed]],
 
-Cell[TextData[ButtonBox["Getting Started",
- BaseStyle->"Link",
- ButtonData->
-  "paclet:QNMspectral/tutorial/Introduction#707075887"]], "TOCSection"],
+Cell[CellGroupData[{
 
-Cell[TextData[ButtonBox["Quasinormal Modes",
- BaseStyle->"Link",
- ButtonData->
-  "paclet:QNMspectral/tutorial/Introduction#1797413958"]], "TOCSection"],
+Cell["Keywords", "KeywordsSection",
+ CellID->1427428552],
 
-Cell[TextData[ButtonBox["Acknowledgements",
- BaseStyle->"Link",
- ButtonData->
-  "paclet:QNMspectral/tutorial/Introduction#2056750608"]], "TOCSection"],
+Cell["XXXX", "Keywords",
+ CellID->1251852827]
+}, Closed]],
 
-Cell[TextData[ButtonBox["Overview",
- BaseStyle->"Link",
- ButtonData->
-  "paclet:QNMspectral/tutorial/Introduction#1585771417"]], "TOCSection"]
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection",
+ CellID->307771771],
+
+Cell["XXXX", "Details",
+ CellLabel->"Lead",
+ CellID->218895918],
+
+Cell["XXXX", "Details",
+ CellLabel->"Developers",
+ CellID->350963985],
+
+Cell["XXXX", "Details",
+ CellLabel->"Authors",
+ CellID->795871300],
+
+Cell["XXXX", "Details",
+ CellLabel->"Feature Name",
+ CellID->199739161],
+
+Cell["XXXX", "Details",
+ CellLabel->"QA",
+ CellID->40625308],
+
+Cell["XXXX", "Details",
+ CellLabel->"DA",
+ CellID->357121918],
+
+Cell["XXXX", "Details",
+ CellLabel->"Docs",
+ CellID->35949532],
+
+Cell["XXXX", "Details",
+ CellLabel->"Features Page Notes",
+ CellID->929432370],
+
+Cell["XXXX", "Details",
+ CellLabel->"Comments",
+ CellID->240026365]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Introduction", "Title",
+ CellID->509267359],
+
+Cell[CellGroupData[{
+
+Cell["About", "Section",
+ CellChangeTimes->{{3.704795646853264*^9, 3.70479564758344*^9}},
+ CellID->1780888324],
+
+Cell[TextData[{
+ "This is a",
+ StyleBox[" Mathematica",
+  FontSlant->"Italic"],
+ " package by Aron Jansen. It is available for anyone to use, though if used \
+for a paper, please cite ",
+ ButtonBox["this paper",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://arxiv.org"], None}],
+ ", where the package was presented."
+}], "Text",
+ CellID->609569526],
+
+Cell[TextData[{
+ "The latest version of the package can be found ",
+ ButtonBox["here",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://github.com/APJansen/QNMspectral"], None}],
+ ". At this site it is also possible to contribute to the package, either by \
+fixing a bug you found, optimizing something or adding additional \
+functionality. I invite anyone who wishes to contribute to do so there."
+}], "Text",
+ CellID->185376528],
+
+Cell[TextData[{
+ "If anything is unclear, or you found a bug, you can also contact me at ",
+ StyleBox["A.P.Jansen@UU.nl",
+  FontSlant->"Italic"],
+ "."
+}], "Text",
+ CellID->1980515458]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Getting Started", "Section",
+ CellChangeTimes->{{3.7047956507019176`*^9, 3.7047956526041203`*^9}},
+ CellID->1817533663],
+
+Cell["\<\
+To get started using this package, it is recommend to first go through the \
+tutorial:\
+\>", "Text",
+ CellID->1813345487],
+
+Cell[TextData[{
+ " ",
+ ButtonBox["A simple example: a massless scalar in AdS_5",
+  BaseStyle->"Link",
+  ButtonData->"paclet:QNMspectral/tutorial/SimpleExample"]
+}], "Text",
+ CellID->2106726496],
+
+Cell["\<\
+An overview of other tutorials can be found below. Futhermore, every function \
+has its own documentation page, which can be accessed by evaluating e.g. \
+?GetModes for the function GetModes.\
+\>", "Text",
+ CellID->680808273]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Quasinormal Modes", "Section",
+ CellChangeTimes->{{3.70479565624006*^9, 3.704795658812667*^9}},
+ CellID->1251559663],
+
+Cell[TextData[{
+ "Quasinormal modes are linear perturbations ",
+ Cell[BoxData[
+  FormBox["\[Delta]\[Phi]", TraditionalForm]], "InlineMath"],
+ " of a black hole/black brane, which behave in time as ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{
+    RowBox[{"\[Delta]\[Phi]", "(", " ", "t", ")"}], "=", 
+    SuperscriptBox["e", 
+     RowBox[{
+      RowBox[{"-", "i"}], " ", "\[Omega]", " ", "t"}]]}], TraditionalForm]], 
+  "InlineMath"],
+ ". These are further required to be ingoing at the horizon and normalizable \
+at the boundary. These two boundary conditions admit solutions only for a \
+discrete set of frequencies ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"\[Omega]", "=", 
+    SubscriptBox["\[Omega]", "n"]}], TraditionalForm]], "InlineMath"],
+ ". This set ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Omega]", "n"], TraditionalForm]], "InlineMath"],
+ " is called the quasinormal mode spectrum and is usually infinite."
+}], "Text",
+ Deletable->True,
+ CellID->1282883017],
+
+Cell["\<\
+They naturally describe the late time part of any equilibration process that \
+results in a black hole.\
+\>", "Text",
+ CellID->1449877470],
+
+Cell["\<\
+Furthermore in the context of holography the frequencies correspond to poles \
+of the retarted Green's function in the dual field theory (where the type of \
+field that is fluctuated relates to the type of Green's function in the dual \
+theory).\
+\>", "Text",
+ CellID->1852568906],
+
+Cell[TextData[{
+ "In general the ",
+ Cell[BoxData[
+  FormBox[
+   SubscriptBox["\[Omega]", "n"], TraditionalForm]], "InlineMath"],
+ " are complex numbers. The real part describes the oscillations and the \
+imaginary part the exponential decay, provided it is negative. A positive \
+imaginary part indicates a dynamical instability."
+}], "Text",
+ Deletable->True,
+ CellID->1877588382],
+
+Cell[TextData[{
+ "Two great reviews on quasinormal modes can be found ",
+ ButtonBox["here",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://arxiv.org/abs/0905.2975"], None}],
+ " and ",
+ ButtonBox["here",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://arxiv.org/abs/1102.4014"], None}],
+ "."
+}], "Text",
+ CellID->331515170]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Acknowledgements", "Section",
+ CellChangeTimes->{{3.7047956633864202`*^9, 3.7047956649709044`*^9}},
+ CellID->1390972306],
+
+Cell[TextData[{
+ "I want to thank especially L. Yaffe and the organisers of the 2014 ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " summer school on theoretical physics in Porto, as this package was \
+inspired by an exercise by L. Yaffe at this school (which can be found ",
+ ButtonBox["here",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["http://msstp.org/?q=node/289"], None}],
+ "). I also want to thank W. van der Schee and W. Sybesma for using earlier \
+versions of this package and helping me fix the occasional bugs and other \
+improvements, and U. Gursoy, J. M. Magan and S. Vandoren for collaborations \
+on different projects during which this package was used and developed. I \
+further want to thank N. Kaplis for tips on efficiently sweeping the complex \
+plane, M. Ammon for a suggestion on how to treat higher powers of the \
+frequency, O. Dias for interesting discussions on using the Newton-Raphson \
+method, and J. Harris for comments on the code, and the suggestion to write \
+this documentation."
+}], "Text",
+ CellID->677148683]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -107,38 +300,44 @@ Cell[CellGroupData[{
 Cell[TextData[{
  ButtonBox["A simple example: a massless scalar in ",
   BaseStyle->"Link",
-  ButtonData->"paclet:QNMspectral/tutorial/SimpleExample#31199131"],
+  ButtonData->"paclet:QNMspectral/tutorial/SimpleExample#509267359"],
  ButtonBox[Cell[BoxData[
   FormBox[
    SubscriptBox["AdS", "5"], TraditionalForm]], "InlineMath"],
   BaseStyle->"Link",
-  ButtonData->"paclet:QNMspectral/tutorial/SimpleExample#31199131"]
-}], "TOCChapter"],
+  ButtonData->"paclet:QNMspectral/tutorial/SimpleExample#509267359"]
+}], "TOCChapter",
+ CellID->285503243],
 
 Cell[TextData[ButtonBox["The quasinormal mode equation",
  BaseStyle->"Link",
  ButtonData->
-  "paclet:QNMspectral/tutorial/SimpleExample#937227206"]], "TOCSubsection"],
+  "paclet:QNMspectral/tutorial/SimpleExample#345343203"]], "TOCSection",
+ CellID->974537703],
 
 Cell[TextData[ButtonBox["Numerical solution",
  BaseStyle->"Link",
  ButtonData->
-  "paclet:QNMspectral/tutorial/SimpleExample#581645126"]], "TOCSubsection"],
+  "paclet:QNMspectral/tutorial/SimpleExample#731986798"]], "TOCSection",
+ CellID->197398652],
 
 Cell[TextData[ButtonBox["Displaying results",
  BaseStyle->"Link",
  ButtonData->
-  "paclet:QNMspectral/tutorial/SimpleExample#1658998297"]], "TOCSubsection"],
+  "paclet:QNMspectral/tutorial/SimpleExample#1402907807"]], "TOCSection",
+ CellID->1964393196],
 
 Cell[TextData[ButtonBox["A more accurate solution",
  BaseStyle->"Link",
  ButtonData->
-  "paclet:QNMspectral/tutorial/SimpleExample#1118107951"]], "TOCSubsection"],
+  "paclet:QNMspectral/tutorial/SimpleExample#643984155"]], "TOCSection",
+ CellID->142856194],
 
 Cell[TextData[ButtonBox["Recommended use: GetAccurateModes",
  BaseStyle->"Link",
  ButtonData->
-  "paclet:QNMspectral/tutorial/SimpleExample#1211574677"]], "TOCSubsection"]
+  "paclet:QNMspectral/tutorial/SimpleExample#1243420014"]], "TOCSection",
+ CellID->97335212]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -150,23 +349,22 @@ Cell[TextData[ButtonBox["Extensions",
 
 Cell[TextData[ButtonBox["Computing and viewing eigenfunctions",
  BaseStyle->"Link",
- ButtonData->
-  "paclet:QNMspectral/tutorial/Extensions#937227206"]], "TOCSubsection"],
+ ButtonData->"paclet:QNMspectral/tutorial/Extensions#17448368"]], "TOCSection"],
 
 Cell[TextData[ButtonBox["Coupled equations",
  BaseStyle->"Link",
  ButtonData->
-  "paclet:QNMspectral/tutorial/Extensions#1160455089"]], "TOCSubsection"],
+  "paclet:QNMspectral/tutorial/Extensions#1227182867"]], "TOCSection"],
 
-Cell[TextData[ButtonBox["Numerical background",
+Cell[TextData[ButtonBox["Numerical Background",
  BaseStyle->"Link",
  ButtonData->
-  "paclet:QNMspectral/tutorial/Extensions#322198769"]], "TOCSubsection"],
+  "paclet:QNMspectral/tutorial/Extensions#724119334"]], "TOCSection"],
 
 Cell[TextData[ButtonBox["Higher powers of the frequency",
  BaseStyle->"Link",
  ButtonData->
-  "paclet:QNMspectral/tutorial/Extensions#1947376959"]], "TOCSubsection"]
+  "paclet:QNMspectral/tutorial/Extensions#1672305947"]], "TOCSection"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -180,128 +378,98 @@ Cell[CellGroupData[{
 Cell[TextData[ButtonBox["Boundary Conditions and Eddington-Finkelstein \
 coordinates",
  BaseStyle->"Link",
- ButtonData->"paclet:QNMspectral/tutorial/Method#278927872"]], "TOCSection"],
+ ButtonData->"paclet:QNMspectral/tutorial/Method#13864819"]], "TOCSection"],
 
-Cell[TextData[ButtonBox["Asymptotically flat case",
+Cell[TextData[ButtonBox["Different asymptotics",
  BaseStyle->"Link",
- ButtonData->
-  "paclet:QNMspectral/tutorial/Method#1478924877"]], "TOCSubsection"]
+ ButtonData->"paclet:QNMspectral/tutorial/Method#354031387"]], "TOCSubsection"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[TextData[ButtonBox["Discretization: Pseudospectral Methods",
  BaseStyle->"Link",
- ButtonData->"paclet:QNMspectral/tutorial/Method#1481255430"]], "TOCSection"],
+ ButtonData->"paclet:QNMspectral/tutorial/Method#1267753975"]], "TOCSection"],
 
-Cell[TextData[ButtonBox["Boundary conditions",
+Cell[TextData[ButtonBox["Boundary Conditions",
  BaseStyle->"Link",
  ButtonData->
-  "paclet:QNMspectral/tutorial/Method#2112455044"]], "TOCSubsection"]
+  "paclet:QNMspectral/tutorial/Method#2116007790"]], "TOCSubsection"]
 }, Open  ]],
 
 Cell[TextData[ButtonBox["Generalized Eigenvalue Equation",
  BaseStyle->"Link",
- ButtonData->"paclet:QNMspectral/tutorial/Method#1062523101"]], "TOCSection"],
+ ButtonData->"paclet:QNMspectral/tutorial/Method#543512774"]], "TOCSection"],
 
 Cell[TextData[ButtonBox["Extension: coupled equations, higher powers of \
 \[Omega]",
  BaseStyle->"Link",
- ButtonData->"paclet:QNMspectral/tutorial/Method#443200371"]], "TOCSection"],
+ ButtonData->"paclet:QNMspectral/tutorial/Method#1904411934"]], "TOCSection"],
 
 Cell[TextData[ButtonBox["References",
  BaseStyle->"Link",
- ButtonData->"paclet:QNMspectral/tutorial/Method#1035524837"]], "TOCSection"]
+ ButtonData->"paclet:QNMspectral/tutorial/Method#558260947"]], "TOCSection"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
-Cell[TextData[ButtonBox["ReferencePages/Symbols",
+Cell[TextData[ButtonBox["Functions",
  BaseStyle->"Link",
- ButtonData->"paclet:QNMspectral/ref/GetModes"]], "TOCChapter"],
+ ButtonData->"paclet:QNMspectral/ref/$QNMMemory"]], "TOCChapter",
+ CellChangeTimes->{{3.7058163531867733`*^9, 3.705816353206552*^9}}],
 
 Cell[TextData[ButtonBox["GetModes",
  BaseStyle->"Link",
- ButtonData->"paclet:QNMspectral/ref/GetModes"]], "TOCSection"],
+ ButtonData->"paclet:QNMspectral/ref/GetModes"]], "TOCSection",
+ CellID->1268614066],
 
 Cell[TextData[ButtonBox["GetAccurateModes",
  BaseStyle->"Link",
- ButtonData->"paclet:QNMspectral/ref/GetAccurateModes"]], "TOCSection"],
+ ButtonData->"paclet:QNMspectral/ref/GetAccurateModes"]], "TOCSection",
+ CellID->1378959846],
 
 Cell[TextData[ButtonBox["PlotFrequencies",
  BaseStyle->"Link",
- ButtonData->"paclet:QNMspectral/ref/PlotFrequencies"]], "TOCSection"],
+ ButtonData->"paclet:QNMspectral/ref/PlotFrequencies"]], "TOCSection",
+ CellID->534613298],
 
 Cell[TextData[ButtonBox["MakeTable",
  BaseStyle->"Link",
- ButtonData->"paclet:QNMspectral/ref/MakeTable"]], "TOCSection"],
+ ButtonData->"paclet:QNMspectral/ref/MakeTable"]], "TOCSection",
+ CellID->174120438],
 
 Cell[TextData[ButtonBox["ShowModes",
  BaseStyle->"Link",
- ButtonData->"paclet:QNMspectral/ref/ShowModes"]], "TOCSection"],
+ ButtonData->"paclet:QNMspectral/ref/ShowModes"]], "TOCSection",
+ CellID->1569474252],
 
 Cell[TextData[ButtonBox["PlotEigenfunctions",
  BaseStyle->"Link",
- ButtonData->"paclet:QNMspectral/ref/PlotEigenfunctions"]], "TOCSection"],
+ ButtonData->"paclet:QNMspectral/ref/PlotEigenfunctions"]], "TOCSection",
+ CellID->1845265637],
 
 Cell[TextData[ButtonBox["FitFunction",
  BaseStyle->"Link",
- ButtonData->"paclet:QNMspectral/ref/FitFunction"]], "TOCSection"],
+ ButtonData->"paclet:QNMspectral/ref/FitFunction"]], "TOCSection",
+ CellID->918201093],
 
 Cell[TextData[ButtonBox["PlotFit",
  BaseStyle->"Link",
- ButtonData->"paclet:QNMspectral/ref/PlotFit"]], "TOCSection"]
-}, Open  ]]
-}, Open  ]],
+ ButtonData->"paclet:QNMspectral/ref/PlotFit"]], "TOCSection",
+ CellID->1568214732],
 
-Cell[" ", "FooterCell"]
+Cell[TextData[ButtonBox["$QNMMemory",
+ BaseStyle->"Link",
+ ButtonData->"paclet:QNMspectral/ref/$QNMMemory"]], "TOCSection"]
+}, Open  ]]
+}, Open  ]]
 },
-Saveable->False,
-ScreenStyleEnvironment->"Working",
-WindowSize->{725, 750},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
-WindowTitle->"QNMspectral Overview - Wolfram Mathematica",
-TaggingRules->{
- "ModificationHighlight" -> False, "ColorType" -> "TutorialColor", 
-  "LinkTrails" -> GridBox[{{
-      RowBox[{
-        ButtonBox[
-        "Mathematica", ButtonData -> "paclet:QNMspectral/guide/QNMspectral", 
-         BaseStyle -> {"Link", "DockedLinkTrail"}], 
-        Cell[">", "DockedLinkTrailSeparator"]}]}}, ColumnAlignments -> Left], 
-  "Metadata" -> {
-   "built" -> "{2016, 10, 11, 12, 16, 31.973782}", 
-    "history" -> {"XX", "", "", ""}, "context" -> "QNMspectral`", 
-    "keywords" -> {}, "specialkeywords" -> {}, 
-    "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
-    "Q N Mspectral Package Overview", "language" -> "en", "paclet" -> 
-    "QNMspectral Package", "status" -> "None", "summary" -> 
-    "QNMspectral A simple example: a massless scalar in AdS_5 Extensions", 
-    "synonyms" -> {}, "title" -> "QNMspectral Overview", "titlemodifier" -> 
-    "", "windowtitle" -> "QNMspectral Overview", "type" -> "Overview", "uri" -> 
-    "QNMspectral/tutorial/QNMspectralOverview"}, "SearchTextTranslated" -> ""},
-FrontEndVersion->"9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, \
-2013)",
-StyleDefinitions->Notebook[{
-   Cell[
-    StyleData[
-    StyleDefinitions -> FrontEnd`FileName[{"Wolfram"}, "Reference.nb"]]], 
-   Cell[
-    StyleData["Input"], CellContext -> Notebook], 
-   Cell[
-    StyleData["Output"], CellContext -> Notebook], 
-   Cell[
-    StyleData["TutorialMoreAboutSection"], 
-    CellGroupingRules -> {"SectionGrouping", 30}], 
-   Cell[
-    StyleData["RelatedTutorialsSection"], 
-    CellGroupingRules -> {"SectionGrouping", 30}], 
-   Cell[
-    StyleData["TutorialRelatedLinksSection"], 
-    CellGroupingRules -> {"SectionGrouping", 30}]}, Visible -> False, 
-  FrontEndVersion -> 
-  "9.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (January 25, 2013)", 
-  StyleDefinitions -> "Default.nb"]
+WindowSize->{700, 770},
+WindowMargins->{{4, Automatic}, {Automatic, 0}},
+FrontEndVersion->"11.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 28, \
+2016)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "TutorialPageStyles.nb", 
+  CharacterEncoding -> "UTF-8"]
 ]
 (* End of Notebook Content *)
 
@@ -314,62 +482,153 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[613, 21, 1964, 44, 70, "AnchorBarGrid",
- CellID->1],
+Cell[558, 20, 324, 14, 24, "History",
+ CellID->1247902091],
 Cell[CellGroupData[{
-Cell[2602, 69, 48, 0, 70, "TOCDocumentTitle"],
-Cell[CellGroupData[{
-Cell[2675, 73, 144, 3, 70, "TOCChapter"],
-Cell[2822, 78, 138, 3, 70, "TOCSection"],
-Cell[2963, 83, 148, 3, 70, "TOCSection"],
-Cell[3114, 88, 151, 3, 70, "TOCSection"],
-Cell[3268, 93, 150, 3, 70, "TOCSection"],
-Cell[3421, 98, 142, 3, 70, "TOCSection"]
+Cell[907, 38, 68, 1, 29, "CategorizationSection",
+ CellID->1122911449],
+Cell[978, 41, 81, 2, 30, "Categorization",
+ CellID->686433507],
+Cell[1062, 45, 92, 2, 30, "Categorization",
+ CellID->605800465],
+Cell[1157, 49, 81, 2, 30, "Categorization",
+ CellID->468444828],
+Cell[1241, 53, 85, 1, 30, "Categorization"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3600, 106, 365, 9, 70, "TOCChapter"],
-Cell[3968, 117, 166, 3, 70, "TOCSubsection"],
-Cell[4137, 122, 155, 3, 70, "TOCSubsection"],
-Cell[4295, 127, 156, 3, 70, "TOCSubsection"],
-Cell[4454, 132, 162, 3, 70, "TOCSubsection"],
-Cell[4619, 137, 171, 3, 70, "TOCSubsection"]
+Cell[1363, 59, 56, 1, 29, "SynonymsSection",
+ CellID->1427418553],
+Cell[1422, 62, 45, 1, 70, "Synonyms",
+ CellID->1251652828]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1504, 68, 56, 1, 19, "KeywordsSection",
+ CellID->1427428552],
+Cell[1563, 71, 45, 1, 70, "Keywords",
+ CellID->1251852827]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1645, 77, 53, 1, 19, "DetailsSection",
+ CellID->307771771],
+Cell[1701, 80, 63, 2, 70, "Details",
+ CellID->218895918],
+Cell[1767, 84, 69, 2, 70, "Details",
+ CellID->350963985],
+Cell[1839, 88, 66, 2, 70, "Details",
+ CellID->795871300],
+Cell[1908, 92, 71, 2, 70, "Details",
+ CellID->199739161],
+Cell[1982, 96, 60, 2, 70, "Details",
+ CellID->40625308],
+Cell[2045, 100, 61, 2, 70, "Details",
+ CellID->357121918],
+Cell[2109, 104, 62, 2, 70, "Details",
+ CellID->35949532],
+Cell[2174, 108, 78, 2, 70, "Details",
+ CellID->929432370],
+Cell[2255, 112, 67, 2, 70, "Details",
+ CellID->240026365]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2359, 119, 49, 1, 106, "Title",
+ CellID->509267359],
+Cell[CellGroupData[{
+Cell[2433, 124, 110, 2, 43, "Section",
+ CellID->1780888324],
+Cell[2546, 128, 361, 12, 40, "Text",
+ CellID->609569526],
+Cell[2910, 142, 440, 10, 57, "Text",
+ CellID->185376528],
+Cell[3353, 154, 183, 6, 23, "Text",
+ CellID->1980515458]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4827, 145, 141, 3, 70, "TOCChapter"],
-Cell[4971, 150, 170, 3, 70, "TOCSubsection"],
-Cell[5144, 155, 152, 3, 70, "TOCSubsection"],
-Cell[5299, 160, 154, 3, 70, "TOCSubsection"],
-Cell[5456, 165, 165, 3, 70, "TOCSubsection"]
+Cell[3573, 165, 125, 2, 43, "Section",
+ CellID->1817533663],
+Cell[3701, 169, 131, 4, 23, "Text",
+ CellID->1813345487],
+Cell[3835, 175, 193, 6, 23, "Text",
+ CellID->2106726496],
+Cell[4031, 183, 235, 5, 40, "Text",
+ CellID->680808273]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5658, 173, 130, 2, 70, "TOCChapter"],
-Cell[CellGroupData[{
-Cell[5813, 179, 183, 3, 70, "TOCSection"],
-Cell[5999, 184, 155, 3, 70, "TOCSubsection"]
+Cell[4303, 193, 122, 2, 43, "Section",
+ CellID->1251559663],
+Cell[4428, 197, 971, 27, 75, "Text",
+ CellID->1282883017],
+Cell[5402, 226, 148, 4, 23, "Text",
+ CellID->1449877470],
+Cell[5553, 232, 290, 6, 57, "Text",
+ CellID->1852568906],
+Cell[5846, 240, 382, 10, 40, "Text",
+ CellID->1877588382],
+Cell[6231, 252, 345, 13, 23, "Text",
+ CellID->331515170]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6191, 192, 163, 2, 70, "TOCSection"],
-Cell[6357, 196, 150, 3, 70, "TOCSubsection"]
-}, Open  ]],
-Cell[6522, 202, 156, 2, 70, "TOCSection"],
-Cell[6681, 206, 181, 3, 70, "TOCSection"],
-Cell[6865, 211, 135, 2, 70, "TOCSection"]
+Cell[6613, 270, 126, 2, 43, "Section",
+ CellID->1390972306],
+Cell[6742, 274, 1059, 20, 159, "Text",
+ CellID->677148683]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7037, 218, 133, 2, 70, "TOCChapter"],
-Cell[7173, 222, 119, 2, 70, "TOCSection"],
-Cell[7295, 226, 135, 2, 70, "TOCSection"],
-Cell[7433, 230, 133, 2, 70, "TOCSection"],
-Cell[7569, 234, 121, 2, 70, "TOCSection"],
-Cell[7693, 238, 121, 2, 70, "TOCSection"],
-Cell[7817, 242, 139, 2, 70, "TOCSection"],
-Cell[7959, 246, 125, 2, 70, "TOCSection"],
-Cell[8087, 250, 117, 2, 70, "TOCSection"]
+Cell[7838, 299, 387, 10, 48, "TOCChapter",
+ CellID->285503243],
+Cell[8228, 311, 183, 4, 28, "TOCSection",
+ CellID->974537703],
+Cell[8414, 317, 172, 4, 22, "TOCSection",
+ CellID->197398652],
+Cell[8589, 323, 174, 4, 22, "TOCSection",
+ CellID->1964393196],
+Cell[8766, 329, 178, 4, 22, "TOCSection",
+ CellID->142856194],
+Cell[8947, 335, 187, 4, 22, "TOCSection",
+ CellID->97335212]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9171, 344, 141, 3, 46, "TOCChapter"],
+Cell[9315, 349, 163, 2, 28, "TOCSection"],
+Cell[9481, 353, 149, 3, 22, "TOCSection"],
+Cell[9633, 358, 151, 3, 22, "TOCSection"],
+Cell[9787, 363, 162, 3, 22, "TOCSection"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9986, 371, 130, 2, 46, "TOCChapter"],
+Cell[CellGroupData[{
+Cell[10141, 377, 182, 3, 28, "TOCSection"],
+Cell[10326, 382, 148, 2, 19, "TOCSubsection"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10511, 389, 163, 2, 28, "TOCSection"],
+Cell[10677, 393, 150, 3, 19, "TOCSubsection"]
+}, Open  ]],
+Cell[10842, 399, 155, 2, 28, "TOCSection"],
+Cell[11000, 403, 182, 3, 22, "TOCSection"],
+Cell[11185, 408, 134, 2, 22, "TOCSection"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11356, 415, 190, 3, 46, "TOCChapter"],
+Cell[11549, 420, 140, 3, 28, "TOCSection",
+ CellID->1268614066],
+Cell[11692, 425, 156, 3, 22, "TOCSection",
+ CellID->1378959846],
+Cell[11851, 430, 153, 3, 22, "TOCSection",
+ CellID->534613298],
+Cell[12007, 435, 141, 3, 22, "TOCSection",
+ CellID->174120438],
+Cell[12151, 440, 142, 3, 22, "TOCSection",
+ CellID->1569474252],
+Cell[12296, 445, 160, 3, 22, "TOCSection",
+ CellID->1845265637],
+Cell[12459, 450, 145, 3, 22, "TOCSection",
+ CellID->918201093],
+Cell[12607, 455, 138, 3, 22, "TOCSection",
+ CellID->1568214732],
+Cell[12748, 460, 123, 2, 22, "TOCSection"]
 }, Open  ]]
-}, Open  ]],
-Cell[8231, 256, 23, 0, 70, "FooterCell"]
+}, Open  ]]
 }
 ]
 *)
 
-(* End of internal cache information *)
