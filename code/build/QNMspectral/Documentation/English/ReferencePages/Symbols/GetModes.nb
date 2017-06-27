@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     12414,        395]
+NotebookDataLength[     12416,        395]
 NotebookOptionsPosition[      9242,        305]
-NotebookOutlinePosition[     11201,        356]
-CellTagsIndexPosition[     11158,        353]
+NotebookOutlinePosition[     11203,        356]
+CellTagsIndexPosition[     11160,        353]
 WindowTitle->GetModes
 WindowFrame->Normal*)
 
@@ -317,7 +317,7 @@ TaggingRules->{
          BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
     Left], "ExampleCounter" -> 1, "NeedPlatMsgIn" -> None, "RootCaptions" -> 
   "", "Metadata" -> {
-   "built" -> "{2017, 6, 7, 17, 8, 27.790482}", 
+   "built" -> "{2017, 6, 26, 13, 34, 29.308201}", 
     "history" -> {"0.0", "", "", ""}, "context" -> "QNMSpectral`", 
     "keywords" -> {}, "specialkeywords" -> {}, 
     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 

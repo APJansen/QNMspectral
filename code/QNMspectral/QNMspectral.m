@@ -304,7 +304,7 @@ Derivative],
 MultilineFunction->None]\)[var]->der[n].f[[2]],{f,format@numBG},{n,0,maxderBG}],1],{}]~Join~{var->grid};
 
 idVec=Table[1,{Length@grid}]//format;
-Map[idVec*#&,coeffs/.replace,{3}]
+Map[idVec*#&,format[coeffs]/.replace,{3}]
 ]
 
 

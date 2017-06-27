@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    259680,       5165]
-NotebookOptionsPosition[    250216,       4858]
-NotebookOutlinePosition[    253118,       4934]
-CellTagsIndexPosition[    253037,       4929]
+NotebookDataLength[    259685,       5165]
+NotebookOptionsPosition[    250217,       4858]
+NotebookOutlinePosition[    253122,       4934]
+CellTagsIndexPosition[    253041,       4929]
 WindowTitle->Extensions
 WindowFrame->Normal*)
 
@@ -1576,7 +1576,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAICl5v8BRZDURA==
  ImageRegion->{{0, 1}, {0, 1}},
  CellTags->"RasterizedOutput",
  CellLabel->"Out[4]=",
- CellID->1058829948]
+ CellID->1050139078]
 }, Open  ]],
 
 Cell[TextData[{
@@ -2536,7 +2536,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALCt/wcursxY
  ImageRegion->{{0, 1}, {0, 1}},
  CellTags->"RasterizedOutput",
  CellLabel->"Out[9]=",
- CellID->1705436994]
+ CellID->1666872900]
 }, Open  ]],
 
 Cell["\<\
@@ -4788,7 +4788,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA0vt/ZyUP6g==
  ImageRegion->{{0, 1}, {0, 1}},
  CellTags->"RasterizedOutput",
  CellLabel->"Out[26]=",
- CellID->815321649]
+ CellID->1208655185]
 }, Open  ]],
 
 Cell[TextData[{
@@ -4870,7 +4870,7 @@ TaggingRules->{
          BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
     Left], "ExampleCounter" -> 1, "NeedPlatMsgIn" -> None, "RootCaptions" -> 
   "", "Metadata" -> {
-   "built" -> "{2017, 6, 7, 17, 8, 37.888074}", 
+   "built" -> "{2017, 6, 26, 13, 34, 40.012582}", 
     "history" -> {"0.0", "", "", ""}, "context" -> "QNMSpectral`", 
     "keywords" -> {}, "specialkeywords" -> {}, 
     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
@@ -4917,18 +4917,18 @@ CellTagsIndex->{
  "RasterizedOutput"->{
   Cell[38331, 819, 45781, 759, 70, "Output",
    CellTags->"RasterizedOutput",
-   CellID->1058829948],
+   CellID->1050139078],
   Cell[92580, 1840, 42076, 698, 70, "Output",
    CellTags->"RasterizedOutput",
-   CellID->1705436994],
-  Cell[161770, 3362, 86602, 1428, 70, "Output",
+   CellID->1666872900],
+  Cell[161770, 3362, 86603, 1428, 70, "Output",
    CellTags->"RasterizedOutput",
-   CellID->815321649]}
+   CellID->1208655185]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"RasterizedOutput", 252704, 4916}
+ {"RasterizedOutput", 252707, 4916}
  }
 *)
 (*NotebookFileOutline
@@ -4983,7 +4983,7 @@ Cell[37981, 806, 347, 11, 70, "Input",
  CellID->1788956318],
 Cell[38331, 819, 45781, 759, 70, "Output",
  CellTags->"RasterizedOutput",
- CellID->1058829948]
+ CellID->1050139078]
 }, Open  ]],
 Cell[84127, 1581, 354, 11, 70, "Text",
  CellID->2038277146]
@@ -5035,7 +5035,7 @@ Cell[91822, 1818, 755, 20, 70, "Input",
  CellID->1841952292],
 Cell[92580, 1840, 42076, 698, 70, "Output",
  CellTags->"RasterizedOutput",
- CellID->1705436994]
+ CellID->1666872900]
 }, Open  ]],
 Cell[134671, 2541, 179, 4, 70, "Text",
  CellID->2092352079],
@@ -5145,28 +5145,28 @@ Cell[160286, 3315, 1260, 36, 70, "Input",
  CellID->496353076],
 Cell[161549, 3353, 218, 7, 70, "Output",
  CellID->161869123],
-Cell[161770, 3362, 86602, 1428, 70, "Output",
+Cell[161770, 3362, 86603, 1428, 70, "Output",
  CellTags->"RasterizedOutput",
- CellID->815321649]
+ CellID->1208655185]
 }, Open  ]],
-Cell[248387, 4793, 535, 10, 70, "Text",
+Cell[248388, 4793, 535, 10, 70, "Text",
  CellID->1845248534],
-Cell[248925, 4805, 397, 11, 70, "Text",
+Cell[248926, 4805, 397, 11, 70, "Text",
  CellID->2032271103]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[249359, 4821, 287, 12, 70, "RelatedTutorialsSection",
+Cell[249360, 4821, 287, 12, 70, "RelatedTutorialsSection",
  CellID->415694126],
-Cell[249649, 4835, 31, 0, 70, "SectionHeaderSpacer"],
-Cell[249683, 4837, 164, 4, 70, "RelatedTutorials",
+Cell[249650, 4835, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[249684, 4837, 164, 4, 70, "RelatedTutorials",
  CellID->261026728],
-Cell[249850, 4843, 163, 4, 70, "RelatedTutorials",
+Cell[249851, 4843, 163, 4, 70, "RelatedTutorials",
  CellID->498253685],
-Cell[250016, 4849, 146, 3, 70, "RelatedTutorials",
+Cell[250017, 4849, 146, 3, 70, "RelatedTutorials",
  CellID->145118313]
 }, Open  ]]
 }, Open  ]],
-Cell[250189, 4856, 23, 0, 70, "FooterCell"]
+Cell[250190, 4856, 23, 0, 70, "FooterCell"]
 }
 ]
 *)
