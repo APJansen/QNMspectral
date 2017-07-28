@@ -285,9 +285,18 @@ Map[Coefficient[#,functsAndDers]&,\[Omega]coeffs,{2}]//Transpose
 (* ::Input::Initialization:: *)
 Attributes[makeSpectralGrid]={HoldFirst};
 makeSpectralGrid[{grid_Symbol,der_Symbol},{order_Integer,prec_?NumericQ,hor_ : 1 }]/;NumericQ[hor]:=Block[{$MinPrecision=prec},
-grid=Rescale[Cos[\[Pi]/order format@Range[0,order]],{-1,1},{0,hor}] //format;
+grid = MakeGrid[order,Precision->prec,Horizon->hor];
 der[0]=IdentityMatrix[order+1]//format;(* Note there is a bug with the function below, using ["DifferentiationMatrix"] gives a wrong last column *)
 der[n_]:=der[n]=(-1)^n NDSolve`FiniteDifferenceDerivative[n,grid//Reverse,DifferenceOrder->"Pseudospectral"]/@IdentityMatrix[order+1]//Transpose;
+]
+
+
+(* ::Input::Initialization:: *)
+Options[MakeGrid]={Horizon->1.,Precision->0}
+MakeGrid[n_,opts : OptionsPattern[]]:=Block[{$MinPrecision = Max[OptionValue[Precision],$MachinePrecision],
+hor=OptionValue[Horizon],bdry=0},
+hor=SetPrecision[hor,$MinPrecision];bdry=SetPrecision[bdry,$MinPrecision];
+Rescale[Cos[\[Pi]/n format@Range[0,n]],{-1,1},{bdry,hor}] 
 ]
 
 
@@ -437,11 +446,11 @@ packEigenfunctions[modes_]:=Block[{$MinPrecision=0},Map[format[#+ 0.I]&,modes,{-
 (* ::Input::Initialization:: *)
 Options[GetAccurateModes]={Cutoff->1,FilterEigenfunctions->False,FilterModes->False};
 GetAccurateModes[equation_,{N1_,M1_  : "default",opts1___},{N2_,M2_  : "default",opts2___},opts:OptionsPattern[{GetAccurateModes,GetModes}]]:=Block[
-{prec1=M1/."default"->N1/2,prec2=M2/."default"->N2/2,filtermds=OptionValue[FilterModes],filterEfs=OptionValue[FilterEigenfunctions],efs=OptionValue[Eigenfunctions],
+{prec1=M1/."default"->N1/2,prec2=M2/."default"->N2/2,filtermds=OptionValue[FilterModes],filterEfs=OptionValue[FilterEigenfunctions],efs=OptionValue[Eigenfunctions],efOpt,
 eigenfPrec,Npmax,Npmin,optsmin,optsmax,modesMax,modesMin,samemodes,
 reap,grid,matrices,Neqs},
 
-If[TrueQ@(filterEfs&&Not[efs]),efs=True];
+efOpt=If[TrueQ@(filterEfs&&Not[efs]),Eigenfunctions->True,Sequence[]];
 
 {Npmin,Npmax}=SortBy[{{N1,prec1},{N2,prec2}},First];
 If[Npmax=={N1,M1},optsmax=opts1;optsmin=opts2;,optsmax=opts2;optsmin=opts1;];
@@ -449,9 +458,9 @@ If[Npmax=={N1,M1},optsmax=opts1;optsmin=opts2;,optsmax=opts2;optsmin=opts1;];
 eigenfPrec = OptionValue[EigenfunctionPrecision];
 
 reap=Reap[
-modesMax=GetModes[equation,Npmax,filterOpts[{optsmax,Eigenfunctions->efs},{opts}]],
+modesMax=GetModes[equation,Npmax,filterOpts[{optsmax,efOpt},{opts}]],
 "Mcoeffs"];
-modesMin=GetModes[equation,Npmin,filterOpts[{optsmin,Eigenfunctions->efs},{opts}]];
+modesMin=GetModes[equation,Npmin,filterOpts[{optsmin,efOpt},{opts}]];
 
 samemodes=sameModes[modesMax,modesMin,OptionValue[Cutoff]]//If[filtermds,FilterModes[#],#]&;
 
@@ -470,7 +479,7 @@ samemodes
 
 
 (* ::Input::Initialization:: *)
-filterOpts[{opts1___},{opts___}]:=(FilterRules[{opts1,opts},Options[GetModes]]/.HoldPattern[Eigenfunctions->"Later"]->Sequence[]//
+filterOpts[{opts1___},{opts___}]:=(FilterRules[{opts1,opts}/.Null->Sequence[],Options[GetModes]]/.HoldPattern[Eigenfunctions->"Later"]->Sequence[]//
 If[MemberQ[#,Eigenfunctions->"Later"],DeleteCases[#,EigenfunctionPrecision->Max],#]&)/.{}->Sequence[]
 
 
@@ -633,14 +642,12 @@ ShowModes::nmodes="There are not as many modes as `1`, showing all `2` instead."
 
 
 (* ::Input::Initialization:: *)
-Options[grid]={Horizon->1.,Precision->0}
-grid[n_,opts : OptionsPattern[]]:=Block[{$MinPrecision = Max[OptionValue[Precision],$MachinePrecision],hor=OptionValue[Horizon]},Rescale[Cos[\[Pi]/n format@Range[0,n]],{-1,1},{0,SetPrecision[hor,$MinPrecision]}] ]
+Options[PlotEigenfunctions]={NModes->All,Horizon->1,FunctionNumber->1,Rescale->0,Conjugates ->(#[[-3]]<0&)};
 
+PlotEigenfunctions[modes_,opts : OptionsPattern[{PlotEigenfunctions,Plot}]]:=Block[{n=OptionValue[NModes]/.All->Length[modes],fn=OptionValue[FunctionNumber],resc=OptionValue[Rescale],conjQ=OptionValue[Conjugates]/.False->(False&),
+hor = OptionValue[Horizon],grid,eigenfcts,fRe,fIm,fname},
 
-(* ::Input::Initialization:: *)
-Options[PlotEigenfunctions]={NModes->All,FunctionNumber->1,Rescale->0,Conjugates ->(#[[-3]]<0&)};
-
-PlotEigenfunctions[modes_,opts : OptionsPattern[{PlotEigenfunctions,Plot}]]:=Block[{n=OptionValue[NModes]/.All->Length[modes],fn=OptionValue[FunctionNumber],resc=OptionValue[Rescale],conjQ=OptionValue[Conjugates]/.False->(False&),grid=grid[Length[modes[[1,2,1]]]-1],eigenfcts,fRe,fIm,hor,fname},
+grid= MakeGrid[Length[modes[[1,2,1]]]-1,Horizon->hor];
 
 If[n>Length[modes],Message[PlotEigenfunctions::nmodes,n,n=Length[modes]]];
 catchError[If[Not@eigenfunctionsQ[modes],throwError[PlotEigenfunctions::efcomputed]],Block];
