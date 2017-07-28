@@ -218,7 +218,7 @@ TaggingRules->{
          BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
     Left], "ExampleCounter" -> 1, "NeedPlatMsgIn" -> None, "RootCaptions" -> 
   "", "Metadata" -> {
-   "built" -> "{2017, 6, 26, 13, 34, 25.781770}", 
+   "built" -> "{2017, 7, 28, 10, 59, 52.326670}", 
     "history" -> {"0.0", "", "", ""}, "context" -> "QNMSpectral`", 
     "keywords" -> {}, "specialkeywords" -> {}, 
     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
