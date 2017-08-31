@@ -458,12 +458,17 @@ formatEigenfunctions[eigensyst_,order_,Neqs_,eigenfPrec_]:=Block[{freqs,evecs,ev
 evecsUnique=Take[Transpose[evecs],Neqs (order+1)]; 
 
 evecsSorted=Transpose[Partition[evecsUnique,(order+1)],{2,3,1}]; 
-evecsNormalized=Map[If[Max[Abs@#]>10^-10&&Norm[First@#]>0,Conjugate[First@#]/Norm[First@#]^2,1]#&,evecsSorted,{2}];
+evecsNormalized=normalizeEigenfunctions[evecsSorted];
 result=Transpose[{freqs,evecsNormalized}];
 
 If[eigenfPrec=!=Max,result = packEigenfunctions[result]];
 result
 ]
+
+
+(* ::Input::Initialization:: *)
+(*normalizeEigenfunctions[eigenfunctions_]:=Map[If[Max[Abs@#]>10^-10&&Norm[First@#]>0,Conjugate[First@#]/Norm[First@#]^2,1]#&,eigenfunctions,{2}]*)
+normalizeEigenfunctions[eigenfunctions_]:=(efs\[Function]efs/(Conjugate[#1]/Norm[#1]^2&)@First@MaximalBy[efs[[All,1]],Abs])/@eigenfunctions
 
 
 (* ::Input::Initialization:: *)
