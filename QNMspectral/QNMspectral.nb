@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    239636,       5509]
-NotebookOptionsPosition[    231721,       5248]
-NotebookOutlinePosition[    232113,       5265]
-CellTagsIndexPosition[    232070,       5262]
+NotebookDataLength[    255931,       5872]
+NotebookOptionsPosition[    247536,       5596]
+NotebookOutlinePosition[    247928,       5613]
+CellTagsIndexPosition[    247885,       5610]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -88,6 +88,21 @@ FontSlant->\"Italic\"]\)} returning only those digits which are the same for \
 both.\>\""}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
+   RowBox[{"SameModes", "::", "usage"}], "=", "\"\<SameModes[\!\(\*
+StyleBox[\"modes1\",
+FontSlant->\"Italic\"]\),\!\(\*
+StyleBox[\"modes2\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\",\",
+FontSlant->\"Italic\"]\)\!\(\*
+StyleBox[\"n\",
+FontSlant->\"Italic\"]\)] compares two lists of modes and returns those that \
+occur in both lists, to a precision of \!\(\*SuperscriptBox[\"10\", 
+RowBox[{\"-\", 
+StyleBox[\"n\",
+FontSlant->\"Italic\"]}]]\).\>\""}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
    RowBox[{"PlotFrequencies", "::", "usage"}], " ", "=", " ", 
    "\"\<PlotFrequencies[\!\(\*
 StyleBox[\"modes\",
@@ -145,29 +160,51 @@ modes.\>\""}], ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]",
    "\"\<Deletes modes whose eigenfunction is not smooth, finite and \
 nonzero.\>\""}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"FilterModes", "::", "usage"}], "=", 
-  "\"\<Deletes any modes with imaginary part exactly equal to zero.\>\""}], "\
-\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"FilterModes", "::", "usage"}], "=", 
+   "\"\<Deletes any modes with imaginary part exactly equal to zero.\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"grid", "::", "usage"}], " ", "=", " ", "\"\<grid[\!\(\*
+  RowBox[{
+   RowBox[{
+    RowBox[{"MakeGrid", "::", "usage"}], " ", "=", " ", "\"\<grid[\!\(\*
 StyleBox[\"N\",
 FontSlant->\"Italic\"]\)] creates the grid of size \!\(\*
 StyleBox[\"N\",
-FontSlant->\"Italic\"]\)+1.\>\""}]}], "Input",
+FontSlant->\"Italic\"]\)+1.\>\""}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ComputeEigenfunctions", "::", "usage"}], " ", "=", " ", 
+   "\"\<ComputeEigenfunctions[\!\(\*
+StyleBox[\"equation\",
+FontSlant->\"Italic\"]\),\!\(\*
+StyleBox[\"frequencies\",
+FontSlant->\"Italic\"]\),{\!\(\*
+StyleBox[\"N\",
+FontSlant->\"Italic\"]\),\!\(\*
+StyleBox[\"prec\",
+FontSlant->\"Italic\"]\)}] computes the eigenfunctions corresponding to the \
+eigenvalues \!\(\*
+StyleBox[\"frequencies\",
+FontSlant->\"Italic\"]\), which were computed from \!\(\*
+StyleBox[\"equation\",
+FontSlant->\"Italic\"]\).\>\""}], ";"}]}], "Input",
  InitializationCell->True,
  CellChangeTimes->{{3.681190877813313*^9, 3.681191009515481*^9}, {
-  3.681191729036965*^9, 3.6811917349870157`*^9}, {3.681193665604437*^9, 
-  3.681193670616273*^9}, {3.6812068196310472`*^9, 3.6812068329532003`*^9}, {
-  3.681384167647242*^9, 3.681384167987802*^9}, {3.682051645059965*^9, 
-  3.682051656305437*^9}, {3.68268385247582*^9, 3.682683889246477*^9}, {
-  3.6826839473125057`*^9, 3.6826839692265463`*^9}, {3.6826840420104723`*^9, 
-  3.6826841175061207`*^9}, {3.682684903063634*^9, 3.682684905489676*^9}, {
-  3.6826849880613317`*^9, 3.682684989928273*^9}, {3.685621312764637*^9, 
-  3.685621337322607*^9}, {3.685621398502398*^9, 3.68562140777204*^9}, {
-  3.685621450793447*^9, 3.685621461761014*^9}, {3.685621918108268*^9, 
-  3.685621920909947*^9}, {3.686136088575013*^9, 3.686136094628667*^9}, {
-  3.68639302157261*^9, 3.686393070359399*^9}, {3.707539595445464*^9, 
-  3.707539676796596*^9}}]
+   3.681191729036965*^9, 3.6811917349870157`*^9}, {3.681193665604437*^9, 
+   3.681193670616273*^9}, {3.6812068196310472`*^9, 3.6812068329532003`*^9}, {
+   3.681384167647242*^9, 3.681384167987802*^9}, {3.682051645059965*^9, 
+   3.682051656305437*^9}, {3.68268385247582*^9, 3.682683889246477*^9}, {
+   3.6826839473125057`*^9, 3.6826839692265463`*^9}, {3.6826840420104723`*^9, 
+   3.6826841175061207`*^9}, {3.682684903063634*^9, 3.682684905489676*^9}, {
+   3.6826849880613317`*^9, 3.682684989928273*^9}, {3.685621312764637*^9, 
+   3.685621337322607*^9}, {3.685621398502398*^9, 3.68562140777204*^9}, {
+   3.685621450793447*^9, 3.685621461761014*^9}, {3.685621918108268*^9, 
+   3.685621920909947*^9}, {3.686136088575013*^9, 3.686136094628667*^9}, {
+   3.68639302157261*^9, 3.686393070359399*^9}, {3.707539595445464*^9, 
+   3.707539676796596*^9}, 3.7105659421199293`*^9, {3.7114460369268217`*^9, 
+   3.7114461759489727`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -210,8 +247,8 @@ the spectral grid, and as second argument a list of the matrix coefficients \
 of the powers of the frequency.\>\""}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
-   RowBox[{"computeLinearMatrix", "::", "usage"}], "=", 
-   "\"\<computeLinearMatrix[\!\(\*
+   RowBox[{"constructLinearMatrix", "::", "usage"}], "=", 
+   "\"\<constructLinearMatrix[\!\(\*
 StyleBox[\"matrixList\",
 FontSlant->\"Italic\"]\)], where \!\(\*
 StyleBox[\"matrixList\",
@@ -230,7 +267,7 @@ StyleBox[\"Neqs\",
 FontSlant->\"Italic\"]\)], where \!\(\*
 StyleBox[\"eigensyst\",
 FontSlant->\"Italic\"]\) is the output of applying either Eigenvalues or \
-Eigensystem to the output of computeLinearMatrix, \!\(\*
+Eigensystem to the output of constructLinearMatrix, \!\(\*
 StyleBox[\"grid\",
 FontSlant->\"Italic\"]\) is the spectral grid and \!\(\*
 StyleBox[\"Neqs\",
@@ -240,13 +277,22 @@ normalizing them, and sorting by imaginary part of the eigenvalues.\>\""}],
    ";"}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
-   RowBox[{"sameModes", "::", "usage"}], "=", 
-   "\"\<Internal function used by GetAccurateModes. SameModes[\!\(\*
-StyleBox[\"modes1\",
+   RowBox[{"equationToMatrices", "::", "usage"}], " ", "=", " ", 
+   "\"\<Internal function, equationToMatrices[\!\(\*
+StyleBox[\"equation\",
+FontSlant->\"Italic\"]\),{\!\(\*
+StyleBox[\"N\",
 FontSlant->\"Italic\"]\),\!\(\*
-StyleBox[\"modes2\",
-FontSlant->\"Italic\"]\)] compares two lists of modes and returns those that \
-occur in both lists.\>\""}], ";"}], "\[IndentingNewLine]", 
+StyleBox[\"p\",
+FontSlant->\"Italic\"]\)}] gives {\!\(\*
+StyleBox[\"grid\",
+FontSlant->\"Italic\"]\), \!\(\*
+StyleBox[\"Mcoeffs\",
+FontSlant->\"Italic\"]\), \!\(\*
+StyleBox[\"Neqs\",
+FontSlant->\"Italic\"]\)}, the spectral grid, a list of matrices, one for \
+each power of omega, and the number of equations.\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"detFunction", "::", "usage"}], " ", "=", " ", 
@@ -261,7 +307,9 @@ occur in both lists.\>\""}], ";"}], "\[IndentingNewLine]",
    3.685622103994597*^9, 3.685622111699361*^9}, {3.686138445153796*^9, 
    3.686138450038815*^9}, {3.6863767844976997`*^9, 3.686377129034748*^9}, {
    3.686377234751194*^9, 3.686377304035001*^9}, {3.686377392690564*^9, 
-   3.6863774492775183`*^9}, {3.686377499782578*^9, 3.686377499970934*^9}}]
+   3.6863774492775183`*^9}, {3.686377499782578*^9, 3.686377499970934*^9}, {
+   3.7114460145704*^9, 3.711446031744314*^9}, {3.711451591624342*^9, 
+   3.711451646586673*^9}, {3.7131606847175207`*^9, 3.7131606934784946`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -329,8 +377,8 @@ Cell[BoxData[
      "FunctionNumber", ",", "Rescale", ",", "RealCutoff", ",", 
      "FrequencySign", ",", "tMax", ",", "GridPoint", ",", "Rescale", ",", 
      "RescaleFrequency", ",", "Name", ",", "Conjugates", ",", 
-     "ConjugateCutoff", ",", "EigenfunctionPrecision"}], "}"}]}], 
-  ";"}]], "Input",
+     "ConjugateCutoff", ",", "EigenfunctionPrecision", ",", 
+     "SameEigenfunctions", ",", "Both"}], "}"}]}], ";"}]], "Input",
  InitializationCell->True,
  CellChangeTimes->{{3.681210494319175*^9, 3.681210503707081*^9}, {
   3.6822512453427153`*^9, 3.682251247111298*^9}, {3.6851982085145903`*^9, 
@@ -338,7 +386,7 @@ Cell[BoxData[
   3.685519550844799*^9, 3.6855195528071623`*^9}, {3.685521179048356*^9, 
   3.685521179207267*^9}, {3.686545742186516*^9, 3.686545744172885*^9}, {
   3.686637446321197*^9, 3.6866374464932528`*^9}, {3.707546594512195*^9, 
-  3.707546594660329*^9}}]
+  3.707546594660329*^9}, {3.711518008441307*^9, 3.711518018562693*^9}}]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -544,61 +592,49 @@ Cell[BoxData[{
      RowBox[{
       RowBox[{"method", "=", 
        RowBox[{"OptionValue", "[", "Method", "]"}]}], ",", 
-      RowBox[{"hor", "=", 
-       RowBox[{"OptionValue", "[", "Horizon", "]"}]}], ",", 
-      RowBox[{"numBG", "=", 
-       RowBox[{"OptionValue", "[", "NumericalBackground", "]"}]}], ",", 
       RowBox[{"quiet", "=", 
        RowBox[{"OptionValue", "[", "Quiet", "]"}]}], ",", 
-      RowBox[{"eigenfuncts", "=", 
+      RowBox[{"eigenfunctsQ", "=", 
        RowBox[{"OptionValue", "[", "Eigenfunctions", "]"}]}], ",", 
-      "\[IndentingNewLine]", 
       RowBox[{"eigenfPrec", "=", 
        RowBox[{
         RowBox[{"OptionValue", "[", "EigenfunctionPrecision", "]"}], "/.", 
         RowBox[{"Max", "\[Rule]", "precision"}]}]}], ",", 
-      "\[IndentingNewLine]", "eqn", ",", "Neqs", ",", "functs", ",", "var", 
-      ",", "\[Omega]", ",", "bgfuncts", ",", "maxder", ",", "maxpower", ",", 
-      "\[IndentingNewLine]", "grid", ",", "Mcoeffs", ",", 
-      "\[IndentingNewLine]", "computeEigensyst", ",", "eigensyst", ",", 
-      "\[IndentingNewLine]", "result"}], "}"}], ",", "\[IndentingNewLine]", 
-    "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", "grid", ",", "Mcoeffs", ",", "Neqs", ",", 
+      "\[IndentingNewLine]", "computeEigensystFunction", ",", "eigensyst", 
+      ",", "\[IndentingNewLine]", "result"}], "}"}], ",", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
     RowBox[{
-     RowBox[{"catchError", "[", 
-      RowBox[{
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"grid", ",", "Mcoeffs", ",", "Neqs"}], "}"}], "=", 
+      RowBox[{"Sow", "[", 
        RowBox[{
-        RowBox[{"{", 
-         RowBox[{
-         "eqn", ",", "Neqs", ",", "functs", ",", "var", ",", "\[Omega]", ",", 
-          "bgfuncts", ",", "maxder", ",", "maxpower"}], "}"}], "=", 
-        RowBox[{"analyzeEquation", "[", 
-         RowBox[{"equation", ",", "numBG", ",", "order"}], "]"}]}], ",", 
-       "Block"}], "]"}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        RowBox[{"equationToMatrices", "[", 
+         RowBox[{"equation", ",", 
+          RowBox[{"{", 
+           RowBox[{"order", ",", "precision"}], "}"}], ",", 
+          RowBox[{"FilterRules", "[", 
+           RowBox[{
+            RowBox[{"{", "opts", "}"}], ",", 
+            RowBox[{"Options", "[", "equationToMatrices", "]"}]}], "]"}]}], 
+         "]"}], ",", "\"\<Mcoeffs\>\""}], "]"}]}], ";", " ", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+      "need", " ", "to", " ", "catch", " ", "error", " ", "here", "??"}], " ",
+       "*)"}], "\[IndentingNewLine]", "\[IndentingNewLine]", 
      RowBox[{"If", "[", 
       RowBox[{
        RowBox[{
         RowBox[{"method", "=!=", "\"\<Sweep\>\""}], "&&", 
         RowBox[{"quiet", "\[Equal]", "False"}]}], ",", 
        RowBox[{"\[Omega]powerMessage", "[", 
-        RowBox[{"maxpower", ",", "Neqs", ",", "order"}], "]"}]}], "]"}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"{", 
-       RowBox[{"grid", ",", "Mcoeffs"}], "}"}], "=", 
-      RowBox[{"computeMatrix", "[", 
-       RowBox[{
-       "eqn", ",", "Neqs", ",", "functs", ",", "var", ",", "\[Omega]", ",", 
-        "bgfuncts", ",", "maxder", ",", 
-        RowBox[{"{", 
-         RowBox[{"order", ",", "precision"}], "}"}], ",", "hor"}], "]"}]}], 
-     ";", "\[IndentingNewLine]", 
-     RowBox[{"Sow", "[", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{"grid", ",", "Mcoeffs", ",", "Neqs"}], "}"}], ",", 
-       "\"\<Mcoeffs\>\""}], "]"}], ";", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Length", "[", "Mcoeffs", "]"}], "-", "1"}], ",", "Neqs", 
+         ",", "order"}], "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
      "\[IndentingNewLine]", 
-     RowBox[{"computeEigensyst", "=", 
+     RowBox[{"computeEigensystFunction", "=", 
       RowBox[{"catchError", "[", 
        RowBox[{
         RowBox[{"Switch", "[", 
@@ -620,11 +656,9 @@ Cell[BoxData[{
      RowBox[{"eigensyst", "=", 
       RowBox[{"catchError", "[", 
        RowBox[{
-        RowBox[{"computeEigensyst", "[", 
-         RowBox[{
-         "Mcoeffs", ",", "precision", ",", "maxpower", ",", "eigenfuncts"}], 
-         "]"}], ",", "Block"}], "]"}]}], ";", "\[IndentingNewLine]", 
-     "\[IndentingNewLine]", 
+        RowBox[{"computeEigensystFunction", "[", 
+         RowBox[{"Mcoeffs", ",", "eigenfunctsQ"}], "]"}], ",", "Block"}], 
+       "]"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
      RowBox[{"result", "=", 
       RowBox[{"reorganize", "[", 
        RowBox[{"eigensyst", ",", "order", ",", "Neqs", ",", "eigenfPrec"}], 
@@ -833,7 +867,13 @@ Cell[BoxData[{
    3.686572080378681*^9, {3.6866374294806232`*^9, 3.686637436602378*^9}, {
    3.7075385404212914`*^9, 3.7075385408752604`*^9}, 3.707543654383462*^9, {
    3.707546585650202*^9, 3.707546598077188*^9}, {3.707546775441227*^9, 
-   3.707546798672751*^9}, {3.707546991506586*^9, 3.707547008419833*^9}}],
+   3.707546798672751*^9}, {3.707546991506586*^9, 3.707547008419833*^9}, {
+   3.711449414222316*^9, 3.7114495218337717`*^9}, {3.711449559545266*^9, 
+   3.711449579795444*^9}, {3.7114496295703506`*^9, 3.71144966754458*^9}, {
+   3.7114497568619556`*^9, 3.7114497619080048`*^9}, {3.711449806894919*^9, 
+   3.711449818021227*^9}, {3.7114500765180693`*^9, 3.7114500908638687`*^9}, {
+   3.7114501460784903`*^9, 3.711450165184765*^9}, {3.711451331376637*^9, 
+   3.711451332899858*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -842,6 +882,85 @@ Cell[BoxData[
    ";"}]], "Input",
  InitializationCell->True,
  CellChangeTimes->{{3.682237634163295*^9, 3.6822376581821423`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["go from input to a list of matrices", "Section",
+ CellChangeTimes->{{3.711448461109777*^9, 3.711448461603569*^9}, {
+  3.71145032358197*^9, 3.711450333040132*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Options", "[", "equationToMatrices", "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Horizon", "\[Rule]", "1"}], ",", 
+     RowBox[{"NumericalBackground", "\[Rule]", "False"}], ",", 
+     RowBox[{"Quiet", "\[Rule]", "False"}]}], "}"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"equationToMatrices", "[", 
+   RowBox[{"equation_", ",", 
+    RowBox[{"{", "order_", "}"}], ",", 
+    RowBox[{"opts", " ", ":", " ", 
+     RowBox[{"OptionsPattern", "[", "]"}]}]}], "]"}], ":=", 
+  RowBox[{"equationToMatrices", "[", 
+   RowBox[{"equation", ",", 
+    RowBox[{"{", 
+     RowBox[{"order", ",", 
+      RowBox[{"order", "/", "2"}]}], "}"}], ",", "opts"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"equationToMatrices", "[", 
+   RowBox[{"equation_", ",", 
+    RowBox[{"{", 
+     RowBox[{"order_", ",", "precision_"}], "}"}], ",", 
+    RowBox[{"opts", " ", ":", " ", 
+     RowBox[{"OptionsPattern", "[", "]"}]}]}], "]"}], ":=", 
+  RowBox[{"Block", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"numBG", "=", 
+       RowBox[{"OptionValue", "[", "NumericalBackground", "]"}]}], ",", 
+      RowBox[{"hor", "=", 
+       RowBox[{"OptionValue", "[", "Horizon", "]"}]}], ",", 
+      "\[IndentingNewLine]", "eqn", ",", "Neqs", ",", "functs", ",", "var", 
+      ",", "\[Omega]", ",", "bgfuncts", ",", "maxder", ",", 
+      "\[Omega]MaxPower", ",", "grid", ",", "Mcoeffs"}], "}"}], ",", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"catchError", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+         "eqn", ",", "Neqs", ",", "functs", ",", "var", ",", "\[Omega]", ",", 
+          "bgfuncts", ",", "maxder", ",", "\[Omega]MaxPower"}], "}"}], "=", 
+        RowBox[{"analyzeEquation", "[", 
+         RowBox[{"equation", ",", "numBG", ",", "order"}], "]"}]}], ",", 
+       "Block"}], "]"}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"grid", ",", "Mcoeffs"}], "}"}], "=", 
+      RowBox[{"computeMatrix", "[", 
+       RowBox[{
+       "eqn", ",", "Neqs", ",", "functs", ",", "var", ",", "\[Omega]", ",", 
+        "bgfuncts", ",", "maxder", ",", 
+        RowBox[{"{", 
+         RowBox[{"order", ",", "precision"}], "}"}], ",", "hor"}], "]"}]}], 
+     ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{"grid", ",", "Mcoeffs", ",", "Neqs"}], "}"}]}]}], 
+   "\[IndentingNewLine]", "]"}]}]}], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.711448462593072*^9, 3.711448543597457*^9}, {
+  3.7114487427122927`*^9, 3.711448779491673*^9}, {3.71144883565591*^9, 
+  3.711448840550962*^9}, {3.711449131705675*^9, 3.71144921459918*^9}, {
+  3.711449262490629*^9, 3.71144926264614*^9}, {3.711449323459567*^9, 
+  3.711449336249075*^9}}]
+}, Closed]],
 
 Cell[CellGroupData[{
 
@@ -1805,9 +1924,7 @@ Cell["Directly by solving the generalized eigenvalue problem", "Subsection",
 Cell[BoxData[
  RowBox[{
   RowBox[{"direct", "[", 
-   RowBox[{
-   "Mcoeffs_", ",", "precision_", ",", "maxpower_", ",", "eigenfuncts_"}], 
-   "]"}], ":=", 
+   RowBox[{"Mcoeffs_", ",", "eigenfuncts_"}], "]"}], ":=", 
   RowBox[{"Block", "[", 
    RowBox[{
     RowBox[{"{", 
@@ -1817,8 +1934,7 @@ Cell[BoxData[
      RowBox[{
       RowBox[{"{", 
        RowBox[{"\[Alpha]", ",", "\[Beta]"}], "}"}], "=", 
-      RowBox[{"computeLinearMatrix", "[", 
-       RowBox[{"Mcoeffs", ",", "precision", ",", "maxpower"}], "]"}]}], ";", 
+      RowBox[{"constructLinearMatrix", "[", "Mcoeffs", "]"}]}], ";", 
      "\[IndentingNewLine]", "\[IndentingNewLine]", 
      RowBox[{"If", "[", 
       RowBox[{
@@ -1855,7 +1971,9 @@ Cell[BoxData[
    3.685519215242096*^9}, {3.685519304815187*^9, 3.685519320555256*^9}, 
    3.685521113411845*^9, {3.685521955335844*^9, 3.685521955483986*^9}, {
    3.6861148868033113`*^9, 3.6861149175660973`*^9}, 3.686115849578383*^9, 
-   3.686115928499444*^9, 3.686377468997328*^9}],
+   3.686115928499444*^9, 3.686377468997328*^9, {3.7114500720639*^9, 
+   3.711450072252462*^9}, {3.7114501722322073`*^9, 3.7114501765098*^9}, 
+   3.71316069602629*^9}],
 
 Cell[CellGroupData[{
 
@@ -1876,25 +1994,9 @@ array (in the machine precision case).\
    3.685519331890568*^9, 3.685519376737198*^9}, {3.685519509291636*^9, 
    3.685519526516018*^9}, 3.6855211166219187`*^9}],
 
-Cell[BoxData[{
+Cell[BoxData[
  RowBox[{
-  RowBox[{
-   RowBox[{"computeLinearMatrix", "[", "Mcoeffs_", "]"}], ":=", 
-   RowBox[{"computeLinearMatrix", "[", 
-    RowBox[{"Mcoeffs", ",", 
-     RowBox[{"Precision", "@", 
-      RowBox[{
-      "Mcoeffs", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], 
-     ",", 
-     RowBox[{
-      RowBox[{"Length", "[", "Mcoeffs", "]"}], "-", "1"}]}], "]"}]}], " ", 
-  RowBox[{"(*", " ", 
-   RowBox[{
-    RowBox[{"to", " ", "use", " ", "manually"}], ",", " ", 
-    RowBox[{"for", " ", "debugging"}]}], " ", "*)"}]}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"computeLinearMatrix", "[", 
-   RowBox[{"Mcoeffs_", ",", "precision_", ",", "maxpower_"}], "]"}], ":=", 
+  RowBox[{"constructLinearMatrix", "[", "Mcoeffs_", "]"}], ":=", 
   "\[IndentingNewLine]", 
   RowBox[{"Block", "[", 
    RowBox[{
@@ -1902,19 +2004,34 @@ Cell[BoxData[{
      RowBox[{
       RowBox[{"$MinPrecision", "=", 
        RowBox[{"Max", "[", 
-        RowBox[{"precision", ",", "$MachinePrecision"}], "]"}]}], ",", 
+        RowBox[{
+         RowBox[{"Precision", "@", 
+          RowBox[{"Mcoeffs", "\[LeftDoubleBracket]", 
+           RowBox[{
+            RowBox[{"-", "1"}], ",", "2", ",", "2"}], 
+           "\[RightDoubleBracket]"}]}], 
+         RowBox[{"(*", 
+          RowBox[{
+           RowBox[{"this", " ", "is", " ", 
+            RowBox[{"unlikely", "/", "impossible"}], 
+            RowBox[{"(", "?", ")"}], " ", "to", " ", "be", " ", "zero"}], ",",
+            " ", 
+           RowBox[{
+           "so", " ", "will", " ", "give", " ", "the", " ", "correct", " ", 
+            "prec"}]}], " ", "*)"}], ",", "$MachinePrecision"}], "]"}]}], ",", 
+      RowBox[{"maxpower", "=", 
+       RowBox[{
+        RowBox[{"Length", "[", "Mcoeffs", "]"}], "-", "1"}]}], ",", 
       "\[IndentingNewLine]", "\[Alpha]", ",", "\[Beta]", ",", 
-      RowBox[{"mat0", "=", 
-       RowBox[{"0", " ", 
-        RowBox[{"IdentityMatrix", "[", 
-         RowBox[{"Length", "@", 
-          RowBox[{"First", "[", "Mcoeffs", "]"}]}], "]"}]}]}], ",", 
       RowBox[{"mat1", "=", 
        RowBox[{"IdentityMatrix", "[", 
         RowBox[{"Length", "@", 
-         RowBox[{"First", "[", "Mcoeffs", "]"}]}], "]"}]}]}], "}"}], ",", 
-    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+         RowBox[{"First", "[", "Mcoeffs", "]"}]}], "]"}]}], ",", "mat0"}], 
+     "}"}], ",", "\[IndentingNewLine]", 
     RowBox[{
+     RowBox[{"mat0", "=", 
+      RowBox[{"0", " ", "mat1"}]}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
      RowBox[{"If", "[", 
       RowBox[{
        RowBox[{"maxpower", "\[Equal]", "1"}], ",", 
@@ -1993,7 +2110,7 @@ Cell[BoxData[{
      ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
      RowBox[{"{", 
       RowBox[{"\[Alpha]", ",", "\[Beta]"}], "}"}]}]}], "\[IndentingNewLine]", 
-   "]"}]}]}], "Input",
+   "]"}]}]], "Input",
  InitializationCell->True,
  CellChangeTimes->{{3.6861143529793262`*^9, 3.686114372170918*^9}, {
    3.686114470712348*^9, 3.686114515719966*^9}, {3.686114615611334*^9, 
@@ -2001,7 +2118,9 @@ Cell[BoxData[{
    3.686114724345477*^9, {3.686114789838286*^9, 3.686114825308447*^9}, {
    3.686114873483675*^9, 3.6861148778544683`*^9}, {3.686115008891471*^9, 
    3.686115016181857*^9}, {3.686123939935747*^9, 3.686123943159625*^9}, {
-   3.686377470426795*^9, 3.686377471048025*^9}}]
+   3.686377470426795*^9, 3.686377471048025*^9}, {3.7114500040643873`*^9, 
+   3.711450017457301*^9}, {3.711450252004599*^9, 3.711450270907943*^9}, {
+   3.711451988982214*^9, 3.71145207339884*^9}, 3.7131606969655943`*^9}]
 }, Open  ]]
 }, Open  ]],
 
@@ -2017,16 +2136,21 @@ Cell[BoxData[
  RowBox[{
   RowBox[{"sweep", "[", 
    RowBox[{
-   "Mcoeffs_", ",", "precision_", ",", "maxpower_", ",", "eigenfuncts_", ",", 
-    "order_", ",", "sweepGrid_", ",", "parallel_", ",", "plot_"}], "]"}], ":=", 
+   "Mcoeffs_", ",", "eigenfuncts_", ",", "order_", ",", "sweepGrid_", ",", 
+    "parallel_", ",", "plot_"}], "]"}], ":=", 
   RowBox[{"Block", "[", 
    RowBox[{
     RowBox[{"{", 
      RowBox[{
       RowBox[{"$MinPrecision", "=", 
        RowBox[{"Max", "[", 
-        RowBox[{"precision", ",", "$MachinePrecision"}], "]"}]}], ",", 
-      "\[IndentingNewLine]", "eigensyst0", ",", "detf", ",", 
+        RowBox[{
+         RowBox[{"Precision", "@", 
+          RowBox[{"Mcoeffs", "\[LeftDoubleBracket]", 
+           RowBox[{
+            RowBox[{"-", "1"}], ",", "2", ",", "2"}], 
+           "\[RightDoubleBracket]"}]}], ",", "$MachinePrecision"}], "]"}]}], 
+      ",", "\[IndentingNewLine]", "eigensyst0", ",", "detf", ",", 
       "\[IndentingNewLine]", "\[Omega]ReMin", ",", "\[Omega]ReMax", ",", 
       "\[Delta]\[Omega]Re", ",", "\[Omega]ImMin", ",", "\[Omega]ImMax", ",", 
       "\[Delta]\[Omega]Im", ",", "\[IndentingNewLine]", "\[Omega]grid", ",", 
@@ -2377,7 +2501,8 @@ Cell[BoxData[
    3.6863936945628233`*^9, {3.686393730972555*^9, 3.686393734039496*^9}, 
    3.686394062148938*^9, {3.686395383192979*^9, 3.686395391087348*^9}, {
    3.6863958015766*^9, 3.6863958030835123`*^9}, {3.6864089026529284`*^9, 
-   3.686408904028413*^9}}],
+   3.686408904028413*^9}, {3.7114500504058313`*^9, 3.711450050560423*^9}, {
+   3.711450207986601*^9, 3.7114502103110323`*^9}, 3.711452082328178*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -2750,10 +2875,17 @@ To test for convergence, compute twice with different gridsizes and precision \
 (and possibly different options), and return only results that agree between \
 the two.
 Optionally also check if the eigenfunctions are properly behaved, and discard \
-any that are not.\
+any that are not.
+Optionally also compute eigenfunctions for both sets of modes on the smaller \
+of the two grids, and discard those that differ too much.
+For the eigenfunctions (if present), set the precision to machine precision \
+(and convert to packed arrays), unless the option eigenfPrec \
+(EigenfunctionPrecision) is set to max, then set it the same as the \
+corresponding frequency.\
 \>", "Text",
  CellChangeTimes->{{3.685165134763672*^9, 3.685165165719222*^9}, {
-  3.707538659779977*^9, 3.707538675814198*^9}}],
+  3.707538659779977*^9, 3.707538675814198*^9}, {3.711517430664453*^9, 
+  3.7115174853373203`*^9}}],
 
 Cell[BoxData[{
  RowBox[{
@@ -2762,6 +2894,7 @@ Cell[BoxData[{
    RowBox[{"{", 
     RowBox[{
      RowBox[{"Cutoff", "\[Rule]", "1"}], ",", 
+     RowBox[{"SameEigenfunctions", "\[Rule]", "False"}], ",", 
      RowBox[{"FilterEigenfunctions", "\[Rule]", "False"}], ",", 
      RowBox[{"FilterModes", "\[Rule]", "False"}]}], "}"}]}], 
   ";"}], "\[IndentingNewLine]", 
@@ -2785,6 +2918,18 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{"{", 
      RowBox[{
+      RowBox[{"filtermds", "=", 
+       RowBox[{"OptionValue", "[", "FilterModes", "]"}]}], ",", 
+      RowBox[{"filterEfs", "=", 
+       RowBox[{"OptionValue", "[", "FilterEigenfunctions", "]"}]}], ",", 
+      RowBox[{"efs", "=", 
+       RowBox[{"OptionValue", "[", "Eigenfunctions", "]"}]}], ",", 
+      RowBox[{"eigenfPrec", " ", "=", " ", 
+       RowBox[{"OptionValue", "[", "EigenfunctionPrecision", "]"}]}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"sameEfs", "=", 
+       RowBox[{"OptionValue", "[", "SameEigenfunctions", "]"}]}], ",", 
+      "\[IndentingNewLine]", "efLaterQ", ",", "\[IndentingNewLine]", 
       RowBox[{"prec1", "=", 
        RowBox[{"M1", "/.", 
         RowBox[{"\"\<default\>\"", "\[Rule]", 
@@ -2792,29 +2937,22 @@ Cell[BoxData[{
       RowBox[{"prec2", "=", 
        RowBox[{"M2", "/.", 
         RowBox[{"\"\<default\>\"", "\[Rule]", 
-         RowBox[{"N2", "/", "2"}]}]}]}], ",", 
-      RowBox[{"filtermds", "=", 
-       RowBox[{"OptionValue", "[", "FilterModes", "]"}]}], ",", 
-      RowBox[{"filterEfs", "=", 
-       RowBox[{"OptionValue", "[", "FilterEigenfunctions", "]"}]}], ",", 
-      RowBox[{"efs", "=", 
-       RowBox[{"OptionValue", "[", "Eigenfunctions", "]"}]}], ",", "efOpt", 
-      ",", "\[IndentingNewLine]", "eigenfPrec", ",", "Npmax", ",", "Npmin", 
-      ",", "optsmin", ",", "optsmax", ",", "modesMax", ",", "modesMin", ",", 
-      "samemodes", ",", "\[IndentingNewLine]", "reap", ",", "grid", ",", 
-      "matrices", ",", "Neqs"}], "}"}], ",", "\[IndentingNewLine]", 
-    "\[IndentingNewLine]", 
+         RowBox[{"N2", "/", "2"}]}]}]}], ",", "\[IndentingNewLine]", "Npmax", 
+      ",", "Npmin", ",", "optsmin", ",", "optsmax", ",", "modesMax", ",", 
+      "modesMin", ",", "samemodes", ",", "\[IndentingNewLine]", "reap", ",", 
+      "grid", ",", "matrices", ",", "Neqs"}], "}"}], ",", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
     RowBox[{
-     RowBox[{"efOpt", "=", 
-      RowBox[{"If", "[", 
-       RowBox[{
-        RowBox[{"TrueQ", "@", 
+     RowBox[{"efLaterQ", "=", 
+      RowBox[{"TrueQ", "@", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"sameEfs", "=!=", "False"}], "||", 
          RowBox[{"(", 
           RowBox[{"filterEfs", "&&", 
-           RowBox[{"Not", "[", "efs", "]"}]}], ")"}]}], ",", 
-        RowBox[{"Eigenfunctions", "\[Rule]", "True"}], ",", 
-        RowBox[{"Sequence", "[", "]"}]}], "]"}]}], ";", "\[IndentingNewLine]",
-      "\[IndentingNewLine]", 
+           RowBox[{"Not", "[", "efs", "]"}]}], ")"}], "||", 
+         RowBox[{"efs", "===", "\"\<Later\>\""}]}], ")"}]}]}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
      RowBox[{
       RowBox[{"{", 
        RowBox[{"Npmin", ",", "Npmax"}], "}"}], "=", 
@@ -2839,9 +2977,6 @@ Cell[BoxData[{
         RowBox[{"optsmax", "=", "opts2"}], ";", 
         RowBox[{"optsmin", "=", "opts1"}], ";"}]}], "]"}], ";", 
      "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"eigenfPrec", " ", "=", " ", 
-      RowBox[{"OptionValue", "[", "EigenfunctionPrecision", "]"}]}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
      RowBox[{"reap", "=", 
       RowBox[{"Reap", "[", "\[IndentingNewLine]", 
        RowBox[{
@@ -2850,33 +2985,32 @@ Cell[BoxData[{
           RowBox[{"equation", ",", "Npmax", ",", 
            RowBox[{"filterOpts", "[", 
             RowBox[{
-             RowBox[{"{", 
-              RowBox[{"optsmax", ",", "efOpt"}], "}"}], ",", 
-             RowBox[{"{", "opts", "}"}]}], "]"}]}], "]"}]}], ",", 
-        "\[IndentingNewLine]", "\"\<Mcoeffs\>\""}], "]"}]}], ";", 
+             RowBox[{"{", "optsmax", "}"}], ",", 
+             RowBox[{"{", "opts", "}"}], ",", "efLaterQ"}], "]"}]}], "]"}]}], 
+        ",", "\[IndentingNewLine]", "\"\<Mcoeffs\>\""}], "]"}]}], ";", 
      "\[IndentingNewLine]", 
      RowBox[{"modesMin", "=", 
       RowBox[{"GetModes", "[", 
        RowBox[{"equation", ",", "Npmin", ",", 
         RowBox[{"filterOpts", "[", 
          RowBox[{
-          RowBox[{"{", 
-           RowBox[{"optsmin", ",", "efOpt"}], "}"}], ",", 
-          RowBox[{"{", "opts", "}"}]}], "]"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+          RowBox[{"{", "optsmin", "}"}], ",", 
+          RowBox[{"{", "opts", "}"}], ",", "efLaterQ"}], "]"}]}], "]"}]}], 
+     ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
      RowBox[{"samemodes", "=", 
       RowBox[{
-       RowBox[{"sameModes", "[", 
+       RowBox[{"SameModes", "[", 
         RowBox[{"modesMax", ",", "modesMin", ",", 
-         RowBox[{"OptionValue", "[", "Cutoff", "]"}]}], "]"}], "//", 
+         RowBox[{"Cutoff", "\[Rule]", 
+          RowBox[{"OptionValue", "[", "Cutoff", "]"}]}], ",", 
+         RowBox[{"Both", "\[Rule]", "sameEfs"}]}], "]"}], "//", 
        RowBox[{
         RowBox[{"If", "[", 
          RowBox[{"filtermds", ",", 
           RowBox[{"FilterModes", "[", "#", "]"}], ",", "#"}], "]"}], 
         "&"}]}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
      RowBox[{"If", "[", 
-      RowBox[{
-       RowBox[{"efs", "===", "\"\<Later\>\""}], ",", "\[IndentingNewLine]", 
+      RowBox[{"efLaterQ", ",", "\[IndentingNewLine]", 
        RowBox[{
         RowBox[{
          RowBox[{"{", 
@@ -2892,34 +3026,41 @@ Cell[BoxData[{
            ",", 
            RowBox[{"reap", "\[LeftDoubleBracket]", 
             RowBox[{"2", ",", "1", ",", "1"}], "\[RightDoubleBracket]"}], ",", 
-           RowBox[{"eigenfunctionData", "[", 
-            RowBox[{"equation", ",", "Npmax", ",", 
+           RowBox[{"equationToMatrices", "[", 
+            RowBox[{"equation", ",", "Npmin", ",", 
              RowBox[{"filterOpts", "[", 
               RowBox[{
-               RowBox[{"{", "optsmax", "}"}], ",", 
-               RowBox[{"{", "opts", "}"}]}], "]"}]}], "]"}]}], "]"}]}], ";", 
-        "\[IndentingNewLine]", 
+               RowBox[{"{", "optsmin", "}"}], ",", 
+               RowBox[{"{", "opts", "}"}], ",", "efLaterQ"}], "]"}]}], 
+            "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
         RowBox[{"samemodes", "=", 
          RowBox[{"ComputeEigenfunctions", "[", 
           RowBox[{
            RowBox[{"{", 
             RowBox[{
              RowBox[{
-             "Npmax", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+             "Npmin", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
              ",", "matrices", ",", "Neqs", ",", "eigenfPrec"}], "}"}], ",", 
            "samemodes"}], "]"}]}]}]}], "]"}], ";", "\[IndentingNewLine]", 
      "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"sameEfs", "=!=", "False"}], ",", " ", 
+       RowBox[{"samemodes", "=", 
+        RowBox[{"sameEigenfunctions", "[", 
+         RowBox[{"samemodes", ",", "sameEfs"}], "]"}]}]}], "]"}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
      RowBox[{"(*", " ", 
       RowBox[{"Filter", " ", "and", " ", "repack"}], " ", "*)"}], 
      "\[IndentingNewLine]", 
      RowBox[{"If", "[", 
-      RowBox[{"filterEfs", ",", "\[IndentingNewLine]", 
+      RowBox[{"filterEfs", ",", 
        RowBox[{"samemodes", "=", 
         RowBox[{"FilterEigenfunctions", "[", "samemodes", "]"}]}]}], "]"}], 
      ";", "\[IndentingNewLine]", 
      RowBox[{"If", "[", 
       RowBox[{
-       RowBox[{"eigenfPrec", "=!=", "Max"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"eigenfPrec", "=!=", "Max"}], ",", 
        RowBox[{"samemodes", "=", 
         RowBox[{"packEigenfunctions", "[", "samemodes", "]"}]}]}], "]"}], ";",
       "\[IndentingNewLine]", "\[IndentingNewLine]", "samemodes"}]}], 
@@ -2994,42 +3135,68 @@ Cell[BoxData[{
    3.707633751704075*^9}, {3.707633795274118*^9, 3.707633795483843*^9}, {
    3.710223784271143*^9, 3.710223795042115*^9}, {3.710224055897171*^9, 
    3.7102240790750113`*^9}, {3.710224164566813*^9, 3.710224167353972*^9}, {
-   3.710224247705069*^9, 3.710224254588698*^9}, 3.7102244392842007`*^9}],
+   3.710224247705069*^9, 3.710224254588698*^9}, 3.7102244392842007`*^9, 
+   3.711446015978113*^9, {3.711517579188176*^9, 3.711517582335153*^9}, {
+   3.7115178893813353`*^9, 3.711517890620407*^9}, {3.711517935184052*^9, 
+   3.711517947138006*^9}, {3.711517983338087*^9, 3.711517992748184*^9}, {
+   3.711518122783764*^9, 3.711518124184403*^9}, {3.711518724681794*^9, 
+   3.7115187586902533`*^9}, {3.7115189043999567`*^9, 3.71151893231686*^9}, {
+   3.711519051457267*^9, 3.7115190558323727`*^9}, {3.711519486802557*^9, 
+   3.711519501525763*^9}, {3.711519761796056*^9, 3.711519780176324*^9}, {
+   3.711521077979431*^9, 3.711521078165539*^9}, {3.711521503295573*^9, 
+   3.71152150500496*^9}, {3.711522876381886*^9, 3.7115228872458057`*^9}, {
+   3.7115237294337*^9, 3.711523732916955*^9}, {3.711537062506654*^9, 
+   3.711537064043139*^9}, {3.711550116204468*^9, 3.711550131435213*^9}, {
+   3.711551133833969*^9, 3.7115511348463984`*^9}, {3.711551927862097*^9, 
+   3.711551929914057*^9}, {3.711552156247053*^9, 3.7115521575889997`*^9}, {
+   3.711552264322797*^9, 3.711552266347591*^9}, {3.711555140125146*^9, 
+   3.711555148593151*^9}, {3.7115981225955887`*^9, 3.711598146686532*^9}, {
+   3.711598254311305*^9, 3.7115982638038387`*^9}, {3.711598377096352*^9, 
+   3.711598390323344*^9}, {3.711598444815881*^9, 3.711598451420718*^9}, {
+   3.711598515940028*^9, 3.7115985195828657`*^9}, {3.7115985568022013`*^9, 
+   3.711598557177464*^9}, {3.711598595706704*^9, 3.711598603146813*^9}, {
+   3.711598737048341*^9, 3.711598742718008*^9}, {3.711598849943316*^9, 
+   3.711598851784548*^9}, {3.711599025664713*^9, 3.7115990260362597`*^9}, {
+   3.711599163000353*^9, 3.711599165084333*^9}, {3.7115993125020123`*^9, 
+   3.711599323226413*^9}, {3.7115993632496862`*^9, 3.711599386454158*^9}, {
+   3.7115995298546457`*^9, 3.711599533023806*^9}, {3.7115999017869473`*^9, 
+   3.711599989147653*^9}, {3.711600115169156*^9, 3.711600121322641*^9}, {
+   3.71160027260303*^9, 3.7116002737962713`*^9}, {3.711600365305468*^9, 
+   3.711600373599744*^9}, 3.711600483276559*^9, {3.711600595537479*^9, 
+   3.711600598603284*^9}, {3.71160091730015*^9, 3.7116009244296618`*^9}, {
+   3.711608562864666*^9, 3.711608563799917*^9}, {3.7116099015580053`*^9, 
+   3.711609904910619*^9}, {3.711688652043949*^9, 3.711688654945417*^9}, {
+   3.711689012559106*^9, 3.711689012723493*^9}}],
 
 Cell[BoxData[
  RowBox[{
   RowBox[{"filterOpts", "[", 
    RowBox[{
     RowBox[{"{", "opts1___", "}"}], ",", 
-    RowBox[{"{", "opts___", "}"}]}], "]"}], ":=", 
+    RowBox[{"{", "opts___", "}"}], ",", "efLaterQ_"}], "]"}], ":=", 
   RowBox[{
    RowBox[{"(", 
     RowBox[{
-     RowBox[{
-      RowBox[{"FilterRules", "[", 
-       RowBox[{
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{"opts1", ",", "opts"}], "}"}], "/.", 
-         RowBox[{"Null", "\[Rule]", 
-          RowBox[{"Sequence", "[", "]"}]}]}], ",", 
-        RowBox[{"Options", "[", "GetModes", "]"}]}], "]"}], "/.", 
+     RowBox[{"FilterRules", "[", 
       RowBox[{
-       RowBox[{"HoldPattern", "[", 
-        RowBox[{"Eigenfunctions", "\[Rule]", "\"\<Later\>\""}], "]"}], 
-       "\[Rule]", 
-       RowBox[{"Sequence", "[", "]"}]}]}], "//", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"opts1", ",", "opts"}], "}"}], "/.", 
+        RowBox[{"Null", "\[Rule]", 
+         RowBox[{"Sequence", "[", "]"}]}]}], ",", 
+       RowBox[{"Options", "[", "GetModes", "]"}]}], "]"}], "//", 
      RowBox[{
       RowBox[{"If", "[", 
-       RowBox[{
-        RowBox[{"MemberQ", "[", 
-         RowBox[{"#", ",", 
-          RowBox[{"Eigenfunctions", "\[Rule]", "\"\<Later\>\""}]}], "]"}], 
-        ",", 
+       RowBox[{"efLaterQ", ",", 
         RowBox[{"DeleteCases", "[", 
          RowBox[{"#", ",", 
-          RowBox[{"EigenfunctionPrecision", "\[Rule]", "Max"}]}], "]"}], ",", 
-        "#"}], "]"}], "&"}]}], ")"}], "/.", 
+          RowBox[{
+           RowBox[{"HoldPattern", "[", 
+            RowBox[{"EigenfunctionPrecision", "\[Rule]", "Max"}], "]"}], "|", 
+           
+           RowBox[{"HoldPattern", "[", 
+            RowBox[{"Eigenfunctions", "\[Rule]", " ", "_"}], "]"}]}]}], "]"}],
+         ",", "#"}], "]"}], "&"}]}], ")"}], "/.", 
    RowBox[{
     RowBox[{"{", "}"}], "\[Rule]", 
     RowBox[{"Sequence", "[", "]"}]}]}]}]], "Input",
@@ -3039,7 +3206,19 @@ Cell[BoxData[
    3.686581668712297*^9}, {3.686582020077405*^9, 3.686582022035578*^9}, 
    3.70763052880322*^9, {3.7076309279101*^9, 3.7076309285254393`*^9}, {
    3.707631026344277*^9, 3.707631026489957*^9}, {3.707631376668107*^9, 
-   3.707631396667749*^9}, {3.710224337295858*^9, 3.710224340234531*^9}}],
+   3.707631396667749*^9}, {3.710224337295858*^9, 3.710224340234531*^9}, {
+   3.711598970091658*^9, 3.711598972258202*^9}, {3.711599019999215*^9, 
+   3.711599020525515*^9}, {3.7115990815395813`*^9, 3.7115990850329113`*^9}, {
+   3.711599694774457*^9, 3.711599703259449*^9}, {3.711599739623361*^9, 
+   3.711599741761436*^9}, {3.711600030775399*^9, 3.7116000480862217`*^9}, {
+   3.7116001299553757`*^9, 3.711600180106824*^9}, 3.7116006920017653`*^9, 
+   3.711600824194738*^9}],
+
+Cell["\<\
+want to compare eigenfunctions computed on lowest gridsize with frequencies \
+from either calculation, so need the equations, so only use in getaccur\
+\>", "Text",
+ CellChangeTimes->{{3.711454070827104*^9, 3.711454096582965*^9}}],
 
 Cell[CellGroupData[{
 
@@ -3066,106 +3245,125 @@ Cell[BoxData[
 Cell["\<\
 Return only modes that agree between the 2 calculations up to some precision \
 specified by cutoff.
-Set the precision of the frequencies such that only digits that agreed \
-remain.
-For the eigenfunctions (if present), set the precision to machine precision \
-(and convert to packed arrays), unless the option eigenfPrec \
-(EigenfunctionPrecision) is set to max, then set it the same as the \
-corresponding frequency.\
+Set the precision of the frequencies such that only digits that agreed remain.\
 \>", "Text",
  CellChangeTimes->{{3.70754735051024*^9, 3.7075473721143827`*^9}, {
   3.707547420895554*^9, 3.7075474376099586`*^9}, {3.707547544071402*^9, 
   3.707547562975834*^9}, {3.707556944432494*^9, 3.707556991300169*^9}, {
-  3.7075579585609837`*^9, 3.707557962316688*^9}}],
+  3.7075579585609837`*^9, 3.707557962316688*^9}, {3.711517482406044*^9, 
+  3.711517482831727*^9}}],
+
+Cell["\<\
+GetAccurateModes can call this function and want to compare eigenfunctions, \
+in that case return the agreed frequencies from both calculations with all \
+their precision.\
+\>", "Text",
+ CellChangeTimes->{{3.711519682813438*^9, 3.711519718814589*^9}}],
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"sameModes", "[", 
-   RowBox[{"modes1_", ",", "modes2_", ",", 
-    RowBox[{"cutoff_", " ", ":", " ", "1"}]}], "]"}], ":=", 
-  RowBox[{"Block", "[", 
-   RowBox[{
-    RowBox[{"{", 
-     RowBox[{"modesMax", ",", "modesMin", ",", 
-      RowBox[{"prec1", "=", 
-       RowBox[{"Precision", "[", "modes1", "]"}]}], ",", 
-      RowBox[{"prec2", "=", 
-       RowBox[{"Precision", "[", "modes2", "]"}]}], ",", "agreedModes1", ",", 
-      "agreedModes2", ",", "frequencies", ",", "eigenfuncts"}], "}"}], ",", 
-    "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Options", "[", "SameModes", "]"}], "=", 
+   RowBox[{"{", 
     RowBox[{
-     RowBox[{
-      RowBox[{"{", 
-       RowBox[{"modesMax", ",", "modesMin"}], "}"}], "=", 
-      RowBox[{"Sort", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{"modes1", ",", "modes2"}], "}"}], ",", 
-        RowBox[{
-         RowBox[{
-          RowBox[{"Length", "[", "#1", "]"}], ">", 
-          RowBox[{"Length", "[", "#2", "]"}]}], "&"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"agreedModes1", "=", 
-      RowBox[{"Cases", "[", 
-       RowBox[{"modesMax", ",", 
-        RowBox[{"(", 
-         RowBox[{"mode_", "/;", 
-          RowBox[{
-           RowBox[{
-            RowBox[{"minDiff", "[", "modesMin", "]"}], "[", "mode", "]"}], 
-           "<", 
-           SuperscriptBox["10", 
-            RowBox[{"-", "cutoff"}]]}]}], ")"}]}], "]"}]}], ";", 
-     "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"catchError", "[", 
+     RowBox[{"Cutoff", "\[Rule]", "1"}], ",", 
+     RowBox[{"Both", "\[Rule]", "False"}]}], "}"}]}], ";", 
+  RowBox[{
+   RowBox[{"SameModes", "[", 
+    RowBox[{"modes1_", ",", "modes2_", ",", 
+     RowBox[{"opts", " ", ":", " ", 
+      RowBox[{"OptionsPattern", "[", "]"}]}]}], "]"}], ":=", 
+   RowBox[{"Block", "[", 
+    RowBox[{
+     RowBox[{"{", 
       RowBox[{
-       RowBox[{"If", "[", 
-        RowBox[{
-         RowBox[{"agreedModes1", "===", 
-          RowBox[{"{", "}"}]}], ",", 
-         RowBox[{"throwError", "[", 
-          RowBox[{
-           RowBox[{"sameModes", "::", "noconvergedmodes"}], ",", "cutoff"}], 
-          "]"}]}], "]"}], ",", "Block"}], "]"}], ";", "\[IndentingNewLine]", 
+       RowBox[{"cutoff", "=", 
+        RowBox[{"OptionValue", "[", "Cutoff", "]"}]}], ",", 
+       RowBox[{"bothQ", "=", 
+        RowBox[{"OptionValue", "[", "Both", "]"}]}], ",", "modesMax", ",", 
+       "modesMin", ",", 
+       RowBox[{"prec1", "=", 
+        RowBox[{"Precision", "[", "modes1", "]"}]}], ",", 
+       RowBox[{"prec2", "=", 
+        RowBox[{"Precision", "[", "modes2", "]"}]}], ",", "agreedModesMax", 
+       ",", "agreedModesMin", ",", "result"}], "}"}], ",", 
      "\[IndentingNewLine]", 
-     RowBox[{"agreedModes2", "=", 
+     RowBox[{
       RowBox[{
-       RowBox[{
+       RowBox[{"{", 
+        RowBox[{"modesMax", ",", "modesMin"}], "}"}], "=", 
+       RowBox[{"Sort", "[", 
         RowBox[{
-         RowBox[{
-          RowBox[{"agreedDigits", "[", "modesMin", "]"}], "[", "#", "]"}], "/.", 
          RowBox[{"{", 
+          RowBox[{"modes1", ",", "modes2"}], "}"}], ",", 
+         RowBox[{
           RowBox[{
-           RowBox[{"Indeterminate", "\[Rule]", "#"}], ",", 
-           RowBox[{"prec_", ":>", 
-            RowBox[{"SetPrecision", "[", 
-             RowBox[{"#", ",", "prec"}], "]"}]}]}], "}"}]}], "&"}], "/@", 
-       "agreedModes1"}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     
-     RowBox[{"agreedModes2", "//", 
-      RowBox[{
+           RowBox[{"Length", "[", "#1", "]"}], ">", 
+           RowBox[{"Length", "[", "#2", "]"}]}], "&"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{
+        RowBox[{"agreedModesMin", "=", 
+         RowBox[{"agreedModes", "[", 
+          RowBox[{"modesMin", ",", "modesMax", ",", "cutoff"}], "]"}]}], 
+        ";"}], "*)"}], "\[IndentingNewLine]", 
+      RowBox[{"agreedModesMin", "=", 
+       RowBox[{"Select", "[", 
+        RowBox[{"modesMin", ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"agreedDigits", "[", "modesMax", "]"}], "[", "#", "]"}], 
+           "\[GreaterEqual]", "cutoff"}], "&"}]}], "]"}]}], ";", 
+      "\[IndentingNewLine]", "\[IndentingNewLine]", 
+      RowBox[{"catchError", "[", 
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"agreedModesMin", "===", 
+           RowBox[{"{", "}"}]}], ",", 
+          RowBox[{"throwError", "[", 
+           RowBox[{
+            RowBox[{"SameModes", "::", "noconvergedmodes"}], ",", "cutoff"}], 
+           "]"}]}], "]"}], ",", "Block"}], "]"}], ";", "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", 
+      RowBox[{"result", "=", 
        RowBox[{"If", "[", 
         RowBox[{
+         RowBox[{"bothQ", "===", "False"}], ",", "\[IndentingNewLine]", 
          RowBox[{
-          RowBox[{"Length", "[", 
+          RowBox[{
            RowBox[{
-           "#", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], "]"}],
-           "\[Equal]", "0"}], ",", 
-         RowBox[{"SortBy", "[", 
-          RowBox[{"#", ",", 
-           RowBox[{"(", 
             RowBox[{
-             RowBox[{"-", 
-              RowBox[{"Im", "[", "#1", "]"}]}], "&"}], ")"}]}], "]"}], ",", 
-         RowBox[{"SortBy", "[", 
-          RowBox[{"#", ",", 
-           RowBox[{"(", 
-            RowBox[{
-             RowBox[{"-", 
-              RowBox[{"Im", "[", 
-               RowBox[{"First", "@", "#1"}], "]"}]}], "&"}], ")"}]}], "]"}]}],
-         "]"}], "&"}]}]}]}], "\[IndentingNewLine]", "]"}]}]], "Input",
+             RowBox[{"agreedDigits", "[", "modesMax", "]"}], "[", "#", "]"}], 
+            "/.", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"Indeterminate", "\[Rule]", "#"}], ",", 
+              RowBox[{"Infinity", "\[Rule]", "#"}], ",", 
+              RowBox[{"prec_", ":>", 
+               RowBox[{"SetPrecision", "[", 
+                RowBox[{"#", ",", "prec"}], "]"}]}]}], "}"}]}], "&"}], "/@", 
+          "agreedModesMin"}], ",", "\[IndentingNewLine]", 
+         "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"agreedModesMax", "=", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"modeMin", "\[Function]", 
+              RowBox[{
+               RowBox[{"MinimalBy", "[", 
+                RowBox[{"modesMax", ",", 
+                 RowBox[{
+                  RowBox[{"Abs", "[", 
+                   RowBox[{"#", "-", "modeMin"}], "]"}], "&"}]}], "]"}], 
+               "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}]}], 
+             ")"}], "/@", "agreedModesMin"}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"{", 
+           RowBox[{"agreedModesMax", ",", "agreedModesMin"}], "}"}]}]}], 
+        "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
+      "\[IndentingNewLine]", "result"}]}], "\[IndentingNewLine]", 
+    "]"}]}]}]], "Input",
  InitializationCell->True,
  CellChangeTimes->{{3.67006038502686*^9, 3.67006045880551*^9}, {
    3.670060583012182*^9, 3.670060611054139*^9}, {3.670061346804922*^9, 
@@ -3217,7 +3415,18 @@ Cell[BoxData[
    3.707557002533782*^9}, {3.707557785822431*^9, 3.707557798191677*^9}, {
    3.7075578660222073`*^9, 3.707557866187292*^9}, 3.7075582490333443`*^9, {
    3.70756197697289*^9, 3.7075619771534023`*^9}, {3.707562072830605*^9, 
-   3.7075620815707912`*^9}}],
+   3.7075620815707912`*^9}, {3.711446016908646*^9, 3.7114460180855207`*^9}, {
+   3.711453811029765*^9, 3.7114538495092373`*^9}, {3.711453978935006*^9, 
+   3.71145400320821*^9}, {3.711517171172493*^9, 3.7115173785906897`*^9}, {
+   3.7115184082236834`*^9, 3.7115184367558517`*^9}, {3.7115195965040607`*^9, 
+   3.7115196639801283`*^9}, {3.711519740276129*^9, 3.711519741038582*^9}, {
+   3.7115213983516903`*^9, 3.7115214016447487`*^9}, {3.7115311029309587`*^9, 
+   3.7115311145484877`*^9}, {3.7115316374642353`*^9, 3.711531650199379*^9}, {
+   3.711532516927743*^9, 3.711532534659253*^9}, {3.711535045820842*^9, 
+   3.711535047007328*^9}, {3.711535901731677*^9, 3.711535974018649*^9}, {
+   3.711545556688246*^9, 3.711545586585834*^9}, {3.711546280084139*^9, 
+   3.711546417365199*^9}, {3.711690991248563*^9, 3.711690991607544*^9}, 
+   3.71316089963739*^9}],
 
 Cell["\<\
 The \[OpenCurlyQuote]Indeterminate\[CloseCurlyQuote] case above is \
@@ -3228,13 +3437,13 @@ encountered when there is an eigenvalue that is exactly 0.\
 Cell[BoxData[
  RowBox[{
   RowBox[{
-   RowBox[{"sameModes", "::", "noconvergedmodes"}], "=", 
+   RowBox[{"SameModes", "::", "noconvergedmodes"}], "=", 
    "\"\<No modes found that agree up to order \!\(\*SuperscriptBox[\(10\), \
 \(-`1`\)]\)\>\""}], ";"}]], "Input",
  InitializationCell->True,
  CellChangeTimes->{
   3.684680622153778*^9, {3.685620969585692*^9, 3.685620970880825*^9}, {
-   3.685621894077681*^9, 3.685621894309889*^9}}]
+   3.685621894077681*^9, 3.685621894309889*^9}, 3.711446019089511*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -3244,66 +3453,179 @@ Cell["minDiff, agreedDigits", "Subsubsection",
   3.7075555818962183`*^9, 3.707555584050158*^9}}],
 
 Cell["\<\
-Given a list of reference modes and one single mode, minDiff finds the mode \
-in the reference list closest to the single mode, and gives the absolute \
-value of the difference.\
+Gives the number of digits that agree between a single mode and the closest \
+mode in a list, excluding leading 0\[CloseCurlyQuote]s\
 \>", "Text",
- CellChangeTimes->{{3.6642760584127007`*^9, 3.664276121770289*^9}}],
+ CellChangeTimes->{{3.71152458254993*^9, 3.711524607971402*^9}}],
 
-Cell[BoxData[{
+Cell[BoxData[
  RowBox[{
   RowBox[{
+   RowBox[{"agreedDigits", "[", "refModes_", "]"}], "[", "singleMode_", "]"}],
+   ":=", 
+  RowBox[{"Block", "[", 
    RowBox[{
-    RowBox[{"minDiff", "[", "refmodes_", "]"}], "[", "singleMode_", "]"}], ":=", 
-   RowBox[{"If", "[", 
+    RowBox[{"{", 
+     RowBox[{"\[Omega]", ",", "\[Omega]list", ",", "\[Omega]closest"}], "}"}],
+     ",", "\[IndentingNewLine]", 
     RowBox[{
      RowBox[{
-      RowBox[{"Length", "[", "singleMode", "]"}], "\[Equal]", "0"}], ",", 
-     "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"Abs", "[", 
+      RowBox[{"{", 
+       RowBox[{"\[Omega]", ",", "\[Omega]list"}], "}"}], "=", 
+      RowBox[{"If", "[", 
        RowBox[{
         RowBox[{
+         RowBox[{"Length", "[", "singleMode", "]"}], "\[Equal]", "0"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"singleMode", ",", "refModes"}], "}"}], ",", 
+        RowBox[{"{", 
          RowBox[{
-          RowBox[{"MinimalBy", "[", "Abs", "]"}], "[", 
-          RowBox[{"(", 
-           RowBox[{"#", "-", "refmodes"}], ")"}], "]"}], "&"}], "[", 
-        "singleMode", "]"}], "]"}], "//", "Last"}], ",", 
-     "\[IndentingNewLine]", 
-     RowBox[{
-      RowBox[{"Abs", "[", 
-       RowBox[{
-        RowBox[{
+          RowBox[{
+          "singleMode", "\[LeftDoubleBracket]", "1", 
+           "\[RightDoubleBracket]"}], ",", 
+          RowBox[{"refModes", "\[LeftDoubleBracket]", 
+           RowBox[{"All", ",", "1"}], "\[RightDoubleBracket]"}]}], "}"}]}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"\[Omega]closest", "=", 
+      RowBox[{
+       RowBox[{"MinimalBy", "[", 
+        RowBox[{"\[Omega]list", ",", 
          RowBox[{
-          RowBox[{"MinimalBy", "[", "Abs", "]"}], "[", 
-          RowBox[{"(", 
-           RowBox[{"#", "-", 
-            RowBox[{"refmodes", "\[LeftDoubleBracket]", 
-             RowBox[{"All", ",", "1"}], "\[RightDoubleBracket]"}]}], ")"}], 
-          "]"}], "&"}], "[", 
+          RowBox[{"Abs", "[", 
+           RowBox[{"#", "-", "\[Omega]"}], "]"}], "&"}]}], "]"}], "//", 
+       "First"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"Floor", "[", 
+       RowBox[{"-", 
+        RowBox[{"Log", "[", 
+         RowBox[{"10", ",", 
+          RowBox[{"Abs", "[", 
+           RowBox[{"\[Omega]", "-", "\[Omega]closest"}], "]"}]}], "]"}]}], 
+       "]"}], "+", 
+      RowBox[{"(", 
+       RowBox[{"Floor", "[", 
         RowBox[{
-        "singleMode", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
-        "]"}], "]"}], "//", "Last"}]}], "]"}]}], 
-  "\n"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"agreedDigits", "[", "refmodes_", "]"}], "[", "singleMode_", "]"}],
-   ":=", 
-  RowBox[{"-", 
-   RowBox[{"Floor", "@", 
-    RowBox[{"Log", "[", 
-     RowBox[{"10", ",", 
-      RowBox[{"Abs", "@", 
-       RowBox[{
-        RowBox[{"minDiff", "[", "refmodes", "]"}], "[", "singleMode", 
-        "]"}]}]}], "]"}]}]}]}]}], "Input",
+         RowBox[{"Log", "[", 
+          RowBox[{"10", ",", 
+           RowBox[{"Abs", "[", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{"\[Omega]", "+", "\[Omega]closest"}], ")"}], "/", "2"}],
+             "]"}]}], "]"}], "/.", 
+         RowBox[{
+          RowBox[{"-", "Infinity"}], "\[Rule]", "0"}]}], "]"}], ")"}]}]}]}], 
+   "\[IndentingNewLine]", "]"}]}]], "Input",
  InitializationCell->True,
- CellChangeTimes->{
-  3.664276112745141*^9, {3.67496899215796*^9, 3.6749690278089733`*^9}, {
-   3.6749691139635477`*^9, 3.6749691141761208`*^9}, {3.6846801729143*^9, 
-   3.684680177419971*^9}, {3.684680333927499*^9, 3.684680335424184*^9}, {
-   3.707555617481539*^9, 3.707555619345043*^9}}]
+ CellChangeTimes->{{3.7115261002468452`*^9, 3.71152610332155*^9}, {
+   3.711530173081362*^9, 3.711530176074592*^9}, {3.711531157816183*^9, 
+   3.711531162462364*^9}, {3.711532817291687*^9, 3.711532859754002*^9}, {
+   3.7115329184287024`*^9, 3.711532939964018*^9}, {3.7115329886074123`*^9, 
+   3.711533008135092*^9}, {3.7115330489433403`*^9, 3.711533124851347*^9}, {
+   3.711533433182432*^9, 3.711533434098674*^9}, 3.711534700835676*^9, {
+   3.711537552250942*^9, 3.711537553956221*^9}}]
 }, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Same eigenfunctions", "Section",
+ CellChangeTimes->{{3.711517557599947*^9, 3.711517559695775*^9}}],
+
+Cell["\<\
+Takes two sets of modes which agree in frequencies (with their original \
+precisions), returns only those whose eigenfunctions agree to some precision \
+specified by cutoff, using distance metric below, and finally sets the \
+precision of the frequencies to only show agreed digits.\
+\>", "Text",
+ CellChangeTimes->{{3.711520801709001*^9, 3.71152087033891*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"sameEigenfunctions", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"agreedModesMin_", ",", "agreedModesMax_"}], "}"}], ",", 
+    "cutoff_"}], "]"}], ":=", 
+  RowBox[{"Block", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"differences", "=", 
+       RowBox[{"MapThread", "[", 
+        RowBox[{"eigenfunctionDistance", ",", 
+         RowBox[{"{", 
+          RowBox[{"agreedModesMin", ",", "agreedModesMax"}], "}"}]}], "]"}]}],
+       ",", "diffSmallQ", ",", "agreedEfs"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"diffSmallQ", "=", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"#", "<", 
+          SuperscriptBox["10", 
+           RowBox[{"-", "cutoff"}]]}], "&"}], ")"}], "/@", "differences"}]}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"agreedEfs", "=", 
+      RowBox[{"Extract", "[", 
+       RowBox[{"agreedModesMax", ",", 
+        RowBox[{"Position", "[", 
+         RowBox[{"diffSmallQ", ",", "True"}], "]"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"agreedDigits", "[", "agreedModesMin", "]"}], "[", "#", 
+         "]"}], "/.", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Indeterminate", "\[Rule]", "#"}], ",", 
+          RowBox[{"Infinity", "\[Rule]", "#"}], ",", 
+          RowBox[{"prec_", ":>", 
+           RowBox[{"SetPrecision", "[", 
+            RowBox[{"#", ",", "prec"}], "]"}]}]}], "}"}]}], "&"}], "/@", 
+      "agreedEfs"}]}]}], "\[IndentingNewLine]", "]"}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.711519850035775*^9, 3.711519876622826*^9}, {
+   3.711520283400852*^9, 3.711520339693964*^9}, {3.711520580350046*^9, 
+   3.7115205891099033`*^9}, {3.7115206304736443`*^9, 3.711520648551062*^9}, {
+   3.711520757348215*^9, 3.711520792091344*^9}, {3.711521082516296*^9, 
+   3.7115210826657257`*^9}, 3.711537096428821*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"eigenfunctionDistance", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\[Omega]1_", "?", "NumericQ"}], ",", "eigenf1_List"}], "}"}], 
+    ",", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"\[Omega]2_", "?", "NumericQ"}], ",", "eigenf2_List"}], "}"}]}],
+    "]"}], ":=", 
+  RowBox[{"Max", "[", 
+   RowBox[{"Mean", "/@", 
+    RowBox[{"(", 
+     FractionBox[
+      RowBox[{"(", 
+       RowBox[{"Abs", "/@", 
+        RowBox[{"(", 
+         RowBox[{"eigenf1", "-", "eigenf2"}], ")"}]}], ")"}], 
+      RowBox[{
+       RowBox[{"1", "/", "2"}], 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Max", "@*", "Abs"}], "/@", "eigenf1"}], "+", 
+         RowBox[{
+          RowBox[{"Max", "@*", "Abs"}], "/@", "eigenf2"}]}], ")"}]}]], 
+     ")"}]}], "]"}]}]], "Input",
+ InitializationCell->True,
+ CellChangeTimes->{{3.711519927070578*^9, 3.711519949713374*^9}, {
+  3.711520055559087*^9, 3.711520110480261*^9}, {3.711606774540512*^9, 
+  3.7116067985846453`*^9}, {3.7116081777798967`*^9, 3.711608221613473*^9}}]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -3478,10 +3800,10 @@ GetModes.\>\""}], ";"}], "\[IndentingNewLine]",
 
 Cell[CellGroupData[{
 
-Cell["Compute eigenfunction (\[OpenCurlyDoubleQuote]Later\
-\[CloseCurlyDoubleQuote])", "Section",
+Cell["Compute eigenfunctions separately", "Section",
  CellChangeTimes->{{3.686545816133478*^9, 3.686545838921077*^9}, {
-  3.6866377950290823`*^9, 3.686637796965321*^9}}],
+  3.6866377950290823`*^9, 3.686637796965321*^9}, {3.7114537348274508`*^9, 
+  3.711453736387286*^9}}],
 
 Cell["\<\
 In case the frequencies are already computed, this allows to compute the \
@@ -3509,8 +3831,20 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"ComputeEigenfunctions", "[", 
    RowBox[{"equation_", ",", "\[Omega]list_", ",", 
+    RowBox[{"{", "N_", " ", "}"}], ",", 
+    RowBox[{"opts", " ", ":", " ", 
+     RowBox[{"OptionsPattern", "[", "]"}]}]}], "]"}], ":=", 
+  RowBox[{"ComputeEigenfunctions", "[", 
+   RowBox[{"equation", ",", "\[Omega]list", ",", 
     RowBox[{"{", 
-     RowBox[{"N_", ",", "p_"}], "}"}], ",", 
+     RowBox[{"N", ",", 
+      RowBox[{"N", "/", "2"}]}], " ", "}"}], ",", "opts"}], " ", 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ComputeEigenfunctions", "[", 
+   RowBox[{"equation_", ",", "\[Omega]list_", ",", 
+    RowBox[{"{", 
+     RowBox[{"N_", ",", "p_"}], " ", "}"}], ",", 
     RowBox[{"opts", " ", ":", " ", 
      RowBox[{"OptionsPattern", "[", "]"}]}]}], "]"}], ":=", 
   RowBox[{"Block", "[", 
@@ -3528,37 +3862,17 @@ Cell[BoxData[{
      RowBox[{
       RowBox[{"{", 
        RowBox[{"grid", ",", "matrices", ",", "Neqs"}], "}"}], "=", 
-      RowBox[{"GetModes", "[", 
+      RowBox[{"equationToMatrices", "[", 
        RowBox[{"equation", ",", 
         RowBox[{"{", 
-         RowBox[{"N", ",", "p"}], "}"}], ",", 
-        RowBox[{"ReturnMatrices", "\[Rule]", "True"}], ",", "opts"}], "]"}]}],
-      ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
-     RowBox[{"If", "[", 
+         RowBox[{"N", ",", "p"}], "}"}], ",", "opts"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"ComputeEigenfunctions", "[", 
       RowBox[{
-       RowBox[{"TrueQ", "@", "$QNMMemory"}], ",", "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"ComputeEigenfunctions", "[", 
-         RowBox[{"equation", ",", "\[Omega]list", ",", 
-          RowBox[{"{", 
-           RowBox[{"N", ",", "p"}], "}"}], ",", "opts"}], " ", "]"}], "=", 
-        RowBox[{"Block", "[", 
-         RowBox[{
-          RowBox[{"{", 
-           RowBox[{"$QNMMemory", "=", "False"}], "}"}], ",", 
-          RowBox[{"ComputeEigenfunctions", "[", 
-           RowBox[{
-            RowBox[{"{", 
-             RowBox[{"N", ",", "matrices", ",", "Neqs", ",", "eigenfPrec"}], 
-             "}"}], ",", 
-            RowBox[{"\[Omega]list", "//", "format"}]}], "]"}]}], "]"}]}], ",",
-        "\[IndentingNewLine]", 
-       RowBox[{"ComputeEigenfunctions", "[", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{"N", ",", "matrices", ",", "Neqs", ",", "eigenfPrec"}], 
-          "}"}], ",", 
-         RowBox[{"\[Omega]list", "//", "format"}]}], "]"}]}], "]"}]}]}], 
+       RowBox[{"{", 
+        RowBox[{"N", ",", "matrices", ",", "Neqs", ",", "eigenfPrec"}], "}"}],
+        ",", 
+       RowBox[{"\[Omega]list", "//", "format"}]}], "]"}]}]}], 
    "\[IndentingNewLine]", "]"}]}]}], "Input",
  InitializationCell->True,
  CellChangeTimes->{{3.686545840506053*^9, 3.686546064283433*^9}, {
@@ -3575,7 +3889,10 @@ Cell[BoxData[{
    3.707553697801696*^9, 3.707553702992269*^9}, 3.707557213827317*^9, {
    3.707562089131172*^9, 3.707562101162559*^9}, {3.70762952044591*^9, 
    3.707629525789319*^9}, {3.707629672915414*^9, 3.7076296789143143`*^9}, {
-   3.707629732366222*^9, 3.707629769813116*^9}}],
+   3.707629732366222*^9, 3.707629769813116*^9}, {3.711450909754978*^9, 
+   3.7114509177400093`*^9}, {3.711450951268524*^9, 3.7114510118465767`*^9}, {
+   3.7114511688897343`*^9, 3.711451172639626*^9}, {3.7131610158381863`*^9, 
+   3.7131610177991123`*^9}, {3.713161108776845*^9, 3.713161109059546*^9}}],
 
 Cell[TextData[StyleBox["This is used internally", "Subsubsection"]], "Text",
  CellChangeTimes->{{3.70754247745468*^9, 3.7075424833870077`*^9}, {
@@ -3588,7 +3905,12 @@ Cell[BoxData[{
     RowBox[{
      RowBox[{"{", 
       RowBox[{"order_", ",", "matrices_", ",", "Neqs_", ",", "eigenfPrec_"}], 
-      "}"}], ",", "\[Omega]list0_List"}], "]"}], ":=", 
+      "}"}], ",", 
+     RowBox[{"\[Omega]list0_", "?", 
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"VectorQ", "[", 
+         RowBox[{"#", ",", "NumericQ"}], "]"}], "&"}], ")"}]}]}], "]"}], ":=", 
    RowBox[{"With", "[", 
     RowBox[{
      RowBox[{"{", 
@@ -3673,11 +3995,19 @@ Cell[BoxData[{
             RowBox[{"ComputeEigenfunctions", "[", 
              RowBox[{
               RowBox[{"{", 
-               RowBox[{"order", ",", "matrices", ",", "Neqs"}], "}"}], ",", 
-              "\[Omega]list0"}], "]"}], "=", "result"}], ";"}]}], "]"}], ";", 
-        "\[IndentingNewLine]", "\[IndentingNewLine]", "result"}]}], 
-      "\[IndentingNewLine]", "]"}]}], "]"}]}], 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+               RowBox[{
+               "order", ",", "matrices", ",", "Neqs", ",", "eigenfPrec"}], 
+               "}"}], ",", "\[Omega]list0"}], "]"}], "=", "result"}], ";"}]}],
+          "]"}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+        "result"}]}], "\[IndentingNewLine]", "]"}]}], "]"}]}], 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"To", " ", "work", " ", "on", " ", "single", " ", "frequencies"}],
+     ",", " ", 
+    RowBox[{
+    "or", " ", "lists", " ", "of", " ", "lists", " ", "of", " ", 
+     "frequencies"}]}], " ", "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"ComputeEigenfunctions", "[", 
    RowBox[{
@@ -3689,7 +4019,20 @@ Cell[BoxData[{
    RowBox[{
     RowBox[{"{", 
      RowBox[{"order", ",", "matrices", ",", "Neqs"}], "}"}], ",", 
-    RowBox[{"{", "\[Omega]", "}"}]}], "]"}]}]}], "Input",
+    RowBox[{"{", "\[Omega]", "}"}]}], "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"ComputeEigenfunctions", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"order_", ",", "matrices_", ",", "Neqs_", ",", "eigenfPrec_"}], 
+     "}"}], ",", "\[Omega]lists_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ComputeEigenfunctions", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"order", ",", "matrices", ",", "Neqs", ",", "eigenfPrec"}], 
+       "}"}], ",", "#"}], "]"}], "&"}], "/@", "\[Omega]lists"}]}]}], "Input",
  InitializationCell->True,
  CellChangeTimes->{{3.6865463444060802`*^9, 3.6865463483795*^9}, {
    3.68654643489019*^9, 3.686546467643633*^9}, 3.686548341148375*^9, 
@@ -3726,7 +4069,12 @@ Cell[BoxData[{
    3.707564642992857*^9}, 3.707627054102096*^9, {3.707627089400052*^9, 
    3.707627119766142*^9}, {3.7076274523297863`*^9, 3.7076274690637693`*^9}, {
    3.7076297715494003`*^9, 3.707629822972378*^9}, {3.707630946852668*^9, 
-   3.707630949255258*^9}}]
+   3.707630949255258*^9}, {3.7114511295169783`*^9, 3.711451131357149*^9}, {
+   3.711519289287702*^9, 3.711519359843948*^9}, {3.71151945192015*^9, 
+   3.7115194554157333`*^9}, {3.711522769997665*^9, 3.711522798152958*^9}, 
+   3.711522860429555*^9, {3.7115231756524754`*^9, 3.711523180270282*^9}, {
+   3.7115234099545193`*^9, 3.711523411884591*^9}, {3.711523607973009*^9, 
+   3.7115236089598923`*^9}}]
 }, Closed]]
 }, Closed]],
 
@@ -4482,7 +4830,7 @@ instead.\>\""}], ";"}]}], "Input",
   3.68120299850494*^9}, {3.681203039435773*^9, 3.681203087446988*^9}, {
   3.68120322905685*^9, 3.68120322936944*^9}, {3.681203787202797*^9, 
   3.6812037887728243`*^9}, {3.6826923336925364`*^9, 3.682692335748453*^9}}]
-}, Closed]]
+}, Open  ]]
 }, Closed]],
 
 Cell[CellGroupData[{
@@ -5272,241 +5620,256 @@ Cell[CellGroupData[{
 Cell[1103, 37, 100, 1, 44, "Subsection"],
 Cell[CellGroupData[{
 Cell[1228, 42, 102, 1, 35, "Subsubsection"],
-Cell[1333, 45, 4797, 124, 322, "Input",
+Cell[1333, 45, 6054, 161, 385, "Input",
  InitializationCell->True]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6167, 174, 146, 1, 35, "Subsubsection"],
-Cell[6316, 177, 3660, 86, 280, "Input",
+Cell[7424, 211, 146, 1, 35, "Subsubsection"],
+Cell[7573, 214, 4059, 97, 280, "Input",
  InitializationCell->True]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10013, 268, 111, 1, 35, "Subsubsection"],
-Cell[10127, 271, 612, 14, 70, "Input",
+Cell[11669, 316, 111, 1, 35, "Subsubsection"],
+Cell[11783, 319, 612, 14, 70, "Input",
  InitializationCell->True]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10776, 290, 98, 1, 35, "Subsubsection"],
-Cell[10877, 293, 761, 18, 91, "Input",
+Cell[12432, 338, 98, 1, 35, "Subsubsection"],
+Cell[12533, 341, 761, 18, 91, "Input",
  InitializationCell->True]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[11687, 317, 95, 1, 36, "Subsection"],
-Cell[11785, 320, 1069, 20, 70, "Input",
+Cell[13343, 365, 95, 1, 36, "Subsection"],
+Cell[13441, 368, 1158, 20, 70, "Input",
  InitializationCell->True]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[12891, 345, 95, 1, 54, "Chapter"],
-Cell[12989, 348, 235, 5, 48, "Input",
+Cell[14636, 393, 95, 1, 54, "Chapter"],
+Cell[14734, 396, 235, 5, 48, "Input",
  InitializationCell->True],
 Cell[CellGroupData[{
-Cell[13249, 357, 102, 1, 44, "Subsection"],
-Cell[13354, 360, 1319, 33, 91, "Input",
+Cell[14994, 405, 102, 1, 44, "Subsection"],
+Cell[15099, 408, 1319, 33, 91, "Input",
  InitializationCell->True],
-Cell[14676, 395, 1305, 31, 112, "Input",
+Cell[16421, 443, 1305, 31, 112, "Input",
  InitializationCell->True],
-Cell[15984, 428, 539, 14, 70, "Input",
+Cell[17729, 476, 539, 14, 70, "Input",
  InitializationCell->True],
-Cell[16526, 444, 1197, 32, 70, "Input",
+Cell[18271, 492, 1197, 32, 70, "Input",
  InitializationCell->True]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[17760, 481, 102, 1, 47, "Subchapter"],
-Cell[17865, 484, 258, 6, 70, "Input",
+Cell[19505, 529, 102, 1, 47, "Subchapter"],
+Cell[19610, 532, 258, 6, 70, "Input",
  InitializationCell->True],
-Cell[18126, 492, 20085, 343, 723, "Input",
+Cell[19871, 540, 19855, 335, 618, "Input",
  InitializationCell->True],
-Cell[38214, 837, 228, 6, 48, "Input",
- InitializationCell->True],
-Cell[CellGroupData[{
-Cell[38467, 847, 219, 3, 64, "Section"],
-Cell[38689, 852, 828, 13, 68, "Text"],
-Cell[39520, 867, 11241, 257, 607, "Input",
- InitializationCell->True],
-Cell[50764, 1126, 1133, 29, 133, "Input",
+Cell[39729, 877, 228, 6, 48, "Input",
  InitializationCell->True],
 Cell[CellGroupData[{
-Cell[51922, 1159, 143, 1, 35, "Subsubsection"],
-Cell[52068, 1162, 2784, 62, 217, "Input",
+Cell[39982, 887, 168, 2, 64, "Section"],
+Cell[40153, 891, 2864, 70, 259, "Input",
+ InitializationCell->True]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[43054, 966, 219, 3, 50, "Section"],
+Cell[43276, 971, 828, 13, 68, "Text"],
+Cell[44107, 986, 11241, 257, 607, "Input",
+ InitializationCell->True],
+Cell[55351, 1245, 1133, 29, 133, "Input",
+ InitializationCell->True],
+Cell[CellGroupData[{
+Cell[56509, 1278, 143, 1, 35, "Subsubsection"],
+Cell[56655, 1281, 2784, 62, 217, "Input",
  InitializationCell->True]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[54901, 1230, 112, 1, 50, "Section"],
-Cell[55016, 1233, 496, 8, 49, "Text"],
-Cell[55515, 1243, 7618, 138, 343, "Input",
+Cell[59488, 1349, 112, 1, 50, "Section"],
+Cell[59603, 1352, 496, 8, 49, "Text"],
+Cell[60102, 1362, 7618, 138, 343, "Input",
  InitializationCell->True],
 Cell[CellGroupData[{
-Cell[63158, 1385, 110, 1, 35, "Subsubsection"],
-Cell[63271, 1388, 839, 16, 53, "Text"],
-Cell[64113, 1406, 1958, 49, 181, "Input",
+Cell[67745, 1504, 110, 1, 35, "Subsubsection"],
+Cell[67858, 1507, 839, 16, 53, "Text"],
+Cell[68700, 1525, 1958, 49, 181, "Input",
  InitializationCell->True]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[66108, 1460, 136, 1, 35, "Subsubsection"],
-Cell[66247, 1463, 3178, 74, 158, "Input",
+Cell[70695, 1579, 136, 1, 35, "Subsubsection"],
+Cell[70834, 1582, 3178, 74, 158, "Input",
  InitializationCell->True],
-Cell[69428, 1539, 2225, 55, 181, "Input",
+Cell[74015, 1658, 2225, 55, 181, "Input",
  InitializationCell->True]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[71690, 1599, 128, 1, 35, "Subsubsection"],
-Cell[71821, 1602, 251, 5, 30, "Text"],
-Cell[72075, 1609, 3632, 90, 204, "Input",
+Cell[76277, 1718, 128, 1, 35, "Subsubsection"],
+Cell[76408, 1721, 251, 5, 30, "Text"],
+Cell[76662, 1728, 3632, 90, 204, "Input",
  InitializationCell->True]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[75744, 1704, 139, 1, 35, "Subsubsection"],
-Cell[75886, 1707, 526, 9, 49, "Text"],
-Cell[76415, 1718, 2942, 72, 196, "Input",
+Cell[80331, 1823, 139, 1, 35, "Subsubsection"],
+Cell[80473, 1826, 526, 9, 49, "Text"],
+Cell[81002, 1837, 2942, 72, 196, "Input",
  InitializationCell->True]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[79406, 1796, 105, 1, 50, "Section"],
+Cell[83993, 1915, 105, 1, 50, "Section"],
 Cell[CellGroupData[{
-Cell[79536, 1801, 142, 1, 44, "Subsection"],
-Cell[79681, 1804, 2807, 53, 133, "Input",
+Cell[84123, 1920, 142, 1, 44, "Subsection"],
+Cell[84268, 1923, 2830, 52, 133, "Input",
  InitializationCell->True],
 Cell[CellGroupData[{
-Cell[82513, 1861, 168, 3, 35, "Subsubsection"],
-Cell[82684, 1866, 466, 10, 68, "Text"],
-Cell[83153, 1878, 5134, 125, 322, "Input",
+Cell[87123, 1979, 168, 3, 35, "Subsubsection"],
+Cell[87294, 1984, 466, 10, 68, "Text"],
+Cell[87763, 1996, 5300, 126, 322, "Input",
  InitializationCell->True]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[88336, 2009, 214, 4, 44, "Subsection"],
-Cell[88553, 2015, 18087, 364, 742, "Input",
+Cell[93112, 2128, 214, 4, 44, "Subsection"],
+Cell[93329, 2134, 18365, 370, 742, "Input",
  InitializationCell->True],
-Cell[106643, 2381, 362, 9, 48, "Input",
+Cell[111697, 2506, 362, 9, 48, "Input",
  InitializationCell->True],
-Cell[107008, 2392, 254, 5, 30, "Text"],
-Cell[107265, 2399, 3904, 98, 265, "Input",
+Cell[112062, 2517, 254, 5, 30, "Text"],
+Cell[112319, 2524, 3904, 98, 265, "Input",
  InitializationCell->True]
 }, Closed]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[111218, 2503, 154, 2, 50, "Section"],
-Cell[111375, 2507, 851, 13, 87, "Text"],
-Cell[112229, 2522, 4758, 96, 248, "Input",
+Cell[116272, 2628, 154, 2, 50, "Section"],
+Cell[116429, 2632, 851, 13, 87, "Text"],
+Cell[117283, 2647, 4758, 96, 248, "Input",
  InitializationCell->True],
 Cell[CellGroupData[{
-Cell[117012, 2622, 115, 1, 35, "Subsubsection"],
-Cell[117130, 2625, 348, 7, 68, "Text"],
-Cell[117481, 2634, 3590, 84, 318, "Input",
+Cell[122066, 2747, 115, 1, 35, "Subsubsection"],
+Cell[122184, 2750, 348, 7, 68, "Text"],
+Cell[122535, 2759, 3590, 84, 318, "Input",
  InitializationCell->True],
-Cell[121074, 2720, 581, 17, 48, "Input",
+Cell[126128, 2845, 581, 17, 48, "Input",
  InitializationCell->True]
 }, Open  ]]
 }, Closed]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[121716, 2744, 104, 1, 47, "Subchapter"],
-Cell[121823, 2747, 404, 8, 49, "Text"],
-Cell[122230, 2757, 11942, 239, 700, "Input",
+Cell[126770, 2869, 104, 1, 47, "Subchapter"],
+Cell[126877, 2872, 828, 15, 87, "Text"],
+Cell[127708, 2889, 14680, 279, 721, "Input",
  InitializationCell->True],
-Cell[134175, 2998, 1683, 43, 70, "Input",
+Cell[142391, 3170, 1926, 44, 70, "Input",
  InitializationCell->True],
+Cell[144320, 3216, 239, 4, 30, "Text"],
 Cell[CellGroupData[{
-Cell[135883, 3045, 148, 2, 64, "Section"],
+Cell[144584, 3224, 148, 2, 64, "Section"],
 Cell[CellGroupData[{
-Cell[136056, 3051, 134, 1, 35, "Subsubsection"],
-Cell[136193, 3054, 343, 9, 48, "Input",
+Cell[144757, 3230, 134, 1, 35, "Subsubsection"],
+Cell[144894, 3233, 343, 9, 48, "Input",
  InitializationCell->True],
-Cell[136539, 3065, 704, 13, 68, "Text"],
-Cell[137246, 3080, 6922, 139, 265, "Input",
+Cell[145240, 3244, 515, 9, 49, "Text"],
+Cell[145758, 3255, 261, 5, 30, "Text"],
+Cell[146022, 3262, 8580, 166, 427, "Input",
  InitializationCell->True],
-Cell[144171, 3221, 217, 4, 30, "Text"],
-Cell[144391, 3227, 374, 9, 49, "Input",
+Cell[154605, 3430, 217, 4, 30, "Text"],
+Cell[154825, 3436, 396, 9, 49, "Input",
  InitializationCell->True]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[144802, 3241, 165, 2, 35, "Subsubsection"],
-Cell[144970, 3245, 269, 5, 30, "Text"],
-Cell[145242, 3252, 1834, 52, 133, "Input",
+Cell[155258, 3450, 165, 2, 35, "Subsubsection"],
+Cell[155426, 3454, 221, 4, 30, "Text"],
+Cell[155650, 3460, 2479, 64, 133, "Input",
  InitializationCell->True]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[147125, 3310, 141, 2, 50, "Section"],
+Cell[158178, 3530, 104, 1, 50, "Section"],
+Cell[158285, 3533, 371, 6, 30, "Text"],
+Cell[158659, 3541, 1969, 52, 139, "Input",
+ InitializationCell->True],
+Cell[160631, 3595, 1077, 32, 69, "Input",
+ InitializationCell->True]
+}, Closed]],
 Cell[CellGroupData[{
-Cell[147291, 3316, 102, 1, 44, "Subsection"],
-Cell[147396, 3319, 318, 6, 49, "Text"],
-Cell[147717, 3327, 894, 26, 48, "Input",
+Cell[161745, 3632, 141, 2, 50, "Section"],
+Cell[CellGroupData[{
+Cell[161911, 3638, 102, 1, 44, "Subsection"],
+Cell[162016, 3641, 318, 6, 49, "Text"],
+Cell[162337, 3649, 894, 26, 48, "Input",
  InitializationCell->True]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[148648, 3358, 111, 1, 44, "Subsection"],
-Cell[148762, 3361, 340, 6, 30, "Text"],
-Cell[149105, 3369, 3596, 91, 175, "Input",
+Cell[163268, 3680, 111, 1, 44, "Subsection"],
+Cell[163382, 3683, 340, 6, 30, "Text"],
+Cell[163725, 3691, 3596, 91, 175, "Input",
  InitializationCell->True],
-Cell[152704, 3462, 500, 12, 70, "Input",
+Cell[167324, 3784, 500, 12, 70, "Input",
  InitializationCell->True]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[153253, 3480, 214, 3, 50, "Section"],
-Cell[153470, 3485, 245, 4, 30, "Text"],
-Cell[153718, 3491, 200, 3, 37, "Text"],
-Cell[153921, 3496, 3679, 81, 217, "Input",
+Cell[167873, 3802, 220, 3, 50, "Section"],
+Cell[168096, 3807, 245, 4, 30, "Text"],
+Cell[168344, 3813, 200, 3, 37, "Text"],
+Cell[168547, 3818, 3561, 76, 196, "Input",
  InitializationCell->True],
-Cell[157603, 3579, 194, 2, 37, "Text"],
-Cell[157800, 3583, 7056, 145, 412, "Input",
+Cell[172111, 3896, 194, 2, 37, "Text"],
+Cell[172308, 3900, 8363, 176, 454, "Input",
  InitializationCell->True]
 }, Closed]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[164905, 3734, 148, 2, 47, "Subchapter"],
-Cell[165056, 3738, 995, 25, 196, "Input",
+Cell[180720, 4082, 148, 2, 47, "Subchapter"],
+Cell[180871, 4086, 995, 25, 196, "Input",
  InitializationCell->True],
 Cell[CellGroupData[{
-Cell[166076, 3767, 106, 1, 44, "Subsection"],
-Cell[166185, 3770, 4683, 108, 238, "Input",
+Cell[181891, 4115, 106, 1, 44, "Subsection"],
+Cell[182000, 4118, 4683, 108, 238, "Input",
  InitializationCell->True],
-Cell[170871, 3880, 479, 12, 70, "Input",
+Cell[186686, 4228, 479, 12, 70, "Input",
  InitializationCell->True]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[171387, 3897, 100, 1, 36, "Subsection"],
-Cell[171490, 3900, 277, 7, 48, "Input",
+Cell[187202, 4245, 100, 1, 36, "Subsection"],
+Cell[187305, 4248, 277, 7, 48, "Input",
  InitializationCell->True],
-Cell[171770, 3909, 9058, 204, 535, "Input",
+Cell[187585, 4257, 9058, 204, 535, "Input",
  InitializationCell->True],
-Cell[180831, 4115, 731, 17, 91, "Input",
- InitializationCell->True],
-Cell[CellGroupData[{
-Cell[181587, 4136, 116, 1, 35, "Subsubsection"],
-Cell[181706, 4139, 2157, 55, 133, "Input",
- InitializationCell->True],
-Cell[183866, 4196, 321, 8, 48, "Input",
- InitializationCell->True]
-}, Open  ]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[184236, 4210, 107, 1, 36, "Subsection"],
-Cell[184346, 4213, 11307, 247, 622, "Input",
- InitializationCell->True],
-Cell[195656, 4462, 982, 21, 91, "Input",
- InitializationCell->True]
-}, Closed]]
-}, Closed]],
-Cell[CellGroupData[{
-Cell[196687, 4489, 120, 2, 47, "Subchapter"],
-Cell[196810, 4493, 28638, 581, 1324, "Input",
- InitializationCell->True],
-Cell[225451, 5076, 1227, 28, 112, "Input",
+Cell[196646, 4463, 731, 17, 91, "Input",
  InitializationCell->True],
 Cell[CellGroupData[{
-Cell[226703, 5108, 99, 1, 44, "Subsection"],
-Cell[226805, 5111, 4346, 115, 254, "Input",
+Cell[197402, 4484, 116, 1, 35, "Subsubsection"],
+Cell[197521, 4487, 2157, 55, 133, "Input",
+ InitializationCell->True],
+Cell[199681, 4544, 321, 8, 48, "Input",
  InitializationCell->True]
 }, Open  ]]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[231200, 5232, 93, 1, 47, "Subchapter"],
-Cell[231296, 5235, 385, 8, 70, "Input",
+Cell[200051, 4558, 107, 1, 36, "Subsection"],
+Cell[200161, 4561, 11307, 247, 622, "Input",
+ InitializationCell->True],
+Cell[211471, 4810, 982, 21, 91, "Input",
+ InitializationCell->True]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[212502, 4837, 120, 2, 47, "Subchapter"],
+Cell[212625, 4841, 28638, 581, 1263, "Input",
+ InitializationCell->True],
+Cell[241266, 5424, 1227, 28, 112, "Input",
+ InitializationCell->True],
+Cell[CellGroupData[{
+Cell[242518, 5456, 99, 1, 44, "Subsection"],
+Cell[242620, 5459, 4346, 115, 254, "Input",
+ InitializationCell->True]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[247015, 5580, 93, 1, 47, "Subchapter"],
+Cell[247111, 5583, 385, 8, 70, "Input",
  InitializationCell->True]
 }, Open  ]]
 }, Open  ]]
