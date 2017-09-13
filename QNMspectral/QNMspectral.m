@@ -555,7 +555,7 @@ precisionFromDifference[\[Omega]1_,\[Omega]2_]:=Floor[-Log[10,Abs[\[Omega]1-\[Om
 sameEigenfunctions[{agreedModesMin_,agreedModesMax_},cutoff_]:=Block[{differences=MapThread[eigenfunctionDistance,{agreedModesMin,agreedModesMax}],diffSmallQ,agreedEfs},
 diffSmallQ=(#<10^-cutoff&)/@differences;
 agreedEfs=Extract[agreedModesMax,Position[diffSmallQ,True]];
-agreedDigits[agreedModesMin][#]/.{Indeterminate->#,Infinity->#,prec_:>SetPrecision[#,prec]}&/@agreedEfs
+precisionFromMinimalDifference[#,agreedModesMin]/.{Indeterminate->#,Infinity->#,prec_:>SetPrecision[#,prec]}&/@agreedEfs
 ]
 
 
