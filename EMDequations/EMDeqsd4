@@ -1,0 +1,684 @@
+{{(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 - 
+   (Z[\[Phi][r]]*Derivative[1][a][r]^2)/2 + (2*f[r]*Derivative[1][S][r]^2)/
+    S[r]^2 - ((S[r]*Derivative[1][f][r] + 4*f[r]*Derivative[1][S][r])*
+     Derivative[1][\[Zeta]][r])/(S[r]*\[Zeta][r]) + 
+   \[Xi]*f[r]*Derivative[1][\[Phi]][r]^2 + Derivative[2][f][r] + 
+   (4*(Derivative[1][f][r]*Derivative[1][S][r] + f[r]*Derivative[2][S][r]))/
+    S[r], Derivative[1][f][r] + (12*f[r]*\[Zeta][r]*Derivative[1][S][r]^2 + 
+     S[r]^2*\[Zeta][r]*(2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+       Z[\[Phi][r]]*Derivative[1][a][r]^2 + 2*\[Xi]*f[r]*
+        Derivative[1][\[Phi]][r]^2) + 12*f[r]*S[r]*
+      (-(Derivative[1][S][r]*Derivative[1][\[Zeta]][r]) + 
+       \[Zeta][r]*Derivative[2][S][r]))/(6*S[r]*\[Zeta][r]*
+     Derivative[1][S][r]), 
+  ((3*Derivative[1][S][r])/S[r] - Derivative[1][\[Zeta]][r]/\[Zeta][r])*
+    Derivative[1][\[Phi]][r] + (-2*\[Zeta][r]^2*Derivative[1][V][\[Phi][r]] + 
+     Derivative[1][a][r]^2*Derivative[1][Z][\[Phi][r]] + 
+     4*\[Xi]*Derivative[1][f][r]*Derivative[1][\[Phi]][r])/(4*\[Xi]*f[r]) + 
+   Derivative[2][\[Phi]][r], 
+  -((Derivative[1][S][r]*Derivative[1][\[Zeta]][r])/\[Zeta][r]) + 
+   (\[Xi]*S[r]*Derivative[1][\[Phi]][r]^2)/3 + Derivative[2][S][r], 
+  Derivative[1][a][r]*((3*Derivative[1][S][r])/S[r] - 
+     Derivative[1][\[Zeta]][r]/\[Zeta][r] + 
+     (Derivative[1][Z][\[Phi][r]]*Derivative[1][\[Phi]][r])/Z[\[Phi][r]]) + 
+   Derivative[2][a][r]}, 2*Z3[r]*\[Zeta][r]*Derivative[1][S][r]*
+   ((-3*q^2 + 2*S[r]^2*(\[CapitalLambda] + V[\[Phi][r]]))*\[Zeta][r]^2 + 
+    S[r]^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + (3*I)*\[Omega]*S[r]*
+     \[Zeta][r]*Derivative[1][S][r] + 12*f[r]*Derivative[1][S][r]^2) - 
+  S[r]*Derivative[1][Z3][r]*(18*f[r]*\[Zeta][r]*Derivative[1][S][r]^2 + 
+    6*S[r]*Derivative[1][S][r]*((2*I)*\[Omega]*\[Zeta][r]^2 + 
+      f[r]*Derivative[1][\[Zeta]][r]) + S[r]^2*\[Zeta][r]*
+     (2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+      Z[\[Phi][r]]*Derivative[1][a][r]^2 - 2*\[Xi]*f[r]*
+       Derivative[1][\[Phi]][r]^2)) + 6*f[r]*S[r]^2*\[Zeta][r]*
+   Derivative[1][S][r]*Derivative[2][Z3][r], 
+ {6*q*S[r]*Z[\[Phi][r]]*Z1y[r]*\[Zeta][r]^2*Derivative[1][a][r]*
+    Derivative[1][S][r]*(\[Omega]*S[r]*\[Zeta][r] - 
+     (2*I)*f[r]*Derivative[1][S][r]) + (6*I)*q*f[r]*S[r]^2*Z[\[Phi][r]]*
+    \[Zeta][r]^2*Derivative[1][a][r]*Derivative[1][S][r]*
+    Derivative[1][Z1y][r] + 6*Ey[r]*\[Zeta][r]^2*Derivative[1][S][r]*
+    (q^2*f[r]*\[Zeta][r]*(Z[\[Phi][r]]*((-I)*q^2*\[Zeta][r] + 
+         \[Omega]*S[r]*Derivative[1][S][r]) + \[Omega]*S[r]^2*
+        Derivative[1][Z][\[Phi][r]]*Derivative[1][\[Phi]][r]) - 
+     \[Omega]^2*S[r]^2*((-I)*S[r]^2*Z[\[Phi][r]]^2*Derivative[1][a][r]^2 + 
+       Z[\[Phi][r]]*\[Zeta][r]*((-I)*q^2*\[Zeta][r] + \[Omega]*S[r]*
+          Derivative[1][S][r]) + \[Omega]*S[r]^2*\[Zeta][r]*
+        Derivative[1][Z][\[Phi][r]]*Derivative[1][\[Phi]][r])) - 
+   I*S[r]*(q^2*f[r] - \[Omega]^2*S[r]^2)*\[Zeta][r]*Derivative[1][Ey][r]*
+    (6*f[r]*Z[\[Phi][r]]*\[Zeta][r]*Derivative[1][S][r]^2 + 
+     6*S[r]*Derivative[1][S][r]*(Z[\[Phi][r]]*((2*I)*\[Omega]*\[Zeta][r]^2 + 
+         f[r]*Derivative[1][\[Zeta]][r]) - f[r]*\[Zeta][r]*
+        Derivative[1][Z][\[Phi][r]]*Derivative[1][\[Phi]][r]) + 
+     S[r]^2*Z[\[Phi][r]]*\[Zeta][r]*(2*(\[CapitalLambda] + V[\[Phi][r]])*
+        \[Zeta][r]^2 + Z[\[Phi][r]]*Derivative[1][a][r]^2 - 
+       2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^2)) + 
+   (6*I)*f[r]*S[r]^2*(q^2*f[r] - \[Omega]^2*S[r]^2)*Z[\[Phi][r]]*\[Zeta][r]^2*
+    Derivative[1][S][r]*Derivative[2][Ey][r], 
+  18*q*f[r]*S[r]^2*(-(q^2*f[r]) + \[Omega]^2*S[r]^2)*Z[\[Phi][r]]*
+    \[Zeta][r]^2*Derivative[1][a][r]*Derivative[1][Ey][r]*
+    Derivative[1][S][r] + 3*q*\[Omega]*Ey[r]*S[r]^2*Z[\[Phi][r]]*\[Zeta][r]^2*
+    Derivative[1][a][r]*((6*I)*q^2*f[r]*\[Zeta][r]*Derivative[1][S][r] - 
+     (6*I)*\[Omega]^2*S[r]^2*\[Zeta][r]*Derivative[1][S][r] - 
+     24*\[Omega]*f[r]*S[r]*Derivative[1][S][r]^2 - 
+     \[Omega]*S[r]^3*(2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+       Z[\[Phi][r]]*Derivative[1][a][r]^2 - 2*\[Xi]*f[r]*
+        Derivative[1][\[Phi]][r]^2)) - 3*S[r]*\[Zeta][r]*
+    Derivative[1][Z1y][r]*(6*q^2*f[r]^2*\[Zeta][r]*Derivative[1][S][r]^2 + 
+     18*\[Omega]^2*f[r]*S[r]^2*\[Zeta][r]*Derivative[1][S][r]^2 - 
+     6*q^2*f[r]*S[r]*Derivative[1][S][r]*((2*I)*\[Omega]*\[Zeta][r]^2 + 
+       f[r]*Derivative[1][\[Zeta]][r]) + 6*\[Omega]^2*S[r]^3*
+      Derivative[1][S][r]*((2*I)*\[Omega]*\[Zeta][r]^2 + 
+       f[r]*Derivative[1][\[Zeta]][r]) + \[Omega]^2*S[r]^4*\[Zeta][r]*
+      (2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+       Z[\[Phi][r]]*Derivative[1][a][r]^2 - 2*\[Xi]*f[r]*
+        Derivative[1][\[Phi]][r]^2)) + 3*Z1y[r]*\[Zeta][r]^2*
+    (2*\[Omega]^2*S[r]^4*(2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+       Z[\[Phi][r]]*Derivative[1][a][r]^2)*Derivative[1][S][r] + 
+     (18*I)*q^2*\[Omega]*f[r]*S[r]*\[Zeta][r]*Derivative[1][S][r]^2 + 
+     6*q^2*f[r]*Derivative[1][S][r]*(q^2*\[Zeta][r]^2 + 
+       4*f[r]*Derivative[1][S][r]^2) + I*\[Omega]*S[r]^3*\[Zeta][r]*
+      (2*q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+       q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 6*\[Omega]^2*
+        Derivative[1][S][r]^2 - 2*q^2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^
+         2) + 2*S[r]^2*Derivative[1][S][r]*(-3*q^2*\[Omega]^2*\[Zeta][r]^2 - 
+       2*f[r]*(-6*\[Omega]^2*Derivative[1][S][r]^2 + q^2*\[Xi]*f[r]*
+          Derivative[1][\[Phi]][r]^2))) + 18*f[r]*S[r]^2*
+    (-(q^2*f[r]) + \[Omega]^2*S[r]^2)*\[Zeta][r]^2*Derivative[1][S][r]*
+    Derivative[2][Z1y][r]}, 
+ {1296*q*f[r]*S[r]^5*(q^2*f[r] - \[Omega]^2*S[r]^2)*Z[\[Phi][r]]*\[Zeta][r]^3*
+    Derivative[1][a][r]*Derivative[1][S][r]^5*Derivative[1][Z][\[Phi][r]]*
+    Derivative[1][Z\[Phi]][r]*(-12*q^2*f[r]*Derivative[1][S][r]^2 + 
+     S[r]^2*(2*q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+       q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 36*\[Omega]^2*
+        Derivative[1][S][r]^2 - 2*q^2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^
+         2)) + 216*S[r]^4*Z[\[Phi][r]]*\[Zeta][r]^2*Derivative[1][Ex][r]*
+    Derivative[1][S][r]^4*(18*q^2*f[r]^2*Z[\[Phi][r]]*\[Zeta][r]*
+      Derivative[1][S][r]^2 - 2*f[r]*S[r]^2*Z[\[Phi][r]]*\[Zeta][r]*
+      (q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 - 3*\[Omega]^2*
+        Derivative[1][S][r]^2) + 6*\[Omega]^2*S[r]^3*Derivative[1][S][r]*
+      (Z[\[Phi][r]]*((2*I)*\[Omega]*\[Zeta][r]^2 + 
+         f[r]*Derivative[1][\[Zeta]][r]) - f[r]*\[Zeta][r]*
+        Derivative[1][Z][\[Phi][r]]*Derivative[1][\[Phi]][r]) + 
+     6*q^2*f[r]*S[r]*Derivative[1][S][r]*
+      (Z[\[Phi][r]]*((-2*I)*\[Omega]*\[Zeta][r]^2 - 
+         f[r]*Derivative[1][\[Zeta]][r]) + f[r]*\[Zeta][r]*
+        Derivative[1][Z][\[Phi][r]]*Derivative[1][\[Phi]][r]) + 
+     \[Omega]^2*S[r]^4*Z[\[Phi][r]]*\[Zeta][r]*
+      (2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+       Z[\[Phi][r]]*Derivative[1][a][r]^2 - 2*\[Xi]*f[r]*
+        Derivative[1][\[Phi]][r]^2))*(-12*q^2*f[r]*Derivative[1][S][r]^2 + 
+     S[r]^2*(2*q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+       q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 36*\[Omega]^2*
+        Derivative[1][S][r]^2 - 2*q^2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^
+         2)) - 1296*q*f[r]*S[r]^5*Z[\[Phi][r]]^2*\[Zeta][r]^3*
+    Derivative[1][a][r]*Derivative[1][S][r]^5*Derivative[1][Z2][r]*
+    (12*q^2*f[r]*Derivative[1][S][r]^2 - 4*\[Xi]*\[Omega]^2*S[r]^4*
+      Derivative[1][\[Phi]][r]^2 + 
+     S[r]^2*(2*q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 - 
+       q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 12*\[Omega]^2*
+        Derivative[1][S][r]^2 + 2*q^2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^
+         2)) + 432*q*S[r]^4*Z[\[Phi][r]]^2*Z2[r]*\[Zeta][r]^3*
+    Derivative[1][a][r]*Derivative[1][S][r]^4*
+    ((36*I)*q^2*\[Omega]*f[r]*S[r]*\[Zeta][r]*Derivative[1][S][r]^3 - 
+     72*q^2*f[r]^2*Derivative[1][S][r]^4 + 6*f[r]*S[r]^2*
+      Derivative[1][S][r]^2*(q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 
+       36*\[Omega]^2*Derivative[1][S][r]^2) - (12*I)*\[Xi]*\[Omega]^3*S[r]^5*
+      \[Zeta][r]*Derivative[1][S][r]*Derivative[1][\[Phi]][r]^2 + 
+     \[Xi]*\[Omega]^2*S[r]^6*Derivative[1][\[Phi]][r]^2*
+      (2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+       Z[\[Phi][r]]*Derivative[1][a][r]^2 - 2*\[Xi]*f[r]*
+        Derivative[1][\[Phi]][r]^2) + (3*I)*\[Omega]*S[r]^3*\[Zeta][r]*
+      Derivative[1][S][r]*(2*q^2*(\[CapitalLambda] + V[\[Phi][r]])*
+        \[Zeta][r]^2 - q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 
+       12*\[Omega]^2*Derivative[1][S][r]^2 + 2*q^2*\[Xi]*f[r]*
+        Derivative[1][\[Phi]][r]^2) + 
+     S[r]^4*(2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2*
+        (6*\[Omega]^2*Derivative[1][S][r]^2 - q^2*\[Xi]*f[r]*
+          Derivative[1][\[Phi]][r]^2) + 2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^
+         2*(-6*\[Omega]^2*Derivative[1][S][r]^2 + q^2*\[Xi]*f[r]*
+          Derivative[1][\[Phi]][r]^2) - Z[\[Phi][r]]*Derivative[1][a][r]^2*
+        (12*\[Omega]^2*Derivative[1][S][r]^2 + q^2*\[Xi]*f[r]*
+          Derivative[1][\[Phi]][r]^2))) + 216*Ex[r]*S[r]^3*Z[\[Phi][r]]*
+    \[Zeta][r]^3*Derivative[1][S][r]^4*
+    (72*q^6*f[r]^2*Z[\[Phi][r]]*\[Zeta][r]^2*Derivative[1][S][r]^3 + 
+     (360*I)*q^4*\[Omega]*f[r]^2*S[r]*Z[\[Phi][r]]*\[Zeta][r]*
+      Derivative[1][S][r]^4 - (6*I)*q^2*\[Omega]*f[r]*S[r]^3*Z[\[Phi][r]]*
+      \[Zeta][r]*Derivative[1][S][r]^2*
+      (6*q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+       7*q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 192*\[Omega]^2*
+        Derivative[1][S][r]^2 - 6*q^2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^
+         2) - I*\[Omega]*S[r]^5*Z[\[Phi][r]]*\[Zeta][r]*
+      (4*q^4*(\[CapitalLambda] + V[\[Phi][r]])^2*\[Zeta][r]^4 - 
+       q^4*Z[\[Phi][r]]^2*Derivative[1][a][r]^4 - 42*q^2*\[Omega]^2*
+        Z[\[Phi][r]]*Derivative[1][a][r]^2*Derivative[1][S][r]^2 - 
+       216*\[Omega]^4*Derivative[1][S][r]^4 - 60*q^2*\[Xi]*\[Omega]^2*f[r]*
+        Derivative[1][S][r]^2*Derivative[1][\[Phi]][r]^2 + 
+       4*q^4*\[Xi]^2*f[r]^2*Derivative[1][\[Phi]][r]^4 + 
+       4*q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2*
+        (15*\[Omega]^2*Derivative[1][S][r]^2 - 2*q^2*\[Xi]*f[r]*
+          Derivative[1][\[Phi]][r]^2)) - 6*q^4*f[r]*S[r]^2*\[Zeta][r]*
+      Derivative[1][S][r]*(q^2*Z[\[Phi][r]]^2*\[Zeta][r]*
+        Derivative[1][a][r]^2 - (12*I)*\[Omega]*f[r]*Derivative[1][S][r]^2*
+        Derivative[1][Z][\[Phi][r]]*Derivative[1][\[Phi]][r] + 
+       2*Z[\[Phi][r]]*\[Zeta][r]*(q^2*(\[CapitalLambda] + V[\[Phi][r]])*
+          \[Zeta][r]^2 + 24*\[Omega]^2*Derivative[1][S][r]^2 - 
+         q^2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^2)) + 
+     6*\[Omega]^2*S[r]^6*Derivative[1][S][r]*
+      (q^2*Z[\[Phi][r]]^3*Derivative[1][a][r]^4 + I*q^2*\[Omega]*Z[\[Phi][r]]*
+        \[Zeta][r]*Derivative[1][a][r]^2*Derivative[1][Z][\[Phi][r]]*
+        Derivative[1][\[Phi]][r] + (2*I)*\[Omega]*\[Zeta][r]*
+        Derivative[1][Z][\[Phi][r]]*Derivative[1][\[Phi]][r]*
+        (q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+         18*\[Omega]^2*Derivative[1][S][r]^2 - q^2*\[Xi]*f[r]*
+          Derivative[1][\[Phi]][r]^2) + 2*Z[\[Phi][r]]^2*
+        Derivative[1][a][r]^2*(q^2*(\[CapitalLambda] + V[\[Phi][r]])*
+          \[Zeta][r]^2 + 18*\[Omega]^2*Derivative[1][S][r]^2 + 
+         q^2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^2)) + 
+     6*q^2*S[r]^4*Derivative[1][S][r]*(Z[\[Phi][r]]^2*Derivative[1][a][r]^2*
+        (q^2*(\[Omega]^2 - 4*f[r]*(\[CapitalLambda] + V[\[Phi][r]]))*
+          \[Zeta][r]^2 - 60*\[Omega]^2*f[r]*Derivative[1][S][r]^2) - 
+       (2*I)*\[Omega]*f[r]*\[Zeta][r]*Derivative[1][Z][\[Phi][r]]*
+        Derivative[1][\[Phi]][r]*(q^2*(\[CapitalLambda] + V[\[Phi][r]])*
+          \[Zeta][r]^2 + 24*\[Omega]^2*Derivative[1][S][r]^2 - 
+         q^2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^2) + \[Omega]*Z[\[Phi][r]]*
+        \[Zeta][r]*(2*q^2*\[Omega]*(\[CapitalLambda] + V[\[Phi][r]])*
+          \[Zeta][r]^3 - I*q^2*f[r]*Derivative[1][a][r]^2*
+          Derivative[1][Z][\[Phi][r]]*Derivative[1][\[Phi]][r] + 
+         \[Zeta][r]*(36*\[Omega]^3*Derivative[1][S][r]^2 - 
+           2*q^2*\[Xi]*\[Omega]*f[r]*Derivative[1][\[Phi]][r]^2)))) + 
+   1296*f[r]*S[r]^5*(q^2*f[r] - \[Omega]^2*S[r]^2)*Z[\[Phi][r]]^2*
+    \[Zeta][r]^3*Derivative[1][S][r]^5*(-12*q^2*f[r]*Derivative[1][S][r]^2 + 
+     S[r]^2*(2*q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+       q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 36*\[Omega]^2*
+        Derivative[1][S][r]^2 - 2*q^2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^2))*
+    Derivative[2][Ex][r] + 216*q*S[r]^5*Z\[Phi][r]*\[Zeta][r]^3*
+    Derivative[1][a][r]*Derivative[1][S][r]^4*
+    (2*\[Omega]^2*S[r]^4*Z[\[Phi][r]]*\[Zeta][r]*
+      (2*q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+       q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 36*\[Omega]^2*
+        Derivative[1][S][r]^2)*((3*I)*\[Omega]*Derivative[1][S][r]*
+        Derivative[1][Z][\[Phi][r]] + S[r]*\[Zeta][r]*
+        (Z[\[Phi][r]]*Derivative[1][V][\[Phi][r]] + 
+         (\[CapitalLambda] + V[\[Phi][r]])*Derivative[1][Z][\[Phi][r]])) + 
+     12*q^4*f[r]^3*Derivative[1][S][r]*Derivative[1][\[Phi]][r]*
+      (6*Derivative[1][S][r]^2 + \[Xi]*S[r]^2*Derivative[1][\[Phi]][r]^2)*
+      (Derivative[1][Z][\[Phi][r]]^2 - Z[\[Phi][r]]*Derivative[2][Z][
+         \[Phi][r]]) - f[r]*S[r]^2*((6*I)*q^2*\[Omega]*Z[\[Phi][r]]*
+        \[Zeta][r]*Derivative[1][S][r]*
+        (2*q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+         q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 48*\[Omega]^2*
+          Derivative[1][S][r]^2)*Derivative[1][Z][\[Phi][r]] + 
+       S[r]*Z[\[Phi][r]]*(-24*\[Omega]^2*Derivative[1][S][r]^2*
+          (q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+           36*\[Omega]^2*Derivative[1][S][r]^2)*Derivative[1][Z][\[Phi][r]] + 
+         q^4*Z[\[Phi][r]]^2*Derivative[1][a][r]^2*
+          (2*\[Zeta][r]^2*Derivative[1][V][\[Phi][r]] + Derivative[1][a][r]^2*
+            Derivative[1][Z][\[Phi][r]]) + 2*q^2*Z[\[Phi][r]]*
+          (2*q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^4*
+            Derivative[1][V][\[Phi][r]] + 6*\[Omega]^2*Derivative[1][a][r]^2*
+            Derivative[1][S][r]^2*Derivative[1][Z][\[Phi][r]] + 
+           \[Zeta][r]^2*(48*\[Omega]^2*Derivative[1][S][r]^2*Derivative[1][
+                V][\[Phi][r]] + q^2*(\[CapitalLambda] + V[\[Phi][r]])*
+              Derivative[1][a][r]^2*Derivative[1][Z][\[Phi][r]]))) + 
+       2*\[Xi]*\[Omega]^2*S[r]^3*Z[\[Phi][r]]*
+        (4*(q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+           9*\[Omega]^2*Derivative[1][S][r]^2)*Derivative[1][Z][\[Phi][r]] + 
+         q^2*Z[\[Phi][r]]*(2*\[Zeta][r]^2*Derivative[1][V][\[Phi][r]] + 
+           Derivative[1][a][r]^2*Derivative[1][Z][\[Phi][r]]))*
+        Derivative[1][\[Phi]][r]^2 - 48*\[Xi]^2*\[Omega]^4*S[r]^4*
+        Z[\[Phi][r]]^2*Derivative[1][S][r]*Derivative[1][\[Phi]][r]^3 + 
+       6*\[Omega]^2*S[r]^2*Derivative[1][S][r]*Derivative[1][\[Phi]][r]*
+        (-2*(q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+           18*\[Omega]^2*Derivative[1][S][r]^2)*Derivative[1][Z][\[Phi][r]]^
+           2 + Z[\[Phi][r]]^2*(8*q^2*\[Xi]*(\[CapitalLambda] + V[\[Phi][r]])*
+            \[Zeta][r]^2 + 96*\[Xi]*\[Omega]^2*Derivative[1][S][r]^2 + 
+           q^2*Derivative[1][a][r]^2*Derivative[2][Z][\[Phi][r]]) + 
+         Z[\[Phi][r]]*(-(q^2*Derivative[1][a][r]^2*Derivative[1][Z][\[Phi][
+                r]]^2) + 2*(I*q^2*\[Xi]*\[Omega]*\[Zeta][r]*Derivative[1][
+                Z][\[Phi][r]]*Derivative[1][\[Phi]][r] + 
+             q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2*
+              Derivative[2][Z][\[Phi][r]] + 18*\[Omega]^2*Derivative[1][S][
+                r]^2*Derivative[2][Z][\[Phi][r]])))) + 
+     2*q^2*f[r]^2*((36*I)*q^2*\[Omega]*Z[\[Phi][r]]*\[Zeta][r]*
+        Derivative[1][S][r]^3*Derivative[1][Z][\[Phi][r]] + 
+       6*S[r]*Z[\[Phi][r]]*Derivative[1][S][r]^2*
+        (-24*\[Omega]^2*Derivative[1][S][r]^2*Derivative[1][Z][\[Phi][r]] + 
+         q^2*Z[\[Phi][r]]*(2*\[Zeta][r]^2*Derivative[1][V][\[Phi][r]] + 
+           Derivative[1][a][r]^2*Derivative[1][Z][\[Phi][r]])) + 
+       \[Xi]*S[r]^3*Z[\[Phi][r]]*(-12*\[Omega]^2*Derivative[1][S][r]^2*
+          Derivative[1][Z][\[Phi][r]] + q^2*Z[\[Phi][r]]*
+          (2*\[Zeta][r]^2*Derivative[1][V][\[Phi][r]] + Derivative[1][a][r]^2*
+            Derivative[1][Z][\[Phi][r]]))*Derivative[1][\[Phi]][r]^2 + 
+       2*\[Xi]^2*\[Omega]^2*S[r]^5*Z[\[Phi][r]]*Derivative[1][Z][\[Phi][r]]*
+        Derivative[1][\[Phi]][r]^4 - 6*\[Xi]*\[Omega]^2*S[r]^4*
+        Derivative[1][S][r]*Derivative[1][\[Phi]][r]^3*
+        (4*\[Xi]*Z[\[Phi][r]]^2 + Derivative[1][Z][\[Phi][r]]^2 - 
+         Z[\[Phi][r]]*Derivative[2][Z][\[Phi][r]]) + 
+       3*S[r]^2*Derivative[1][S][r]*Derivative[1][\[Phi]][r]*
+        (-2*(q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+           24*\[Omega]^2*Derivative[1][S][r]^2)*Derivative[1][Z][\[Phi][r]]^
+           2 + Z[\[Phi][r]]^2*(8*q^2*\[Xi]*(\[CapitalLambda] + V[\[Phi][r]])*
+            \[Zeta][r]^2 + 96*\[Xi]*\[Omega]^2*Derivative[1][S][r]^2 + 
+           q^2*Derivative[1][a][r]^2*Derivative[2][Z][\[Phi][r]]) + 
+         Z[\[Phi][r]]*(-(q^2*Derivative[1][a][r]^2*Derivative[1][Z][\[Phi][
+                r]]^2) + 2*(I*q^2*\[Xi]*\[Omega]*\[Zeta][r]*Derivative[1][
+                Z][\[Phi][r]]*Derivative[1][\[Phi]][r] + 
+             q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2*
+              Derivative[2][Z][\[Phi][r]] + 24*\[Omega]^2*Derivative[1][S][
+                r]^2*Derivative[2][Z][\[Phi][r]]))))), 
+  -72*q*f[r]*S[r]^6*Z[\[Phi][r]]*\[Zeta][r]^4*Derivative[1][a][r]*
+    Derivative[1][Ex][r]*Derivative[1][S][r]^3*
+    (-12*q^2*f[r]*Derivative[1][S][r]^2 + 
+      S[r]^2*(2*q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+        q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 36*\[Omega]^2*
+         Derivative[1][S][r]^2 - 2*q^2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^
+          2))^2 + 72*q*Ex[r]*S[r]^6*Z[\[Phi][r]]*\[Zeta][r]^4*
+    Derivative[1][a][r]*Derivative[1][S][r]^3*
+    ((144*I)*q^4*\[Omega]*f[r]^2*\[Zeta][r]*Derivative[1][S][r]^4 - 
+     288*q^2*f[r]^2*S[r]*Derivative[1][S][r]^3*
+      (q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+       18*\[Omega]^2*Derivative[1][S][r]^2) + 6*\[Omega]^2*S[r]^5*
+      Derivative[1][S][r]*(2*q^2*(\[CapitalLambda] + V[\[Phi][r]])*
+        \[Zeta][r]^2 + q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 
+       36*\[Omega]^2*Derivative[1][S][r]^2)*
+      (2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+       Z[\[Phi][r]]*Derivative[1][a][r]^2 - 2*\[Xi]*f[r]*
+        Derivative[1][\[Phi]][r]^2) - (24*I)*q^2*\[Omega]*f[r]*S[r]^2*
+      \[Zeta][r]*Derivative[1][S][r]^2*
+      (2*q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+       q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 36*\[Omega]^2*
+        Derivative[1][S][r]^2 - 2*q^2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^
+         2) + I*\[Omega]*S[r]^4*\[Zeta][r]*
+      (2*q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+        q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 36*\[Omega]^2*
+         Derivative[1][S][r]^2 - 2*q^2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^2)^
+       2 - 12*f[r]*S[r]^3*Derivative[1][S][r]*
+      (2*q^4*(\[CapitalLambda] + V[\[Phi][r]])^2*\[Zeta][r]^4 + 
+       6*\[Omega]^2*Derivative[1][S][r]^2*
+        (q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 - 72*\[Omega]^2*
+          Derivative[1][S][r]^2 - 6*q^2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^
+           2) + q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2*
+        (q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 12*\[Omega]^2*
+          Derivative[1][S][r]^2 - 2*q^2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^
+           2))) + 216*S[r]^5*\[Zeta][r]^3*Derivative[1][S][r]^4*
+    Derivative[1][Z2][r]*(\[Omega]^2*S[r]^5*\[Zeta][r]*
+      (S[r]*(2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+         Z[\[Phi][r]]*Derivative[1][a][r]^2) + (12*I)*\[Omega]*\[Zeta][r]*
+        Derivative[1][S][r])*(2*q^2*(\[CapitalLambda] + V[\[Phi][r]])*
+        \[Zeta][r]^2 + q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 
+       36*\[Omega]^2*Derivative[1][S][r]^2) - 
+     4*q^4*f[r]^3*(6*Derivative[1][S][r]^2 + \[Xi]*S[r]^2*
+        Derivative[1][\[Phi]][r]^2)*(-3*S[r]*Derivative[1][S][r]*
+        Derivative[1][\[Zeta]][r] + \[Zeta][r]*(15*Derivative[1][S][r]^2 - 
+         \[Xi]*S[r]^2*Derivative[1][\[Phi]][r]^2)) - 
+     f[r]*S[r]^3*((12*I)*q^2*\[Omega]*\[Zeta][r]^2*Derivative[1][S][r]*
+        (2*q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+         q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 48*\[Omega]^2*
+          Derivative[1][S][r]^2) + S[r]*\[Zeta][r]*
+        (4*q^4*(\[CapitalLambda] + V[\[Phi][r]])^2*\[Zeta][r]^4 - 
+         q^4*Z[\[Phi][r]]^2*Derivative[1][a][r]^4 + 12*q^2*\[Omega]^2*
+          (\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2*Derivative[1][S][r]^
+           2 + 6*q^2*\[Omega]^2*Z[\[Phi][r]]*Derivative[1][a][r]^2*
+          Derivative[1][S][r]^2 - 648*\[Omega]^4*Derivative[1][S][r]^4) + 
+       72*\[Xi]*\[Omega]^4*S[r]^3*\[Zeta][r]*Derivative[1][S][r]^2*
+        Derivative[1][\[Phi]][r]^2 - 6*\[Omega]^2*S[r]^2*Derivative[1][S][r]*
+        ((q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 36*\[Omega]^2*
+            Derivative[1][S][r]^2)*Derivative[1][\[Zeta]][r] + 
+         2*q^2*\[Zeta][r]^2*((\[CapitalLambda] + V[\[Phi][r]])*
+            Derivative[1][\[Zeta]][r] - (2*I)*\[Xi]*\[Omega]*
+            Derivative[1][\[Phi]][r]^2))) - 2*q^2*f[r]^2*S[r]*
+      ((-72*I)*q^2*\[Omega]*\[Zeta][r]^2*Derivative[1][S][r]^3 + 
+       3*S[r]*\[Zeta][r]*Derivative[1][S][r]^2*
+        (10*q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 - 
+         3*q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 48*\[Omega]^2*
+          Derivative[1][S][r]^2) + 2*\[Xi]*S[r]^3*\[Zeta][r]*
+        (q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 - 27*\[Omega]^2*
+          Derivative[1][S][r]^2)*Derivative[1][\[Phi]][r]^2 + 
+       6*\[Xi]*\[Omega]^2*S[r]^4*Derivative[1][S][r]*Derivative[1][\[Zeta]][
+         r]*Derivative[1][\[Phi]][r]^2 + 2*\[Xi]^2*\[Omega]^2*S[r]^5*
+        \[Zeta][r]*Derivative[1][\[Phi]][r]^4 + 3*S[r]^2*Derivative[1][S][r]*
+        ((q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 48*\[Omega]^2*
+            Derivative[1][S][r]^2)*Derivative[1][\[Zeta]][r] + 
+         2*q^2*\[Zeta][r]^2*((\[CapitalLambda] + V[\[Phi][r]])*
+            Derivative[1][\[Zeta]][r] - (2*I)*\[Xi]*\[Omega]*
+            Derivative[1][\[Phi]][r]^2)))) + 72*S[r]^4*Z2[r]*\[Zeta][r]^4*
+    Derivative[1][S][r]^3*((1512*I)*q^4*\[Omega]*f[r]^2*S[r]*\[Zeta][r]*
+      Derivative[1][S][r]^5 + 216*q^4*f[r]^2*Derivative[1][S][r]^4*
+      (q^2*\[Zeta][r]^2 - 4*f[r]*Derivative[1][S][r]^2) - 
+     (12*I)*q^2*\[Xi]*\[Omega]^3*S[r]^7*\[Zeta][r]*Derivative[1][S][r]*
+      Derivative[1][\[Phi]][r]^2*(2*(\[CapitalLambda] + V[\[Phi][r]])*
+        \[Zeta][r]^2 + Z[\[Phi][r]]*Derivative[1][a][r]^2 - 
+       2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^2) + q^2*\[Xi]*\[Omega]^2*S[r]^8*
+      Derivative[1][\[Phi]][r]^2*(2*(\[CapitalLambda] + V[\[Phi][r]])*
+         \[Zeta][r]^2 + Z[\[Phi][r]]*Derivative[1][a][r]^2 - 
+        2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^2)^2 + 
+     (18*I)*q^2*\[Omega]*f[r]*S[r]^3*\[Zeta][r]*Derivative[1][S][r]^3*
+      (10*q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 - 
+       3*q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 - 48*\[Omega]^2*
+        Derivative[1][S][r]^2 + 6*q^2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^
+         2) - (6*I)*\[Omega]*S[r]^5*\[Zeta][r]*Derivative[1][S][r]*
+      (q^4*Z[\[Phi][r]]^2*Derivative[1][a][r]^4 + q^2*Z[\[Phi][r]]*
+        Derivative[1][a][r]^2*(2*q^2*(\[CapitalLambda] + V[\[Phi][r]])*
+          \[Zeta][r]^2 + 15*\[Omega]^2*Derivative[1][S][r]^2 - 
+         4*q^2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^2) + 
+       2*(54*\[Omega]^4*Derivative[1][S][r]^4 + 9*q^2*\[Xi]*\[Omega]^2*f[r]*
+          Derivative[1][S][r]^2*Derivative[1][\[Phi]][r]^2 + 
+         2*q^4*\[Xi]^2*f[r]^2*Derivative[1][\[Phi]][r]^4 + 
+         q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2*
+          (15*\[Omega]^2*Derivative[1][S][r]^2 - 2*q^2*\[Xi]*f[r]*
+            Derivative[1][\[Phi]][r]^2))) - 18*q^2*f[r]*S[r]^2*
+      Derivative[1][S][r]^2*(2*q^4*(\[CapitalLambda] + V[\[Phi][r]])*
+        \[Zeta][r]^4 - 8*f[r]*Derivative[1][S][r]^2*
+        (24*\[Omega]^2*Derivative[1][S][r]^2 + q^2*\[Xi]*f[r]*
+          Derivative[1][\[Phi]][r]^2) + q^2*\[Zeta][r]^2*
+        (q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 
+         2*(8*(3*\[Omega]^2 + f[r]*(\[CapitalLambda] + V[\[Phi][r]]))*
+            Derivative[1][S][r]^2 - q^2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^
+             2))) - S[r]^6*(q^2*Z[\[Phi][r]]^2*Derivative[1][a][r]^4*
+        (18*\[Omega]^2*Derivative[1][S][r]^2 + q^2*\[Xi]*f[r]*
+          Derivative[1][\[Phi]][r]^2) + 4*Z[\[Phi][r]]*Derivative[1][a][r]^2*
+        (54*\[Omega]^4*Derivative[1][S][r]^4 - 12*q^2*\[Xi]*\[Omega]^2*f[r]*
+          Derivative[1][S][r]^2*Derivative[1][\[Phi]][r]^2 - 
+         q^4*\[Xi]^2*f[r]^2*Derivative[1][\[Phi]][r]^4 + 
+         q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2*
+          (9*\[Omega]^2*Derivative[1][S][r]^2 + q^2*\[Xi]*f[r]*
+            Derivative[1][\[Phi]][r]^2)) + 
+       4*(q^4*\[Xi]*f[r]*(\[CapitalLambda] + V[\[Phi][r]])^2*\[Zeta][r]^4*
+          Derivative[1][\[Phi]][r]^2 + q^2*\[Xi]^2*f[r]^2*
+          Derivative[1][\[Phi]][r]^4*(6*\[Omega]^2*Derivative[1][S][r]^2 + 
+           q^2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^2) + 
+         2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2*
+          (54*\[Omega]^4*Derivative[1][S][r]^4 - 3*q^2*\[Xi]*\[Omega]^2*f[r]*
+            Derivative[1][S][r]^2*Derivative[1][\[Phi]][r]^2 - 
+           q^4*\[Xi]^2*f[r]^2*Derivative[1][\[Phi]][r]^4))) + 
+     6*S[r]^4*Derivative[1][S][r]^2*(6*q^4*\[Omega]^2*(\[CapitalLambda] + 
+         V[\[Phi][r]])*\[Zeta][r]^4 + q^2*\[Zeta][r]^2*
+        (q^2*(3*\[Omega]^2 + 2*f[r]*(\[CapitalLambda] + V[\[Phi][r]]))*
+          Z[\[Phi][r]]*Derivative[1][a][r]^2 + 
+         2*(6*\[Omega]^2*(9*\[Omega]^2 + 10*f[r]*(\[CapitalLambda] + V[
+                \[Phi][r]]))*Derivative[1][S][r]^2 - q^2*\[Xi]*f[r]*
+            (3*\[Omega]^2 + 2*f[r]*(\[CapitalLambda] + V[\[Phi][r]]))*
+            Derivative[1][\[Phi]][r]^2)) + 
+       f[r]*(q^4*Z[\[Phi][r]]^2*Derivative[1][a][r]^4 - 4*q^2*Z[\[Phi][r]]*
+          Derivative[1][a][r]^2*(3*\[Omega]^2*Derivative[1][S][r]^2 + 
+           q^2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^2) + 
+         4*(-108*\[Omega]^4*Derivative[1][S][r]^4 - 6*q^2*\[Xi]*\[Omega]^2*
+            f[r]*Derivative[1][S][r]^2*Derivative[1][\[Phi]][r]^2 + 
+           q^4*\[Xi]^2*f[r]^2*Derivative[1][\[Phi]][r]^4)))) - 
+   36*q^2*S[r]^6*Z\[Phi][r]*\[Zeta][r]^4*Derivative[1][S][r]^3*
+    (-(\[Omega]^2*S[r]^6*(2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+        Z[\[Phi][r]]*Derivative[1][a][r]^2)*
+       (2*q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+        q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 36*\[Omega]^2*
+         Derivative[1][S][r]^2)*(2*\[Zeta][r]^2*Derivative[1][V][\[Phi][r]] - 
+        Derivative[1][a][r]^2*Derivative[1][Z][\[Phi][r]])) - 
+     4*q^2*f[r]^3*(24*\[Xi]*\[Omega]^2*S[r]*Derivative[1][S][r]*
+        Derivative[1][\[Phi]][r]*(-12*Derivative[1][S][r]^2 + 
+          \[Xi]*S[r]^2*Derivative[1][\[Phi]][r]^2)^2 - 
+       q^2*Derivative[1][a][r]^2*Derivative[1][Z][\[Phi][r]]*
+        (6*Derivative[1][S][r]^2 + \[Xi]*S[r]^2*Derivative[1][\[Phi]][r]^2)^
+         2 + 2*q^2*\[Zeta][r]^2*(12*Derivative[1][S][r]^2 - 
+         \[Xi]*S[r]^2*Derivative[1][\[Phi]][r]^2)*
+        (6*Derivative[1][S][r]^2*Derivative[1][V][\[Phi][r]] + 
+         12*\[Xi]*S[r]*(\[CapitalLambda] + V[\[Phi][r]])*Derivative[1][S][r]*
+          Derivative[1][\[Phi]][r] + \[Xi]*S[r]^2*Derivative[1][V][\[Phi][r]]*
+          Derivative[1][\[Phi]][r]^2)) - 4*f[r]^2*S[r]^2*
+      (4*q^4*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^4*
+        (-3*Derivative[1][S][r]^2*Derivative[1][V][\[Phi][r]] + 
+         6*\[Xi]*S[r]*(\[CapitalLambda] + V[\[Phi][r]])*Derivative[1][S][r]*
+          Derivative[1][\[Phi]][r] + \[Xi]*S[r]^2*Derivative[1][V][\[Phi][r]]*
+          Derivative[1][\[Phi]][r]^2) + q^2*Z[\[Phi][r]]*
+        Derivative[1][a][r]^2*(-12*\[Xi]*\[Omega]^2*S[r]*Derivative[1][S][r]*
+          Derivative[1][\[Phi]][r]*(-12*Derivative[1][S][r]^2 + 
+           \[Xi]*S[r]^2*Derivative[1][\[Phi]][r]^2) + 
+         q^2*Derivative[1][a][r]^2*Derivative[1][Z][\[Phi][r]]*
+          (6*Derivative[1][S][r]^2 + \[Xi]*S[r]^2*Derivative[1][\[Phi]][r]^
+             2)) + 2*q^2*\[Zeta][r]^2*(-288*\[Omega]^2*Derivative[1][S][r]^4*
+          Derivative[1][V][\[Phi][r]] + q^2*Z[\[Phi][r]]*Derivative[1][a][r]^
+           2*(-3*Derivative[1][S][r]^2*Derivative[1][V][\[Phi][r]] + 
+           6*\[Xi]*S[r]*(\[CapitalLambda] + V[\[Phi][r]])*Derivative[1][S][r]*
+            Derivative[1][\[Phi]][r] + \[Xi]*S[r]^2*Derivative[1][V][
+             \[Phi][r]]*Derivative[1][\[Phi]][r]^2) + 
+         \[Xi]*S[r]^2*Derivative[1][\[Phi]][r]^2*
+          (q^2*(\[CapitalLambda] + V[\[Phi][r]])*Derivative[1][a][r]^2*
+            Derivative[1][Z][\[Phi][r]] + \[Xi]*\[Omega]^2*S[r]^2*
+            Derivative[1][V][\[Phi][r]]*Derivative[1][\[Phi]][r]^2) + 
+         6*Derivative[1][S][r]^2*(q^2*(\[CapitalLambda] + V[\[Phi][r]])*
+            Derivative[1][a][r]^2*Derivative[1][Z][\[Phi][r]] + 
+           2*\[Xi]*\[Omega]^2*S[r]^2*Derivative[1][V][\[Phi][r]]*
+            Derivative[1][\[Phi]][r]^2)) + \[Omega]^2*
+        (-24*\[Xi]*\[Omega]^2*S[r]*Derivative[1][S][r]*Derivative[1][\[Phi]][
+           r]*(-12*Derivative[1][S][r]^2 + \[Xi]*S[r]^2*
+             Derivative[1][\[Phi]][r]^2)^2 + q^2*Derivative[1][a][r]^2*
+          Derivative[1][Z][\[Phi][r]]*(288*Derivative[1][S][r]^4 + 
+           42*\[Xi]*S[r]^2*Derivative[1][S][r]^2*Derivative[1][\[Phi]][r]^2 - 
+           \[Xi]^2*S[r]^4*Derivative[1][\[Phi]][r]^4))) + 
+     f[r]*S[r]^4*(8*q^4*(\[CapitalLambda] + V[\[Phi][r]])^2*\[Zeta][r]^6*
+        Derivative[1][V][\[Phi][r]] + 4*q^2*(\[CapitalLambda] + V[\[Phi][r]])*
+        \[Zeta][r]^4*(2*q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2*
+          Derivative[1][V][\[Phi][r]] + 24*\[Omega]^2*Derivative[1][S][r]^2*
+          Derivative[1][V][\[Phi][r]] + q^2*\[CapitalLambda]*
+          Derivative[1][a][r]^2*Derivative[1][Z][\[Phi][r]] + 
+         q^2*V[\[Phi][r]]*Derivative[1][a][r]^2*Derivative[1][Z][\[Phi][r]] + 
+         24*\[Xi]*\[Omega]^2*S[r]*(\[CapitalLambda] + V[\[Phi][r]])*
+          Derivative[1][S][r]*Derivative[1][\[Phi]][r] + 
+         4*\[Xi]*\[Omega]^2*S[r]^2*Derivative[1][V][\[Phi][r]]*
+          Derivative[1][\[Phi]][r]^2) + Derivative[1][a][r]^2*
+        (q^4*Z[\[Phi][r]]^2*Derivative[1][a][r]^4*Derivative[1][Z][
+           \[Phi][r]] + 72*\[Omega]^4*Derivative[1][S][r]^2*
+          Derivative[1][Z][\[Phi][r]]*(30*Derivative[1][S][r]^2 - 
+           \[Xi]*S[r]^2*Derivative[1][\[Phi]][r]^2) + 
+         4*\[Omega]^2*Z[\[Phi][r]]*(q^2*Derivative[1][a][r]^2*
+            Derivative[1][Z][\[Phi][r]]*(21*Derivative[1][S][r]^2 - 
+             \[Xi]*S[r]^2*Derivative[1][\[Phi]][r]^2) - 12*\[Xi]*\[Omega]^2*
+            S[r]*Derivative[1][S][r]*Derivative[1][\[Phi]][r]*
+            (-12*Derivative[1][S][r]^2 + \[Xi]*S[r]^2*Derivative[1][\[Phi]][
+                r]^2))) + 2*\[Zeta][r]^2*(q^4*Z[\[Phi][r]]^2*
+          Derivative[1][a][r]^4*Derivative[1][V][\[Phi][r]] + 
+         2*q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2*
+          (12*\[Omega]^2*Derivative[1][S][r]^2*Derivative[1][V][\[Phi][r]] + 
+           q^2*(\[CapitalLambda] + V[\[Phi][r]])*Derivative[1][a][r]^2*
+            Derivative[1][Z][\[Phi][r]] + 12*\[Xi]*\[Omega]^2*S[r]*
+            (\[CapitalLambda] + V[\[Phi][r]])*Derivative[1][S][r]*
+            Derivative[1][\[Phi]][r] + 2*\[Xi]*\[Omega]^2*S[r]^2*
+            Derivative[1][V][\[Phi][r]]*Derivative[1][\[Phi]][r]^2) - 
+         4*\[Omega]^2*(216*\[Omega]^2*Derivative[1][S][r]^4*
+            Derivative[1][V][\[Phi][r]] - 144*\[Xi]*\[Omega]^2*S[r]*
+            (\[CapitalLambda] + V[\[Phi][r]])*Derivative[1][S][r]^3*
+            Derivative[1][\[Phi]][r] + q^2*\[Xi]*S[r]^2*(\[CapitalLambda] + 
+             V[\[Phi][r]])*Derivative[1][a][r]^2*Derivative[1][Z][\[Phi][r]]*
+            Derivative[1][\[Phi]][r]^2 + 12*\[Xi]^2*\[Omega]^2*S[r]^3*
+            (\[CapitalLambda] + V[\[Phi][r]])*Derivative[1][S][r]*
+            Derivative[1][\[Phi]][r]^3 - 3*Derivative[1][S][r]^2*
+            (7*q^2*(\[CapitalLambda] + V[\[Phi][r]])*Derivative[1][a][r]^2*
+              Derivative[1][Z][\[Phi][r]] + 6*\[Xi]*\[Omega]^2*S[r]^2*
+              Derivative[1][V][\[Phi][r]]*Derivative[1][\[Phi]][r]^2))))) + 
+   1296*f[r]*S[r]^6*(q^2*f[r] - \[Omega]^2*S[r]^2)*\[Zeta][r]^4*
+    Derivative[1][S][r]^5*(-12*q^2*f[r]*Derivative[1][S][r]^2 + 
+     S[r]^2*(2*q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+       q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 36*\[Omega]^2*
+        Derivative[1][S][r]^2 - 2*q^2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^2))*
+    Derivative[2][Z2][r], -216*q*f[r]^2*S[r]^5*Z[\[Phi][r]]*\[Zeta][r]^3*
+    Derivative[1][a][r]*Derivative[1][Ex][r]*Derivative[1][S][r]^4*
+    (-3*Derivative[1][S][r]*Derivative[1][Z][\[Phi][r]] + 
+     2*\[Xi]*S[r]*Z[\[Phi][r]]*Derivative[1][\[Phi]][r])*
+    (-12*q^2*f[r]*Derivative[1][S][r]^2 + 
+     S[r]^2*(2*q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+       q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 36*\[Omega]^2*
+        Derivative[1][S][r]^2 - 2*q^2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^
+         2)) - 216*\[Xi]*f[r]*S[r]^4*(q^2*f[r] - \[Omega]^2*S[r]^2)*
+    Z[\[Phi][r]]*\[Zeta][r]^2*Derivative[1][S][r]^4*Derivative[1][Z\[Phi]][r]*
+    (-6*f[r]*\[Zeta][r]*Derivative[1][S][r]^2 + 6*S[r]*Derivative[1][S][r]*
+      ((2*I)*\[Omega]*\[Zeta][r]^2 + f[r]*Derivative[1][\[Zeta]][r]) + 
+     S[r]^2*\[Zeta][r]*(2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+       Z[\[Phi][r]]*Derivative[1][a][r]^2 - 2*\[Xi]*f[r]*
+        Derivative[1][\[Phi]][r]^2))*(-12*q^2*f[r]*Derivative[1][S][r]^2 + 
+     S[r]^2*(2*q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+       q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 36*\[Omega]^2*
+        Derivative[1][S][r]^2 - 2*q^2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^
+         2)) + 1296*f[r]*S[r]^6*Z[\[Phi][r]]*\[Zeta][r]^3*
+    Derivative[1][S][r]^5*Derivative[1][Z2][r]*
+    (-2*q^2*f[r]*\[Zeta][r]^2*(3*Derivative[1][S][r]*Derivative[1][V][
+         \[Phi][r]] + 2*\[Xi]*S[r]*(\[CapitalLambda] + V[\[Phi][r]])*
+        Derivative[1][\[Phi]][r]) + \[Omega]^2*S[r]^2*
+      (\[Zeta][r]^2*(6*Derivative[1][S][r]*Derivative[1][V][\[Phi][r]] + 
+         4*\[Xi]*S[r]*(\[CapitalLambda] + V[\[Phi][r]])*Derivative[1][\[Phi]][
+           r]) + Derivative[1][a][r]^2*(-3*Derivative[1][S][r]*
+          Derivative[1][Z][\[Phi][r]] + 2*\[Xi]*S[r]*Z[\[Phi][r]]*
+          Derivative[1][\[Phi]][r]))) + (216*I)*q*Ex[r]*f[r]*S[r]^5*
+    Z[\[Phi][r]]*\[Zeta][r]^3*Derivative[1][a][r]*Derivative[1][S][r]^4*
+    (\[Omega]*S[r]^2*(-3*\[Zeta][r]*Derivative[1][S][r]*
+        (2*q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+         q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 36*\[Omega]^2*
+          Derivative[1][S][r]^2)*Derivative[1][Z][\[Phi][r]] - 
+       (12*I)*\[Xi]*\[Omega]*S[r]^2*Z[\[Phi][r]]*
+        (2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+         Z[\[Phi][r]]*Derivative[1][a][r]^2)*Derivative[1][S][r]*
+        Derivative[1][\[Phi]][r] + 2*S[r]*Z[\[Phi][r]]*
+        ((-18*I)*\[Omega]*\[Zeta][r]^2*Derivative[1][S][r]^2*
+          Derivative[1][V][\[Phi][r]] + (9*I)*\[Omega]*Derivative[1][a][r]^2*
+          Derivative[1][S][r]^2*Derivative[1][Z][\[Phi][r]] + 
+         2*q^2*\[Xi]*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^3*
+          Derivative[1][\[Phi]][r] + \[Xi]*\[Zeta][r]*
+          (q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 36*\[Omega]^2*
+            Derivative[1][S][r]^2)*Derivative[1][\[Phi]][r])) + 
+     2*q^2*f[r]*\[Zeta][r]*(18*\[Omega]*Derivative[1][S][r]^3*
+        Derivative[1][Z][\[Phi][r]] - 2*\[Xi]^2*\[Omega]*S[r]^3*Z[\[Phi][r]]*
+        Derivative[1][\[Phi]][r]^3 + (6*I)*S[r]*Z[\[Phi][r]]*
+        Derivative[1][S][r]^2*(3*\[Zeta][r]*Derivative[1][V][\[Phi][r]] + 
+         (2*I)*\[Xi]*\[Omega]*Derivative[1][\[Phi]][r]) + 
+       3*\[Xi]*S[r]^2*Derivative[1][S][r]*Derivative[1][\[Phi]][r]*
+        ((4*I)*(\[CapitalLambda] + V[\[Phi][r]])*Z[\[Phi][r]]*\[Zeta][r] + 
+         \[Omega]*Derivative[1][Z][\[Phi][r]]*Derivative[1][\[Phi]][r]))) + 
+   108*S[r]^5*Z[\[Phi][r]]*Z2[r]*\[Zeta][r]^3*Derivative[1][S][r]^4*
+    (\[Omega]^2*S[r]^3*(S[r]*(2*(\[CapitalLambda] + V[\[Phi][r]])*
+          \[Zeta][r]^2 + Z[\[Phi][r]]*Derivative[1][a][r]^2) - 
+       (12*I)*\[Omega]*\[Zeta][r]*Derivative[1][S][r])*
+      (\[Zeta][r]^2*(6*Derivative[1][S][r]*Derivative[1][V][\[Phi][r]] + 
+         4*\[Xi]*S[r]*(\[CapitalLambda] + V[\[Phi][r]])*Derivative[1][\[Phi]][
+           r]) + Derivative[1][a][r]^2*(-3*Derivative[1][S][r]*
+          Derivative[1][Z][\[Phi][r]] + 2*\[Xi]*S[r]*Z[\[Phi][r]]*
+          Derivative[1][\[Phi]][r])) - 
+     f[r]*S[r]*((-72*I)*q^2*\[Omega]*\[Zeta][r]^3*Derivative[1][S][r]^2*
+        Derivative[1][V][\[Phi][r]] + 2*\[Xi]*S[r]^2*
+        (4*q^2*(\[CapitalLambda] + V[\[Phi][r]])^2*\[Zeta][r]^4 + 
+         4*q^2*(\[CapitalLambda] + V[\[Phi][r]])*Z[\[Phi][r]]*\[Zeta][r]^2*
+          Derivative[1][a][r]^2 + Z[\[Phi][r]]*Derivative[1][a][r]^2*
+          (q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 36*\[Omega]^2*
+            Derivative[1][S][r]^2))*Derivative[1][\[Phi]][r] + 
+       6*\[Xi]*\[Omega]^2*S[r]^3*Derivative[1][S][r]*
+        (2*\[Zeta][r]^2*Derivative[1][V][\[Phi][r]] - Derivative[1][a][r]^2*
+          Derivative[1][Z][\[Phi][r]])*Derivative[1][\[Phi]][r]^2 + 
+       4*\[Xi]^2*\[Omega]^2*S[r]^4*(2*(\[CapitalLambda] + V[\[Phi][r]])*
+          \[Zeta][r]^2 + Z[\[Phi][r]]*Derivative[1][a][r]^2)*
+        Derivative[1][\[Phi]][r]^3 - 3*S[r]*Derivative[1][S][r]*
+        (-4*q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^4*
+          Derivative[1][V][\[Phi][r]] + Derivative[1][a][r]^2*
+          (q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 36*\[Omega]^2*
+            Derivative[1][S][r]^2)*Derivative[1][Z][\[Phi][r]] + 
+         2*q^2*\[Zeta][r]^2*Derivative[1][a][r]^2*
+          (-(Z[\[Phi][r]]*Derivative[1][V][\[Phi][r]]) + 
+           (\[CapitalLambda] + V[\[Phi][r]])*Derivative[1][Z][\[Phi][r]]) + 
+         (16*I)*q^2*\[Xi]*\[Omega]*(\[CapitalLambda] + V[\[Phi][r]])*
+          \[Zeta][r]^3*Derivative[1][\[Phi]][r])) + 
+     2*q^2*f[r]^2*(2*\[Xi]*S[r]^2*\[Zeta][r]^2*Derivative[1][\[Phi]][r]^2*
+        (3*Derivative[1][S][r]*Derivative[1][V][\[Phi][r]] + 
+         2*\[Xi]*S[r]*(\[CapitalLambda] + V[\[Phi][r]])*Derivative[1][\[Phi]][
+           r]) - Derivative[1][a][r]^2*(3*Derivative[1][S][r]*
+          Derivative[1][Z][\[Phi][r]] - 2*\[Xi]*S[r]*Z[\[Phi][r]]*
+          Derivative[1][\[Phi]][r])*(6*Derivative[1][S][r]^2 + 
+         \[Xi]*S[r]^2*Derivative[1][\[Phi]][r]^2))) + 
+   108*f[r]*S[r]^3*Z\[Phi][r]*\[Zeta][r]^3*Derivative[1][S][r]^4*
+    (2*q^4*f[r]^2*Z[\[Phi][r]]*((36*I)*\[Xi]*\[Omega]*S[r]*\[Zeta][r]*
+        Derivative[1][S][r]^2*(6*Derivative[1][S][r]^2 + 
+         \[Xi]*S[r]^2*Derivative[1][\[Phi]][r]^2) + 
+       2*\[Zeta][r]^2*(48*\[Xi]*S[r]^3*Derivative[1][S][r]^2*
+          Derivative[1][V][\[Phi][r]]*Derivative[1][\[Phi]][r] + 
+         2*\[Xi]^2*S[r]^5*Derivative[1][V][\[Phi][r]]*
+          Derivative[1][\[Phi]][r]^3 + 18*Derivative[1][S][r]^3*
+          (2*q^2*\[Xi] + S[r]^2*Derivative[2][V][\[Phi][r]]) + 
+         3*\[Xi]*S[r]^2*Derivative[1][S][r]*Derivative[1][\[Phi]][r]^2*
+          (2*q^2*\[Xi] + S[r]^2*(8*\[CapitalLambda]*\[Xi] + 
+             8*\[Xi]*V[\[Phi][r]] + Derivative[2][V][\[Phi][r]]))) + 
+       S[r]^2*Derivative[1][a][r]^2*(6*Derivative[1][S][r]^2 + 
+         \[Xi]*S[r]^2*Derivative[1][\[Phi]][r]^2)*
+        (2*\[Xi]*S[r]*Derivative[1][Z][\[Phi][r]]*Derivative[1][\[Phi]][r] - 
+         3*Derivative[1][S][r]*Derivative[2][Z][\[Phi][r]])) - 
+     q^2*f[r]*S[r]^2*(12*\[Omega]^2*S[r]^2*Derivative[1][a][r]^2*
+        Derivative[1][S][r]*Derivative[1][Z][\[Phi][r]]^2*
+        (6*Derivative[1][S][r]^2 + \[Xi]*S[r]^2*Derivative[1][\[Phi]][r]^2) + 
+       Z[\[Phi][r]]^2*Derivative[1][a][r]^2*((36*I)*q^2*\[Xi]*\[Omega]*S[r]*
+          \[Zeta][r]*Derivative[1][S][r]^2 + 2*q^2*\[Zeta][r]^2*
+          (2*\[Xi]*S[r]^3*Derivative[1][V][\[Phi][r]]*Derivative[1][\[Phi]][
+             r] + 3*Derivative[1][S][r]*(2*q^2*\[Xi] + 
+             S[r]^2*Derivative[2][V][\[Phi][r]])) + 
+         S[r]^2*(2*q^2*\[Xi]*S[r]*Derivative[1][a][r]^2*Derivative[1][Z][
+             \[Phi][r]]*Derivative[1][\[Phi]][r] + 48*\[Xi]^2*\[Omega]^2*
+            S[r]^2*Derivative[1][S][r]*Derivative[1][\[Phi]][r]^2 - 
+           3*q^2*Derivative[1][a][r]^2*Derivative[1][S][r]*Derivative[2][Z][
+             \[Phi][r]])) + 2*Z[\[Phi][r]]*((36*I)*q^2*\[Xi]*\[Omega]*S[r]*
+          (\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^3*Derivative[1][S][r]^
+           2 + (36*I)*\[Xi]*\[Omega]^3*S[r]*\[Zeta][r]*Derivative[1][S][r]^2*
+          (24*Derivative[1][S][r]^2 + \[Xi]*S[r]^2*Derivative[1][\[Phi]][r]^
+             2) + 2*q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^4*
+          (2*\[Xi]*S[r]^3*Derivative[1][V][\[Phi][r]]*Derivative[1][\[Phi]][
+             r] + 3*Derivative[1][S][r]*(2*q^2*\[Xi] + 
+             S[r]^2*Derivative[2][V][\[Phi][r]])) - \[Omega]^2*S[r]^2*
+          Derivative[1][a][r]^2*(12*\[Xi]*S[r]*Derivative[1][S][r]^2*
+            Derivative[1][Z][\[Phi][r]]*Derivative[1][\[Phi]][r] + 
+           2*\[Xi]^2*S[r]^3*Derivative[1][Z][\[Phi][r]]*
+            Derivative[1][\[Phi]][r]^3 + 72*Derivative[1][S][r]^3*
+            Derivative[2][Z][\[Phi][r]] + 3*\[Xi]*S[r]^2*Derivative[1][S][r]*
+            Derivative[1][\[Phi]][r]^2*Derivative[2][Z][\[Phi][r]]) + 
+         \[Zeta][r]^2*(240*\[Xi]*\[Omega]^2*S[r]^3*Derivative[1][S][r]^2*
+            Derivative[1][V][\[Phi][r]]*Derivative[1][\[Phi]][r] + 
+           2*\[Xi]*S[r]^3*Derivative[1][\[Phi]][r]*
+            (q^2*(\[CapitalLambda] + V[\[Phi][r]])*Derivative[1][a][r]^2*
+              Derivative[1][Z][\[Phi][r]] + 2*\[Xi]*\[Omega]^2*S[r]^2*
+              Derivative[1][V][\[Phi][r]]*Derivative[1][\[Phi]][r]^2) + 
+           144*\[Omega]^2*Derivative[1][S][r]^3*(2*q^2*\[Xi] + 
+             S[r]^2*Derivative[2][V][\[Phi][r]]) + 3*S[r]^2*
+            Derivative[1][S][r]*(2*\[Xi]*\[Omega]^2*Derivative[1][\[Phi]][
+                r]^2*(2*q^2*\[Xi] + S[r]^2*(16*\[CapitalLambda]*\[Xi] + 
+                 16*\[Xi]*V[\[Phi][r]] + Derivative[2][V][\[Phi][r]])) - 
+             q^2*(\[CapitalLambda] + V[\[Phi][r]])*Derivative[1][a][r]^2*
+              Derivative[2][Z][\[Phi][r]])))) + \[Omega]^2*S[r]^4*
+      (12*S[r]^2*Derivative[1][a][r]^2*Derivative[1][S][r]*
+        (q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+         18*\[Omega]^2*Derivative[1][S][r]^2)*Derivative[1][Z][\[Phi][r]]^2 + 
+       Z[\[Phi][r]]^2*Derivative[1][a][r]^2*((36*I)*q^2*\[Xi]*\[Omega]*S[r]*
+          \[Zeta][r]*Derivative[1][S][r]^2 + 2*q^2*\[Zeta][r]^2*
+          (2*\[Xi]*S[r]^3*Derivative[1][V][\[Phi][r]]*Derivative[1][\[Phi]][
+             r] + 3*Derivative[1][S][r]*(2*q^2*\[Xi] + 
+             S[r]^2*Derivative[2][V][\[Phi][r]])) + 
+         S[r]^2*(-2*q^2*\[Xi]*S[r]*Derivative[1][a][r]^2*Derivative[1][Z][
+             \[Phi][r]]*Derivative[1][\[Phi]][r] + 48*\[Xi]^2*\[Omega]^2*
+            S[r]^2*Derivative[1][S][r]*Derivative[1][\[Phi]][r]^2 - 
+           3*q^2*Derivative[1][a][r]^2*Derivative[1][S][r]*Derivative[2][Z][
+             \[Phi][r]])) + 2*Z[\[Phi][r]]*((36*I)*q^2*\[Xi]*\[Omega]*S[r]*
+          (\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^3*Derivative[1][S][r]^
+           2 + (648*I)*\[Xi]*\[Omega]^3*S[r]*\[Zeta][r]*Derivative[1][S][r]^
+           4 + 2*q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^4*
+          (2*\[Xi]*S[r]^3*Derivative[1][V][\[Phi][r]]*Derivative[1][\[Phi]][
+             r] + 3*Derivative[1][S][r]*(2*q^2*\[Xi] + 
+             S[r]^2*Derivative[2][V][\[Phi][r]])) + \[Zeta][r]^2*
+          (144*\[Xi]*\[Omega]^2*S[r]^3*Derivative[1][S][r]^2*
+            Derivative[1][V][\[Phi][r]]*Derivative[1][\[Phi]][r] - 
+           2*q^2*\[Xi]*S[r]^3*(\[CapitalLambda] + V[\[Phi][r]])*
+            Derivative[1][a][r]^2*Derivative[1][Z][\[Phi][r]]*
+            Derivative[1][\[Phi]][r] + 108*\[Omega]^2*Derivative[1][S][r]^3*
+            (2*q^2*\[Xi] + S[r]^2*Derivative[2][V][\[Phi][r]]) + 
+           3*S[r]^2*(\[CapitalLambda] + V[\[Phi][r]])*Derivative[1][S][r]*
+            (16*\[Xi]^2*\[Omega]^2*S[r]^2*Derivative[1][\[Phi]][r]^2 - 
+             q^2*Derivative[1][a][r]^2*Derivative[2][Z][\[Phi][r]])) + 
+         3*S[r]^2*Derivative[1][a][r]^2*Derivative[1][S][r]*
+          (q^2*Derivative[1][a][r]^2*Derivative[1][Z][\[Phi][r]]^2 - 
+           6*\[Omega]^2*Derivative[1][S][r]*(4*\[Xi]*S[r]*Derivative[1][Z][
+               \[Phi][r]]*Derivative[1][\[Phi]][r] + 3*Derivative[1][S][r]*
+              Derivative[2][Z][\[Phi][r]]))))) + 
+   1296*\[Xi]*f[r]^2*S[r]^5*(q^2*f[r] - \[Omega]^2*S[r]^2)*Z[\[Phi][r]]*
+    \[Zeta][r]^3*Derivative[1][S][r]^5*(-12*q^2*f[r]*Derivative[1][S][r]^2 + 
+     S[r]^2*(2*q^2*(\[CapitalLambda] + V[\[Phi][r]])*\[Zeta][r]^2 + 
+       q^2*Z[\[Phi][r]]*Derivative[1][a][r]^2 + 36*\[Omega]^2*
+        Derivative[1][S][r]^2 - 2*q^2*\[Xi]*f[r]*Derivative[1][\[Phi]][r]^2))*
+    Derivative[2][Z\[Phi]][r]}}
