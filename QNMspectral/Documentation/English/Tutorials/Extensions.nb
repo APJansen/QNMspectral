@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    259681,       5165]
+NotebookDataLength[    259682,       5165]
 NotebookOptionsPosition[    250216,       4858]
-NotebookOutlinePosition[    253119,       4934]
-CellTagsIndexPosition[    253038,       4929]
+NotebookOutlinePosition[    253120,       4934]
+CellTagsIndexPosition[    253039,       4929]
 WindowTitle->Extensions
 WindowFrame->Normal*)
 
@@ -1576,7 +1576,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAICl5v8BRZDURA==
  ImageRegion->{{0, 1}, {0, 1}},
  CellTags->"RasterizedOutput",
  CellLabel->"Out[4]=",
- CellID->2056149624]
+ CellID->1561562968]
 }, Open  ]],
 
 Cell[TextData[{
@@ -2536,7 +2536,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALCt/wcursxY
  ImageRegion->{{0, 1}, {0, 1}},
  CellTags->"RasterizedOutput",
  CellLabel->"Out[9]=",
- CellID->399883044]
+ CellID->791153189]
 }, Open  ]],
 
 Cell["\<\
@@ -4788,7 +4788,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA0vt/ZyUP6g==
  ImageRegion->{{0, 1}, {0, 1}},
  CellTags->"RasterizedOutput",
  CellLabel->"Out[26]=",
- CellID->1357989045]
+ CellID->1840388946]
 }, Open  ]],
 
 Cell[TextData[{
@@ -4870,7 +4870,7 @@ TaggingRules->{
          BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
     Left], "ExampleCounter" -> 1, "NeedPlatMsgIn" -> None, "RootCaptions" -> 
   "", "Metadata" -> {
-   "built" -> "{2017, 8, 12, 12, 2, 28.353812}", 
+   "built" -> "{2017, 9, 14, 14, 21, 31.420361}", 
     "history" -> {"0.0", "", "", ""}, "context" -> "QNMSpectral`", 
     "keywords" -> {}, "specialkeywords" -> {}, 
     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
@@ -4917,18 +4917,18 @@ CellTagsIndex->{
  "RasterizedOutput"->{
   Cell[38331, 819, 45781, 759, 70, "Output",
    CellTags->"RasterizedOutput",
-   CellID->2056149624],
+   CellID->1561562968],
   Cell[92580, 1840, 42075, 698, 70, "Output",
    CellTags->"RasterizedOutput",
-   CellID->399883044],
+   CellID->791153189],
   Cell[161769, 3362, 86603, 1428, 70, "Output",
    CellTags->"RasterizedOutput",
-   CellID->1357989045]}
+   CellID->1840388946]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"RasterizedOutput", 252705, 4916}
+ {"RasterizedOutput", 252706, 4916}
  }
 *)
 (*NotebookFileOutline
@@ -4983,7 +4983,7 @@ Cell[37981, 806, 347, 11, 70, "Input",
  CellID->1788956318],
 Cell[38331, 819, 45781, 759, 70, "Output",
  CellTags->"RasterizedOutput",
- CellID->2056149624]
+ CellID->1561562968]
 }, Open  ]],
 Cell[84127, 1581, 354, 11, 70, "Text",
  CellID->2038277146]
@@ -5035,7 +5035,7 @@ Cell[91822, 1818, 755, 20, 70, "Input",
  CellID->1841952292],
 Cell[92580, 1840, 42075, 698, 70, "Output",
  CellTags->"RasterizedOutput",
- CellID->399883044]
+ CellID->791153189]
 }, Open  ]],
 Cell[134670, 2541, 179, 4, 70, "Text",
  CellID->2092352079],
@@ -5147,7 +5147,7 @@ Cell[161548, 3353, 218, 7, 70, "Output",
  CellID->161869123],
 Cell[161769, 3362, 86603, 1428, 70, "Output",
  CellTags->"RasterizedOutput",
- CellID->1357989045]
+ CellID->1840388946]
 }, Open  ]],
 Cell[248387, 4793, 535, 10, 70, "Text",
  CellID->1845248534],

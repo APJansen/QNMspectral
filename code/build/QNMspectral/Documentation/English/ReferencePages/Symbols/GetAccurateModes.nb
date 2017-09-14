@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     12352,        385]
-NotebookOptionsPosition[      9280,        300]
-NotebookOutlinePosition[     11319,        352]
-CellTagsIndexPosition[     11276,        349]
+NotebookDataLength[     12856,        400]
+NotebookOptionsPosition[      9724,        313]
+NotebookOutlinePosition[     11764,        365]
+CellTagsIndexPosition[     11721,        362]
 WindowTitle->GetAccurateModes
 WindowFrame->Normal*)
 
@@ -179,7 +179,8 @@ Cell[BoxData[GridBox[{
        RowBox[{"-", "Cutoff"}]]], "InlineFormula"]
     }], "TableText"]},
    {"FilterModes", "False", Cell["", "TableText"]},
-   {"FilterEigenfunctions", "False", "\[IndentingNewLine]"}
+   {"FilterEigenfunctions", "False", "\[IndentingNewLine]"},
+   {"SameEigenfunctions", "False", "\[Placeholder]"}
   }]], "3ColumnTable",
  CellID->11156],
 
@@ -248,13 +249,25 @@ Cell[TextData[{
      TextData["GetModes"]],"paclet:QNMspectral/ref/GetModes"},
    "RefLink",
    BaseStyle->{"InlineFormula"}]], "InlineFormula"],
- " has an extra posibility when used with GetAccurateModes, which is \
-\"Later\". This first computes just the frequencies, then it computes the \
+ " has an extra possibility when used with GetAccurateModes, which is \"Later\
+\". This first computes just the frequencies, then it computes the \
 eigenfunctions only for those modes which have converged. This is not always \
 faster, but particularly with higher precision and a higher power of the \
 frequency it can give a significant speed up."
 }], "Notes",
  CellID->1933538609],
+
+Cell[TextData[{
+ "The option SameEigenfunctions, when set to some ",
+ Cell[BoxData["n"], "InlineFormula"],
+ ", will select only those modes whose eigenfunctions differ by at most ",
+ Cell[BoxData[
+  SuperscriptBox["10", 
+   RowBox[{"-", "n"}]]], "InlineFormula"],
+ " in absolute values, relative to the average of the maxima of their \
+absolute values."
+}], "Notes",
+ CellID->155805681],
 
 Cell["", "SectionFooterSpacer"]
 }, Closed]],
@@ -312,7 +325,7 @@ TaggingRules->{
          BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
     Left], "ExampleCounter" -> 1, "NeedPlatMsgIn" -> None, "RootCaptions" -> 
   "", "Metadata" -> {
-   "built" -> "{2017, 8, 12, 12, 2, 13.713940}", 
+   "built" -> "{2017, 9, 14, 14, 21, 18.314508}", 
     "history" -> {"0.0", "", "", ""}, "context" -> "QNMSpectral`", 
     "keywords" -> {}, "specialkeywords" -> {}, 
     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
@@ -363,30 +376,32 @@ Cell[4793, 142, 730, 24, 70, "NotesSection",
 Cell[5526, 168, 31, 0, 70, "SectionHeaderSpacer"],
 Cell[5560, 170, 68, 1, 70, "Notes",
  CellID->13178],
-Cell[5631, 173, 388, 10, 70, "3ColumnTable",
+Cell[5631, 173, 442, 11, 70, "3ColumnTable",
  CellID->11156],
-Cell[6022, 185, 1210, 41, 70, "Notes",
+Cell[6076, 186, 1210, 41, 70, "Notes",
  CellID->1808402586],
-Cell[7235, 228, 246, 5, 70, "Notes",
+Cell[7289, 229, 246, 5, 70, "Notes",
  CellID->1187631099],
-Cell[7484, 235, 277, 6, 70, "Notes",
+Cell[7538, 236, 277, 6, 70, "Notes",
  CellID->1712957043],
-Cell[7764, 243, 597, 13, 70, "Notes",
+Cell[7818, 244, 598, 13, 70, "Notes",
  CellID->1933538609],
-Cell[8364, 258, 31, 0, 70, "SectionFooterSpacer"]
+Cell[8419, 259, 386, 10, 70, "Notes",
+ CellID->155805681],
+Cell[8808, 271, 31, 0, 70, "SectionFooterSpacer"]
 }, Closed]],
 Cell[CellGroupData[{
-Cell[8432, 263, 272, 12, 70, "TutorialsSection",
+Cell[8876, 276, 272, 12, 70, "TutorialsSection",
  CellID->250839057],
-Cell[8707, 277, 31, 0, 70, "SectionHeaderSpacer"],
-Cell[8741, 279, 171, 5, 70, "RelatedDemonstrations",
+Cell[9151, 290, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[9185, 292, 171, 5, 70, "RelatedDemonstrations",
  CellID->618224417],
-Cell[8915, 286, 169, 4, 70, "RelatedDemonstrations",
+Cell[9359, 299, 169, 4, 70, "RelatedDemonstrations",
  CellID->971892333],
-Cell[9087, 292, 151, 3, 70, "RelatedDemonstrations",
+Cell[9531, 305, 151, 3, 70, "RelatedDemonstrations",
  CellID->833821649]
 }, Open  ]],
-Cell[9253, 298, 23, 0, 70, "FooterCell"]
+Cell[9697, 311, 23, 0, 70, "FooterCell"]
 }
 ]
 *)
