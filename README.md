@@ -14,10 +14,11 @@ Mathematica 10 or later is required for this package to work.
 
 1. If you haven’t already dowloaded it, click ‘Clone or download’ on the top right, and choose `download ZIP`.
 
-2. Now copy the ‘QNMspectral’ folder.
+2. Now copy the ‘QNMspectral’ folder (not 'code', this is used only to create the documentation).
 
 3. Paste this folder into the folder 'Applications' located in the Mathematica user base directory. 
-   To find the location of this user base directory, open a Mathematica notebook and evaluate ‘$UserBaseDirectory’
+   To find the location of this user base directory, open a Mathematica notebook and evaluate ‘$UserBaseDirectory’.
+   On a Mac this will be in the 'library' folder, which is hidden by default, to acces that in Finder click Go->Go to Folder... and type '/Library'.
    
 4. To get the documentation to work, reset Mathematica.
 
