@@ -467,7 +467,8 @@ result
 
 
 (* ::Input::Initialization:: *)
-normalizeEigenfunctions[eigenfunctions_]:=(efs\[Function]efs (Conjugate[#1]/Norm[#1]^2&)@First@MaximalBy[efs[[All,1]],Abs])/@eigenfunctions
+normalizeEigenfunctions[eigenfunctions_]:=(efs\[Function]With[{horizonValue=First@MaximalBy[efs[[All,1]],Abs]},
+efs If[Abs[horizonValue]>10^-8,Conjugate[horizonValue]/Norm[horizonValue]^2,1]])/@eigenfunctions
 
 
 (* ::Input::Initialization:: *)
@@ -628,7 +629,7 @@ LabelStyle->{FontSize->30}];
 
 (* ::Input::Initialization:: *)
 Options[PlotFrequencies]={NModes->All,Name->"\[Omega]"};
-PlotFrequencies[modes_,opts : OptionsPattern[{PlotFrequencies,ListPlot}]]:=Block[{n=OptionValue[NModes]/.All->-1,\[Omega]=OptionValue[Name],freqs},
+PlotFrequencies[modes_List,opts : OptionsPattern[{PlotFrequencies,ListPlot}]]:=Block[{n=OptionValue[NModes]/.All->-1,\[Omega]=OptionValue[Name],freqs},
 catchError[If[Not@StringQ@\[Omega],throwError[PlotFrequencies::name]],Block];
 
 If[n>Length[modes],Message[PlotFrequencies::nmodes,n,n=Length[modes]]];
@@ -651,7 +652,7 @@ nrtostring[nr_]:=ToString[nr,TraditionalForm];
 (* ::Input::Initialization:: *)
 Options[MakeTable]={NModes->All,Precision->10,Name->"\!\(\*SubscriptBox[\(\[Omega]\), \(n\)]\)",ConjugateCutoff->3};
 
-MakeTable[modes_,OptionsPattern[]]:=Block[{n=OptionValue[NModes]/.All->-1,prec=OptionValue[Precision],\[Omega]=OptionValue[Name],conjCutoff=OptionValue[ConjugateCutoff],
+MakeTable[modes_List,OptionsPattern[]]:=Block[{n=OptionValue[NModes]/.All->-1,prec=OptionValue[Precision],\[Omega]=OptionValue[Name],conjCutoff=OptionValue[ConjugateCutoff],
 conjQ,uniquefreqs},
 catchError[If[Not@StringQ@\[Omega],throwError[MakeTable::name]],Block];
 
@@ -681,7 +682,7 @@ MakeTable::conjugateCutoff="Option ConjugateCutoff should be a number.";
 
 
 (* ::Input::Initialization:: *)
-ShowModes[modes_,opts :OptionsPattern[{PlotFrequencies,ListPlot,MakeTable}]]:=Block[{n=OptionValue[NModes]},
+ShowModes[modes_List,opts :OptionsPattern[{PlotFrequencies,ListPlot,MakeTable}]]:=Block[{n=OptionValue[NModes]},
 If[n>Length[modes],Message[ShowModes::nmodes,n,n=Length[modes]]];
 
 {PlotFrequencies[modes,FilterRules[{NModes->n,opts},Options[PlotFrequencies]~Join~Options[ListPlot]]],MakeTable[modes,FilterRules[{NModes->n,opts},Options[MakeTable]]]}
@@ -695,7 +696,7 @@ ShowModes::nmodes="There are not as many modes as `1`, showing all `2` instead."
 (* ::Input::Initialization:: *)
 Options[PlotEigenfunctions]={NModes->All,Horizon->1,FunctionNumber->1,Rescale->0,Conjugates ->(#[[-3]]<0&)};
 
-PlotEigenfunctions[modes_,opts : OptionsPattern[{PlotEigenfunctions,Plot}]]:=Block[{n=OptionValue[NModes]/.All->Length[modes],fn=OptionValue[FunctionNumber],resc=OptionValue[Rescale],conjQ=OptionValue[Conjugates]/.False->(False&),
+PlotEigenfunctions[modes_List,opts : OptionsPattern[{PlotEigenfunctions,Plot}]]:=Block[{n=OptionValue[NModes]/.All->Length[modes],fn=OptionValue[FunctionNumber],resc=OptionValue[Rescale],conjQ=OptionValue[Conjugates]/.False->(False&),
 hor = OptionValue[Horizon],grid,eigenfcts,fRe,fIm,fname},
 
 grid= MakeGrid[Length[modes[[1,2,1]]]-1,Horizon->hor];
