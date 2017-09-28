@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     17447,        623]
-NotebookOptionsPosition[     12894,        463]
-NotebookOutlinePosition[     13323,        480]
-CellTagsIndexPosition[     13280,        477]
+NotebookDataLength[     17611,        628]
+NotebookOptionsPosition[     13056,        468]
+NotebookOutlinePosition[     13485,        485]
+CellTagsIndexPosition[     13442,        482]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -130,10 +130,15 @@ Cell[TextData[{
  "This is a",
  StyleBox[" Mathematica",
   FontSlant->"Italic"],
- " package by Aron Jansen. It is presented in more detail in this paper, \
-please cite that when using this package."
+ " package by Aron Jansen. It is presented in more detail in ",
+ ButtonBox["this paper",
+  BaseStyle->"Hyperlink",
+  ButtonData->{
+    URL["https://arxiv.org/abs/1709.09178"], None}],
+ ", please cite that when using this package."
 }], "Text",
- CellChangeTimes->{{3.714380363428773*^9, 3.714380395131928*^9}},
+ CellChangeTimes->{{3.714380363428773*^9, 3.714380395131928*^9}, {
+  3.715566996063143*^9, 3.715567036435717*^9}},
  CellID->609569526],
 
 Cell[TextData[{
@@ -532,97 +537,97 @@ Cell[2359, 119, 49, 1, 106, "Title",
 Cell[CellGroupData[{
 Cell[2433, 124, 110, 2, 43, "Section",
  CellID->1780888324],
-Cell[2546, 128, 295, 8, 40, "Text",
+Cell[2546, 128, 457, 13, 40, "Text",
  CellID->609569526],
-Cell[2844, 138, 501, 11, 57, "Text",
+Cell[3006, 143, 501, 11, 57, "Text",
  CellID->185376528],
-Cell[3348, 151, 183, 6, 23, "Text",
+Cell[3510, 156, 183, 6, 23, "Text",
  CellID->1980515458]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[3568, 162, 125, 2, 43, "Section",
+Cell[3730, 167, 125, 2, 43, "Section",
  CellID->1817533663],
-Cell[3696, 166, 131, 4, 23, "Text",
+Cell[3858, 171, 131, 4, 23, "Text",
  CellID->1813345487],
-Cell[3830, 172, 193, 6, 23, "Text",
+Cell[3992, 177, 193, 6, 23, "Text",
  CellID->2106726496],
-Cell[4026, 180, 235, 5, 40, "Text",
+Cell[4188, 185, 235, 5, 40, "Text",
  CellID->680808273]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[4298, 190, 122, 2, 43, "Section",
+Cell[4460, 195, 122, 2, 43, "Section",
  CellID->1251559663],
-Cell[4423, 194, 971, 27, 75, "Text",
+Cell[4585, 199, 971, 27, 75, "Text",
  CellID->1282883017],
-Cell[5397, 223, 148, 4, 23, "Text",
+Cell[5559, 228, 148, 4, 23, "Text",
  CellID->1449877470],
-Cell[5548, 229, 290, 6, 57, "Text",
+Cell[5710, 234, 290, 6, 57, "Text",
  CellID->1852568906],
-Cell[5841, 237, 382, 10, 40, "Text",
+Cell[6003, 242, 382, 10, 40, "Text",
  CellID->1877588382],
-Cell[6226, 249, 345, 13, 23, "Text",
+Cell[6388, 254, 345, 13, 23, "Text",
  CellID->331515170]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6608, 267, 126, 2, 43, "Section",
+Cell[6770, 272, 126, 2, 43, "Section",
  CellID->1390972306],
-Cell[6737, 271, 1059, 20, 159, "Text",
+Cell[6899, 276, 1059, 20, 159, "Text",
  CellID->677148683]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7833, 296, 387, 10, 48, "TOCChapter",
+Cell[7995, 301, 387, 10, 48, "TOCChapter",
  CellID->285503243],
-Cell[8223, 308, 183, 4, 28, "TOCSection",
+Cell[8385, 313, 183, 4, 28, "TOCSection",
  CellID->974537703],
-Cell[8409, 314, 172, 4, 22, "TOCSection",
+Cell[8571, 319, 172, 4, 22, "TOCSection",
  CellID->197398652],
-Cell[8584, 320, 174, 4, 22, "TOCSection",
+Cell[8746, 325, 174, 4, 22, "TOCSection",
  CellID->1964393196],
-Cell[8761, 326, 178, 4, 22, "TOCSection",
+Cell[8923, 331, 178, 4, 22, "TOCSection",
  CellID->142856194],
-Cell[8942, 332, 187, 4, 22, "TOCSection",
+Cell[9104, 337, 187, 4, 22, "TOCSection",
  CellID->97335212]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[9166, 341, 141, 3, 46, "TOCChapter"],
-Cell[9310, 346, 163, 2, 28, "TOCSection"],
-Cell[9476, 350, 149, 3, 22, "TOCSection"],
-Cell[9628, 355, 151, 3, 22, "TOCSection"],
-Cell[9782, 360, 162, 3, 22, "TOCSection"]
+Cell[9328, 346, 141, 3, 46, "TOCChapter"],
+Cell[9472, 351, 163, 2, 28, "TOCSection"],
+Cell[9638, 355, 149, 3, 22, "TOCSection"],
+Cell[9790, 360, 151, 3, 22, "TOCSection"],
+Cell[9944, 365, 162, 3, 22, "TOCSection"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[9981, 368, 130, 2, 46, "TOCChapter"],
+Cell[10143, 373, 130, 2, 46, "TOCChapter"],
 Cell[CellGroupData[{
-Cell[10136, 374, 182, 3, 28, "TOCSection"],
-Cell[10321, 379, 148, 2, 19, "TOCSubsection"]
+Cell[10298, 379, 182, 3, 28, "TOCSection"],
+Cell[10483, 384, 148, 2, 19, "TOCSubsection"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[10506, 386, 163, 2, 28, "TOCSection"],
-Cell[10672, 390, 150, 3, 19, "TOCSubsection"]
+Cell[10668, 391, 163, 2, 28, "TOCSection"],
+Cell[10834, 395, 150, 3, 19, "TOCSubsection"]
 }, Open  ]],
-Cell[10837, 396, 155, 2, 28, "TOCSection"],
-Cell[10995, 400, 182, 3, 22, "TOCSection"],
-Cell[11180, 405, 134, 2, 22, "TOCSection"]
+Cell[10999, 401, 155, 2, 28, "TOCSection"],
+Cell[11157, 405, 182, 3, 22, "TOCSection"],
+Cell[11342, 410, 134, 2, 22, "TOCSection"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11351, 412, 190, 3, 46, "TOCChapter"],
-Cell[11544, 417, 140, 3, 28, "TOCSection",
+Cell[11513, 417, 190, 3, 46, "TOCChapter"],
+Cell[11706, 422, 140, 3, 28, "TOCSection",
  CellID->1268614066],
-Cell[11687, 422, 156, 3, 22, "TOCSection",
+Cell[11849, 427, 156, 3, 22, "TOCSection",
  CellID->1378959846],
-Cell[11846, 427, 153, 3, 22, "TOCSection",
+Cell[12008, 432, 153, 3, 22, "TOCSection",
  CellID->534613298],
-Cell[12002, 432, 141, 3, 22, "TOCSection",
+Cell[12164, 437, 141, 3, 22, "TOCSection",
  CellID->174120438],
-Cell[12146, 437, 142, 3, 22, "TOCSection",
+Cell[12308, 442, 142, 3, 22, "TOCSection",
  CellID->1569474252],
-Cell[12291, 442, 160, 3, 22, "TOCSection",
+Cell[12453, 447, 160, 3, 22, "TOCSection",
  CellID->1845265637],
-Cell[12454, 447, 145, 3, 22, "TOCSection",
+Cell[12616, 452, 145, 3, 22, "TOCSection",
  CellID->918201093],
-Cell[12602, 452, 138, 3, 22, "TOCSection",
+Cell[12764, 457, 138, 3, 22, "TOCSection",
  CellID->1568214732],
-Cell[12743, 457, 123, 2, 22, "TOCSection"]
+Cell[12905, 462, 123, 2, 22, "TOCSection"]
 }, Open  ]]
 }, Open  ]]
 }

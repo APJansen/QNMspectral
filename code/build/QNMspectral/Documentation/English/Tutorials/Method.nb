@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    151754,       3364]
-NotebookOptionsPosition[    143368,       3100]
-NotebookOutlinePosition[    146210,       3172]
-CellTagsIndexPosition[    146129,       3167]
+NotebookDataLength[    151829,       3367]
+NotebookOptionsPosition[    143445,       3103]
+NotebookOutlinePosition[    146285,       3175]
+CellTagsIndexPosition[    146204,       3170]
 WindowTitle->Method
 WindowFrame->Normal*)
 
@@ -82,7 +82,7 @@ Method.html"], StandardForm]], "Input", TextClipboardType -> "PlainText"]},
            URL[
             StringJoin[
              If[
-              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$8589], 
+              TrueQ[DocumentationBuild`Make`Private`wsmlinkQ$8590], 
               "http://reference.wolfram.com/system-modeler/", 
               "http://reference.wolfram.com/language/"], 
              "QNMspectral/tutorial/Method", ".html"]], None}]}]},
@@ -1027,9 +1027,12 @@ Cell[TextData[{
  "The current example of an asymptotically anti-de Sitter black brane is \
 perhaps the simplest case, but after suitable rescalings the method can be \
 applied to a wide range of asymptotics. The cases of global anti-de Sitter, \
-de Sitter and flat asymptotics are worked out in detail in ",
- StyleBox["add paper reference",
-  FontWeight->"Bold"],
+de Sitter and flat asymptotics are worked out in detail ",
+ Cell[BoxData[
+  TemplateBox[{Cell[
+     TextData["here"]],"https://arxiv.org/abs/1709.09178"},
+   "WebLink",
+   BaseStyle->{"Text"}]]],
  "."
 }], "Text",
  CellID->1966554627]
@@ -2480,7 +2483,7 @@ mciAfDLu1eCTQdoeAZC2Rwak7ZEBabt7NWg7AoFAIFYj/w/4izul
  ImageRegion->{{0, 1}, {0, 1}},
  CellTags->"RasterizedOutput",
  CellLabel->"Out[9]=",
- CellID->1210047681]
+ CellID->567360317]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -3112,7 +3115,7 @@ TaggingRules->{
          BaseStyle -> {"Link", "DockedLinkTrail"}]}]}}, ColumnAlignments -> 
     Left], "ExampleCounter" -> 1, "NeedPlatMsgIn" -> None, "RootCaptions" -> 
   "", "Metadata" -> {
-   "built" -> "{2017, 9, 14, 14, 21, 35.082290}", 
+   "built" -> "{2017, 9, 28, 7, 59, 24.205280}", 
     "history" -> {"0.0", "", "", ""}, "context" -> "QNMSpectral`", 
     "keywords" -> {}, "specialkeywords" -> {}, 
     "tutorialcollectionlinks" -> {}, "index" -> True, "label" -> 
@@ -3159,14 +3162,14 @@ StyleDefinitions->Notebook[{
 (*CellTagsOutline
 CellTagsIndex->{
  "RasterizedOutput"->{
-  Cell[54635, 1298, 71692, 1184, 70, "Output",
+  Cell[54713, 1301, 71691, 1184, 70, "Output",
    CellTags->"RasterizedOutput",
-   CellID->1210047681]}
+   CellID->567360317]}
  }
 *)
 (*CellTagsIndex
 CellTagsIndex->{
- {"RasterizedOutput", 146001, 3160}
+ {"RasterizedOutput", 146077, 3163}
  }
 *)
 (*NotebookFileOutline
@@ -3230,142 +3233,142 @@ Cell[46796, 1017, 83, 1, 70, "Text",
 Cell[CellGroupData[{
 Cell[46904, 1022, 63, 1, 70, "Subsection",
  CellID->354031387],
-Cell[46970, 1025, 401, 9, 70, "Text",
+Cell[46970, 1025, 479, 12, 70, "Text",
  CellID->1966554627]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[47420, 1040, 78, 1, 70, "Section",
+Cell[47498, 1043, 78, 1, 70, "Section",
  CellID->1267753975],
-Cell[47501, 1043, 300, 6, 70, "Text",
+Cell[47579, 1046, 300, 6, 70, "Text",
  CellID->1713154644],
-Cell[47804, 1051, 290, 6, 70, "Text",
+Cell[47882, 1054, 290, 6, 70, "Text",
  CellID->780243156],
-Cell[48097, 1059, 853, 31, 70, "Text",
+Cell[48175, 1062, 853, 31, 70, "Text",
  CellID->225188045],
-Cell[48953, 1092, 641, 22, 70, "Text",
+Cell[49031, 1095, 641, 22, 70, "Text",
  CellID->667655692],
-Cell[49597, 1116, 287, 6, 70, "Text",
+Cell[49675, 1119, 287, 6, 70, "Text",
  CellID->2034219487],
-Cell[49887, 1124, 203, 5, 70, "Text",
+Cell[49965, 1127, 203, 5, 70, "Text",
  CellID->1991738820],
-Cell[50093, 1131, 414, 18, 70, "Text",
+Cell[50171, 1134, 414, 18, 70, "Text",
  CellID->1421600843],
-Cell[50510, 1151, 418, 9, 70, "Text",
+Cell[50588, 1154, 418, 9, 70, "Text",
  CellID->616759975],
-Cell[50931, 1162, 284, 11, 70, "Text",
+Cell[51009, 1165, 284, 11, 70, "Text",
  CellID->988872173],
-Cell[51218, 1175, 919, 36, 70, "Text",
+Cell[51296, 1178, 919, 36, 70, "Text",
  CellID->1630184905],
-Cell[52140, 1213, 337, 9, 70, "Text",
+Cell[52218, 1216, 337, 9, 70, "Text",
  CellID->1087114798],
 Cell[CellGroupData[{
-Cell[52502, 1226, 2130, 70, 70, "Input",
+Cell[52580, 1229, 2130, 70, 70, "Input",
  CellID->1104739231],
-Cell[54635, 1298, 71692, 1184, 70, "Output",
+Cell[54713, 1301, 71691, 1184, 70, "Output",
  CellTags->"RasterizedOutput",
- CellID->1210047681]
+ CellID->567360317]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[126364, 2487, 62, 1, 70, "Subsection",
+Cell[126441, 2490, 62, 1, 70, "Subsection",
  CellID->2116007790],
-Cell[126429, 2490, 427, 7, 70, "Text",
+Cell[126506, 2493, 427, 7, 70, "Text",
  CellID->10743530],
-Cell[126859, 2499, 386, 7, 70, "Text",
+Cell[126936, 2502, 386, 7, 70, "Text",
  CellID->1738386601],
-Cell[127248, 2508, 238, 5, 70, "Text",
+Cell[127325, 2511, 238, 5, 70, "Text",
  CellID->1886024033]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[127535, 2519, 70, 1, 70, "Section",
+Cell[127612, 2522, 70, 1, 70, "Section",
  CellID->543512774],
-Cell[127608, 2522, 106, 3, 70, "Text",
+Cell[127685, 2525, 106, 3, 70, "Text",
  CellID->1528765870],
-Cell[127717, 2527, 708, 26, 70, "Text",
+Cell[127794, 2530, 708, 26, 70, "Text",
  CellID->1636640841],
-Cell[128428, 2555, 689, 27, 70, "Text",
+Cell[128505, 2558, 689, 27, 70, "Text",
  CellID->1395168574],
-Cell[129120, 2584, 282, 8, 70, "Text",
+Cell[129197, 2587, 282, 8, 70, "Text",
  CellID->721735607],
-Cell[129405, 2594, 520, 12, 70, "Text",
+Cell[129482, 2597, 520, 12, 70, "Text",
  CellID->1310912195],
-Cell[129928, 2608, 90, 2, 70, "Text",
+Cell[130005, 2611, 90, 2, 70, "Text",
  CellID->739824142],
-Cell[130021, 2612, 310, 11, 70, "Text",
+Cell[130098, 2615, 310, 11, 70, "Text",
  CellID->544592701],
-Cell[130334, 2625, 219, 8, 70, "Text",
+Cell[130411, 2628, 219, 8, 70, "Text",
  CellID->1659568876],
-Cell[130556, 2635, 736, 27, 70, "Text",
+Cell[130633, 2638, 736, 27, 70, "Text",
  CellID->1698227968],
-Cell[131295, 2664, 181, 8, 70, "Text",
+Cell[131372, 2667, 181, 8, 70, "Text",
  CellID->1446509982],
-Cell[131479, 2674, 310, 9, 70, "Text",
+Cell[131556, 2677, 310, 9, 70, "Text",
  CellID->1307832486]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[131826, 2688, 95, 1, 70, "Section",
+Cell[131903, 2691, 95, 1, 70, "Section",
  CellID->1904411934],
-Cell[131924, 2691, 90, 1, 70, "Text",
+Cell[132001, 2694, 90, 1, 70, "Text",
  CellID->2121721600],
-Cell[132017, 2694, 91, 1, 70, "Text",
+Cell[132094, 2697, 91, 1, 70, "Text",
  CellID->378303749],
-Cell[132111, 2697, 1248, 43, 70, "Text",
+Cell[132188, 2700, 1248, 43, 70, "Text",
  CellID->141532321],
-Cell[133362, 2742, 1231, 42, 70, "Text",
+Cell[133439, 2745, 1231, 42, 70, "Text",
  CellID->1425289929],
-Cell[134596, 2786, 427, 15, 70, "Text",
+Cell[134673, 2789, 427, 15, 70, "Text",
  CellID->21938408],
-Cell[135026, 2803, 325, 11, 70, "Text",
+Cell[135103, 2806, 325, 11, 70, "Text",
  CellID->236731165],
-Cell[135354, 2816, 938, 23, 70, "Output",
+Cell[135431, 2819, 938, 23, 70, "Output",
  CellID->1629887900],
-Cell[136295, 2841, 697, 22, 70, "Text",
+Cell[136372, 2844, 697, 22, 70, "Text",
  CellID->224534168],
-Cell[136995, 2865, 426, 11, 70, "Text",
+Cell[137072, 2868, 426, 11, 70, "Text",
  CellID->1378548966],
-Cell[137424, 2878, 560, 19, 70, "Text",
+Cell[137501, 2881, 560, 19, 70, "Text",
  CellID->1077128890],
-Cell[137987, 2899, 707, 24, 70, "Text",
+Cell[138064, 2902, 707, 24, 70, "Text",
  CellID->61825957],
-Cell[138697, 2925, 953, 30, 70, "Output",
+Cell[138774, 2928, 953, 30, 70, "Output",
  CellID->1959208299],
-Cell[139653, 2957, 362, 14, 70, "Text",
+Cell[139730, 2960, 362, 14, 70, "Text",
  CellID->1227876],
-Cell[140018, 2973, 260, 8, 70, "Text",
+Cell[140095, 2976, 260, 8, 70, "Text",
  CellID->2029057168],
-Cell[140281, 2983, 680, 21, 70, "Text",
+Cell[140358, 2986, 680, 21, 70, "Text",
  CellID->323162344]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[140998, 3009, 49, 1, 70, "Section",
+Cell[141075, 3012, 49, 1, 70, "Section",
  CellID->558260947],
-Cell[141050, 3012, 88, 1, 70, "Text",
+Cell[141127, 3015, 88, 1, 70, "Text",
  CellID->1460668628],
-Cell[141141, 3015, 320, 8, 70, "Text",
+Cell[141218, 3018, 320, 8, 70, "Text",
  CellID->1140688258],
-Cell[141464, 3025, 293, 8, 70, "Text",
+Cell[141541, 3028, 293, 8, 70, "Text",
  CellID->682858425],
-Cell[141760, 3035, 326, 8, 70, "Text",
+Cell[141837, 3038, 326, 8, 70, "Text",
  CellID->1001425676],
-Cell[142089, 3045, 86, 1, 70, "Text",
+Cell[142166, 3048, 86, 1, 70, "Text",
  CellID->2096338536],
-Cell[142178, 3048, 274, 7, 70, "Text",
+Cell[142255, 3051, 274, 7, 70, "Text",
  CellID->1979089624]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[142489, 3060, 287, 12, 70, "RelatedTutorialsSection",
+Cell[142566, 3063, 287, 12, 70, "RelatedTutorialsSection",
  CellID->415694126],
-Cell[142779, 3074, 31, 0, 70, "SectionHeaderSpacer"],
-Cell[142813, 3076, 164, 4, 70, "RelatedTutorials",
+Cell[142856, 3077, 31, 0, 70, "SectionHeaderSpacer"],
+Cell[142890, 3079, 164, 4, 70, "RelatedTutorials",
  CellID->261026728],
-Cell[142980, 3082, 163, 4, 70, "RelatedTutorials",
+Cell[143057, 3085, 163, 4, 70, "RelatedTutorials",
  CellID->498253685],
-Cell[143146, 3088, 168, 6, 70, "RelatedTutorials",
+Cell[143223, 3091, 168, 6, 70, "RelatedTutorials",
  CellID->1415367576]
 }, Open  ]]
 }, Open  ]],
-Cell[143341, 3098, 23, 0, 70, "FooterCell"]
+Cell[143418, 3101, 23, 0, 70, "FooterCell"]
 }
 ]
 *)
