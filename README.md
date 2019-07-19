@@ -2,6 +2,27 @@
 
 A Mathematica package for the numerical computation of quasinormal modes.
 
+## Citation
+
+If one uses this code in any way in the preparation of a publication, please cite it as:
+
+@article{Jansen:2017oag,
+      author         = "Jansen, Aron",
+      title          = "{Overdamped modes in Schwarzschild-de Sitter and a
+                        Mathematica package for the numerical computation of
+                        quasinormal modes}",
+      journal        = "Eur. Phys. J. Plus",
+      volume         = "132",
+      year           = "2017",
+      number         = "12",
+      pages          = "546",
+      doi            = "10.1140/epjp/i2017-11825-9",
+      eprint         = "1709.09178",
+      archivePrefix  = "arXiv",
+      primaryClass   = "gr-qc",
+      SLACcitation   = "%%CITATION = ARXIV:1709.09178;%%"
+}
+
 ## Getting Started
 
 These few steps will allow you to use this package.
